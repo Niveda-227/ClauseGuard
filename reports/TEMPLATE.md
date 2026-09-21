@@ -1,7 +1,7 @@
 ---
 team: ClauseGuard
-session: <NN>
-date: <YYYY-MM-DD>
+session: 04
+date: 2026-09-21
 members:
   - name: Ameer Shaik
     github: <handle>
@@ -19,9 +19,9 @@ members:
     github: <handle>
     hat: Operations
 north_star:
-  metric: <e.g. task success rate>
-  value: <this week>
-  previous: <last week>
+  metric: Macro F1 across ToS risk categories
+  value: N/A
+  previous: N/A
 ---
 
 ## Shipped this week
