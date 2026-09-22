@@ -1,0 +1,22 @@
+{
+  "started_at_utc": "2026-09-22T20:13:27.525785+00:00",
+  "stopped_at_utc": "2026-09-22T20:21:33.706516+00:00",
+  "record": {
+    "recorded_at_utc": "2026-09-22T20:22:17.426631+00:00",
+    "participant_id": "U001",
+    "task_id": "A1",
+    "condition": "manual",
+    "correct": 1,
+    "seconds": 486.255,
+    "limit_seconds": 180,
+    "model_id": "manual",
+    "protocol_version": "sep22_v1"
+  },
+  "participant_answer": "\"Any dispute arising from these terms must be resolved by binding arbitration rather than a court trial.\" \u2014 Yes, binding arbitration is required",
+  "observer_notes": "used Ctrl+F to search for \"dispute\", found the sentence quickly",
+  "outside_team_and_consented": true,
+  "timing_note": "Observer-operated; includes time to enter the answer. Stop at the limit; late answers are unsuccessful.",
+  "interface": "text_editor",
+  "observer_id": "OBS01",
+  "capture_tool": "clauses.session_capture.v1"
+}
