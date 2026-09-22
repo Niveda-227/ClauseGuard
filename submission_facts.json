@@ -1,38 +1,64 @@
 {
   "repo_url": "https://github.com/Niveda-227/ClauseGuard",
-  "branch_protection_verified": false,
-  "outside_user_evidence_reviewed": false,
-  "contributions_verified": false,
-  "shipped_evidence_urls": [],
-  "user_observation": "",
-  "change_from_user": "",
-  "user_change_evidence_urls": [],
-  "current_blockers": "",
+  "branch_protection_verified": true,
+  "outside_user_evidence_reviewed": true,
+  "contributions_verified": true,
+  "shipped_evidence_urls": [
+    "https://github.com/Niveda-227/ClauseGuard/pull/8",
+    "https://github.com/Niveda-227/ClauseGuard/pull/9",
+    "https://github.com/Niveda-227/ClauseGuard/pull/10",
+    "https://github.com/Niveda-227/ClauseGuard/pull/11",
+    "https://github.com/Niveda-227/ClauseGuard/pull/12",
+    "https://github.com/Niveda-227/ClauseGuard/pull/13"
+  ],
+  "user_observation": "On 2026-09-22 one outside participant (U001, not a team member) used the running product in the desktop app after giving verbal consent. They completed task A1 on document A without the tool in a plain text editor, then task B1 on document B with ClauseGuard, each under a 180-second limit. The participant read the category list top to bottom before opening any source sentence, and hesitated at the sentence carrying three category tags.",
+  "change_from_user": "Opened an issue to make the source sentence the primary result and de-emphasise secondary category tags, because the participant treated all three tags on one sentence as established findings.",
+  "user_change_evidence_urls": [
+    "https://github.com/Niveda-227/ClauseGuard/issues/14"
+  ],
+  "current_blockers": "Arbitration F1 is 0.3226 on only 9 validation positives, and six of the eight categories have precision below 0.60, so single sentences receive several labels and users see confident wrong tags. Per-category thresholds tuned on validation are the next experiment (owner: Jayakrishna, Session 05). Outside-user evidence is one participant on short fictional documents, so the product metric is directional only and needs more participants next week.",
   "members": {
     "Ameer": {
-      "github": "",
-      "completed_work": "",
-      "evidence_urls": []
+      "github": "sohail-umd",
+      "completed_work": "Integrated and verified the initial ClauseGuard implementation (desktop app, CLI with HTML export, three trained classifiers, validation evaluation and tests), rewrote the README with real setup commands and measured results, and observed the user session; found confident false positives where a terms-change sentence is also flagged Unilateral termination at score 0.841.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/1",
+        "https://github.com/Niveda-227/ClauseGuard/pull/8"
+      ]
     },
     "Hemanth": {
-      "github": "",
-      "completed_work": "",
-      "evidence_urls": []
+      "github": "hreddy14",
+      "completed_work": "Added scripts/check_environment.py with tests, reporting Python and dependency versions, verifying the model file by SHA-256 against its manifest and probing Tk display availability; verified the desktop app on a real laptop with both study documents before the user session and documented a macOS SSL certificate failure that blocks the dataset download.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/2",
+        "https://github.com/Niveda-227/ClauseGuard/pull/9"
+      ]
     },
     "Jayakrishna": {
-      "github": "",
-      "completed_work": "",
-      "evidence_urls": []
+      "github": "Jayakrishna-Reddy",
+      "completed_work": "Added scripts/build_error_report.py with tests and produced the per-category validation error dashboard, recomputing macro-F1 0.6333; inspected six error cases by source ID and found arbitration misses cluster at 0.36 to 0.41 just below the fixed threshold while a four-word section heading scores 0.745.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/3",
+        "https://github.com/Niveda-227/ClauseGuard/pull/10"
+      ]
     },
     "Niveda": {
       "github": "Niveda-227",
-      "completed_work": "",
-      "evidence_urls": []
+      "completed_work": "Added clauses/session_capture.py with tests, recording which interface each real trial used plus an anonymous observer ID without changing the CSV schema; recruited an outside participant, ran the counterbalanced pilot under a 180-second limit and committed the contemporaneous anonymous records.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/4",
+        "https://github.com/Niveda-227/ClauseGuard/pull/11",
+        "https://github.com/Niveda-227/ClauseGuard/issues/6",
+        "https://github.com/Niveda-227/ClauseGuard/pull/13"
+      ]
     },
     "Ankan": {
-      "github": "",
-      "completed_work": "",
-      "evidence_urls": []
+      "github": "royak747",
+      "completed_work": "Added scripts/check_report_links.py with tests, resolving every local Markdown link in the weekly report, rejecting paths outside the repository and flagging unresolved report fields; audited the report against the course template and verified branch protection, then assembled and finalized the Session 04 report from merged evidence.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/5",
+        "https://github.com/Niveda-227/ClauseGuard/pull/12"
+      ]
     }
   }
 }
