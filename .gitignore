@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+analysis.html
+analysis.json
+data/*.tar.gz
+data/*.partial
+private/
+
+reports/session04.before-finalization.txt

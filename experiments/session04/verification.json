@@ -1,0 +1,33 @@
+{
+  "started_at_utc": "2026-09-22T14:31:27.057390+00:00",
+  "completed_at_utc": "2026-09-22T14:31:30.007393+00:00",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "dataset_sha256": "934470d74b62139dfbfad4a13b75a32e4a4d26a680ab12eedfb7659cdf669d53",
+  "validation_sentences": 2275,
+  "validation_documents": [
+    "Airbnb",
+    "Crowdtangle",
+    "Fitbit",
+    "Headspace",
+    "LindenLab",
+    "Nintendo",
+    "Oculus",
+    "Supercell",
+    "TripAdvisor",
+    "Vimeo"
+  ],
+  "selected_model_id": "04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76",
+  "model_original_created_utc": "2026-09-10T21:47:45.623606+00:00",
+  "test_suite_exit_code": 0,
+  "final_test_evaluated": false,
+  "gui_visual_tested": false,
+  "outside_user_session_claimed": false,
+  "note": "AI-assisted local technical verification. No GitHub merge or student contribution is inferred."
+}

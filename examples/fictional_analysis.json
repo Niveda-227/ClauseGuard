@@ -1,0 +1,224 @@
+{
+  "model_id": "04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76",
+  "variant": "hybrid",
+  "threshold_source": "fixed_0.5",
+  "input_characters": 757,
+  "sentences": [
+    {
+      "sentence_id": 0,
+      "start": 0,
+      "end": 54,
+      "text": "Fictional service terms for a ClauseGuard demonstration",
+      "labels": [],
+      "scores": {
+        "Limitation of liability": 0.03931912725621382,
+        "Unilateral termination": 0.0318328286031897,
+        "Unilateral change": 0.036417458089303856,
+        "Content removal": 0.016870583716097655,
+        "Contract by using": 0.024639341735330816,
+        "Choice of law": 0.019750117888508164,
+        "Jurisdiction": 0.015544076856674392,
+        "Arbitration": 0.021630205399512405
+      },
+      "near_threshold": false
+    },
+    {
+      "sentence_id": 1,
+      "start": 56,
+      "end": 117,
+      "text": "By accessing or using this service, you agree to these terms.",
+      "labels": [
+        "Contract by using"
+      ],
+      "scores": {
+        "Limitation of liability": 0.017419860977636214,
+        "Unilateral termination": 0.0211435193114646,
+        "Unilateral change": 0.082072950870677,
+        "Content removal": 0.009907810225723492,
+        "Contract by using": 0.9844499345086678,
+        "Choice of law": 0.021553888714870816,
+        "Jurisdiction": 0.02313016279977,
+        "Arbitration": 0.02302490146195187
+      },
+      "near_threshold": false
+    },
+    {
+      "sentence_id": 2,
+      "start": 118,
+      "end": 171,
+      "text": "We may change these terms at any time without notice.",
+      "labels": [
+        "Unilateral termination",
+        "Unilateral change"
+      ],
+      "scores": {
+        "Limitation of liability": 0.030929274414042886,
+        "Unilateral termination": 0.8408773177055789,
+        "Unilateral change": 0.9997245620592086,
+        "Content removal": 0.164837915715598,
+        "Contract by using": 0.021319965647437596,
+        "Choice of law": 0.019670292460328663,
+        "Jurisdiction": 0.007893678769561154,
+        "Arbitration": 0.0035455068381586917
+      },
+      "near_threshold": false
+    },
+    {
+      "sentence_id": 3,
+      "start": 172,
+      "end": 236,
+      "text": "We may suspend or terminate your account at our sole discretion.",
+      "labels": [
+        "Unilateral termination",
+        "Content removal"
+      ],
+      "scores": {
+        "Limitation of liability": 0.08338800192731007,
+        "Unilateral termination": 0.9998889197050282,
+        "Unilateral change": 0.4089854638598026,
+        "Content removal": 0.8749020828711764,
+        "Contract by using": 0.00323947601499167,
+        "Choice of law": 0.00627065723349299,
+        "Jurisdiction": 0.006076014465697302,
+        "Arbitration": 0.004983142335649656
+      },
+      "near_threshold": false
+    },
+    {
+      "sentence_id": 4,
+      "start": 237,
+      "end": 298,
+      "text": "We may remove any content you submit without giving a reason.",
+      "labels": [
+        "Content removal"
+      ],
+      "scores": {
+        "Limitation of liability": 0.06709994225662275,
+        "Unilateral termination": 0.16656388498223126,
+        "Unilateral change": 0.22858614157468543,
+        "Content removal": 0.9828336844949388,
+        "Contract by using": 0.0044026696924436715,
+        "Choice of law": 0.01207973261468326,
+        "Jurisdiction": 0.01106319555220828,
+        "Arbitration": 0.006529945766271391
+      },
+      "near_threshold": false
+    },
+    {
+      "sentence_id": 5,
+      "start": 299,
+      "end": 406,
+      "text": "To the maximum extent permitted by applicable law, we are not liable for indirect or consequential damages.",
+      "labels": [
+        "Limitation of liability"
+      ],
+      "scores": {
+        "Limitation of liability": 0.9948485634121119,
+        "Unilateral termination": 0.008671367763053463,
+        "Unilateral change": 0.03134378451877305,
+        "Content removal": 0.008171327777668632,
+        "Contract by using": 0.0071226223353478965,
+        "Choice of law": 0.015484631699804439,
+        "Jurisdiction": 0.011878435248014208,
+        "Arbitration": 0.004408489728438094
+      },
+      "near_threshold": false
+    },
+    {
+      "sentence_id": 6,
+      "start": 407,
+      "end": 471,
+      "text": "These terms are governed by the laws of the State of California.",
+      "labels": [
+        "Choice of law"
+      ],
+      "scores": {
+        "Limitation of liability": 0.009298903345894793,
+        "Unilateral termination": 0.012393160097734151,
+        "Unilateral change": 0.026945298978409398,
+        "Content removal": 0.009923697397239433,
+        "Contract by using": 0.03244622438621543,
+        "Choice of law": 0.9917384267890382,
+        "Jurisdiction": 0.18437761770487487,
+        "Arbitration": 0.004585223544656593
+      },
+      "near_threshold": false
+    },
+    {
+      "sentence_id": 7,
+      "start": 472,
+      "end": 568,
+      "text": "You agree that any court proceedings must be brought exclusively in the courts of San Francisco.",
+      "labels": [
+        "Jurisdiction"
+      ],
+      "scores": {
+        "Limitation of liability": 0.02520289463552381,
+        "Unilateral termination": 0.009743369410377073,
+        "Unilateral change": 0.011000336628094985,
+        "Content removal": 0.006986673006144887,
+        "Contract by using": 0.01647001208236602,
+        "Choice of law": 0.033676224211315046,
+        "Jurisdiction": 0.960154679758511,
+        "Arbitration": 0.01852820022454424
+      },
+      "near_threshold": false
+    },
+    {
+      "sentence_id": 8,
+      "start": 569,
+      "end": 627,
+      "text": "All disputes will be resolved through binding arbitration.",
+      "labels": [
+        "Arbitration"
+      ],
+      "scores": {
+        "Limitation of liability": 0.023358004827648098,
+        "Unilateral termination": 0.0051780289940271396,
+        "Unilateral change": 0.0161534278906377,
+        "Content removal": 0.007235264259251911,
+        "Contract by using": 0.009956138466356488,
+        "Choice of law": 0.022876927108173174,
+        "Jurisdiction": 0.034715574451297006,
+        "Arbitration": 0.9818157105555392
+      },
+      "near_threshold": false
+    },
+    {
+      "sentence_id": 9,
+      "start": 628,
+      "end": 703,
+      "text": "You can download a copy of your account information from the settings page.",
+      "labels": [],
+      "scores": {
+        "Limitation of liability": 0.010123780187849202,
+        "Unilateral termination": 0.02502999143940123,
+        "Unilateral change": 0.004030499333892937,
+        "Content removal": 0.027722202171278933,
+        "Contract by using": 0.014484450296592457,
+        "Choice of law": 0.005835312010984245,
+        "Jurisdiction": 0.006508459863083861,
+        "Arbitration": 0.005591688976204866
+      },
+      "near_threshold": false
+    },
+    {
+      "sentence_id": 10,
+      "start": 704,
+      "end": 756,
+      "text": "Our support team is available Monday through Friday.",
+      "labels": [],
+      "scores": {
+        "Limitation of liability": 0.01705518867636781,
+        "Unilateral termination": 0.008316080750711134,
+        "Unilateral change": 0.028322033280679313,
+        "Content removal": 0.009078014081887813,
+        "Contract by using": 0.014533011623021166,
+        "Choice of law": 0.008278601503444921,
+        "Jurisdiction": 0.008486241941716538,
+        "Arbitration": 0.008342027363660073
+      },
+      "near_threshold": false
+    }
+  ]
+}

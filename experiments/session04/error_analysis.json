@@ -1,0 +1,137 @@
+[
+  {
+    "label": "Limitation of liability",
+    "false_positives": 53,
+    "false_negatives": 12,
+    "false_positive_ids": [
+      "validation:05570",
+      "validation:05613",
+      "validation:05614",
+      "validation:05615",
+      "validation:05621"
+    ],
+    "false_negative_ids": [
+      "validation:06264",
+      "validation:06614",
+      "validation:06846",
+      "validation:06848",
+      "validation:06849"
+    ]
+  },
+  {
+    "label": "Unilateral termination",
+    "false_positives": 49,
+    "false_negatives": 6,
+    "false_positive_ids": [
+      "validation:05573",
+      "validation:05628",
+      "validation:05757",
+      "validation:05797",
+      "validation:05800"
+    ],
+    "false_negative_ids": [
+      "validation:06003",
+      "validation:06004",
+      "validation:06006",
+      "validation:06007",
+      "validation:06662"
+    ]
+  },
+  {
+    "label": "Unilateral change",
+    "false_positives": 34,
+    "false_negatives": 7,
+    "false_positive_ids": [
+      "validation:05798",
+      "validation:06115",
+      "validation:06125",
+      "validation:06155",
+      "validation:06179"
+    ],
+    "false_negative_ids": [
+      "validation:05578",
+      "validation:06178",
+      "validation:06357",
+      "validation:06497",
+      "validation:06530"
+    ]
+  },
+  {
+    "label": "Content removal",
+    "false_positives": 22,
+    "false_negatives": 12,
+    "false_positive_ids": [
+      "validation:06114",
+      "validation:06155",
+      "validation:06202",
+      "validation:06439",
+      "validation:06441"
+    ],
+    "false_negative_ids": [
+      "validation:05578",
+      "validation:06003",
+      "validation:06004",
+      "validation:06006",
+      "validation:06007"
+    ]
+  },
+  {
+    "label": "Contract by using",
+    "false_positives": 14,
+    "false_negatives": 0,
+    "false_positive_ids": [
+      "validation:05731",
+      "validation:06193",
+      "validation:06259",
+      "validation:06274",
+      "validation:06288"
+    ],
+    "false_negative_ids": []
+  },
+  {
+    "label": "Choice of law",
+    "false_positives": 1,
+    "false_negatives": 5,
+    "false_positive_ids": [
+      "validation:07450"
+    ],
+    "false_negative_ids": [
+      "validation:06090",
+      "validation:07419",
+      "validation:07420",
+      "validation:07447",
+      "validation:07794"
+    ]
+  },
+  {
+    "label": "Jurisdiction",
+    "false_positives": 5,
+    "false_negatives": 0,
+    "false_positive_ids": [
+      "validation:06094",
+      "validation:06095",
+      "validation:06096",
+      "validation:07039",
+      "validation:07188"
+    ],
+    "false_negative_ids": []
+  },
+  {
+    "label": "Arbitration",
+    "false_positives": 17,
+    "false_negatives": 4,
+    "false_positive_ids": [
+      "validation:06040",
+      "validation:06513",
+      "validation:06857",
+      "validation:06859",
+      "validation:06881"
+    ],
+    "false_negative_ids": [
+      "validation:05731",
+      "validation:06087",
+      "validation:07413",
+      "validation:07734"
+    ]
+  }
+]
