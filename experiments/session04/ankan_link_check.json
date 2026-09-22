@@ -1,0 +1,123 @@
+{
+  "report": "reports/session04.md",
+  "local_links": [
+    {
+      "target": "../app.py",
+      "exists": true,
+      "repo_path": "app.py"
+    },
+    {
+      "target": "../clauses/cli.py",
+      "exists": true,
+      "repo_path": "clauses/cli.py"
+    },
+    {
+      "target": "../clauses/export.py",
+      "exists": true,
+      "repo_path": "clauses/export.py"
+    },
+    {
+      "target": "../clauses/model.py",
+      "exists": true,
+      "repo_path": "clauses/model.py"
+    },
+    {
+      "target": "../artifacts/",
+      "exists": true,
+      "repo_path": "artifacts"
+    },
+    {
+      "target": "../experiments/initial/selection.json",
+      "exists": true,
+      "repo_path": "experiments/initial/selection.json"
+    },
+    {
+      "target": "../scripts/verify_sep22.py",
+      "exists": true,
+      "repo_path": "scripts/verify_sep22.py"
+    },
+    {
+      "target": "../experiments/session04/test_results.txt",
+      "exists": true,
+      "repo_path": "experiments/session04/test_results.txt"
+    },
+    {
+      "target": "../clauses/task_timer.py",
+      "exists": true,
+      "repo_path": "clauses/task_timer.py"
+    },
+    {
+      "target": "../USER_SESSION_QUICKSTART.md",
+      "exists": true,
+      "repo_path": "USER_SESSION_QUICKSTART.md"
+    },
+    {
+      "target": "../evidence/session04/",
+      "exists": false,
+      "repo_path": "evidence/session04"
+    },
+    {
+      "target": "../USER_SESSION_QUICKSTART.md",
+      "exists": true,
+      "repo_path": "USER_SESSION_QUICKSTART.md"
+    },
+    {
+      "target": "../experiments/session04/baseline/metrics.json",
+      "exists": true,
+      "repo_path": "experiments/session04/baseline/metrics.json"
+    },
+    {
+      "target": "../experiments/session04/balanced/metrics.json",
+      "exists": true,
+      "repo_path": "experiments/session04/balanced/metrics.json"
+    },
+    {
+      "target": "../experiments/session04/hybrid/metrics.json",
+      "exists": true,
+      "repo_path": "experiments/session04/hybrid/metrics.json"
+    },
+    {
+      "target": "../experiments/session04/verification.json",
+      "exists": true,
+      "repo_path": "experiments/session04/verification.json"
+    },
+    {
+      "target": "../artifacts/selected.json",
+      "exists": true,
+      "repo_path": "artifacts/selected.json"
+    },
+    {
+      "target": "../clauses/data.py",
+      "exists": true,
+      "repo_path": "clauses/data.py"
+    },
+    {
+      "target": "../experiments/session04/hybrid/metrics.json",
+      "exists": true,
+      "repo_path": "experiments/session04/hybrid/metrics.json"
+    },
+    {
+      "target": "../experiments/session04/error_analysis.json",
+      "exists": true,
+      "repo_path": "experiments/session04/error_analysis.json"
+    },
+    {
+      "target": "../experiments/session04/ERROR_NOTES.md",
+      "exists": true,
+      "repo_path": "experiments/session04/ERROR_NOTES.md"
+    },
+    {
+      "target": "../docs/lean_canvas.md",
+      "exists": true,
+      "repo_path": "docs/lean_canvas.md"
+    }
+  ],
+  "external_links": [],
+  "path_checks_passed": false,
+  "issues": [
+    "Missing local evidence: ../evidence/session04/"
+  ],
+  "unresolved_submission_fields": true,
+  "limitations": "Checks inline local file/directory paths only, not anchors, legal/user claims, GitHub reviews, remote merges or real-user authenticity.",
+  "requested_checks_passed": false
+}
