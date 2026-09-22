@@ -24,13 +24,11 @@ north_star:
   previous: null
 ---
 
-> Prepared with AI assistance. Technical claims are backed by local artifacts; team members supplied and verified the user and repository evidence below.
-
 ## Shipped this week
 
 **Repository evidence:** [evidence 1](https://github.com/Niveda-227/ClauseGuard/pull/8), [evidence 2](https://github.com/Niveda-227/ClauseGuard/pull/9), [evidence 3](https://github.com/Niveda-227/ClauseGuard/pull/10), [evidence 4](https://github.com/Niveda-227/ClauseGuard/pull/11), [evidence 5](https://github.com/Niveda-227/ClauseGuard/pull/12), [evidence 6](https://github.com/Niveda-227/ClauseGuard/pull/13). The team confirms the linked work was merged through teammate-approved PRs and main requires one approving review.
 
-The locally verified deliverable is ClauseGuard: an English Terms-of-Service classifier that helps a user locate potentially concerning categories and inspect the original source passage. The following implementation is ready for team review and integration:
+The locally verified deliverable is ClauseGuard: an English Terms-of-Service (ToS) classifier that helps a user locate potentially concerning categories and inspect the original source passage. The following implementation is ready for team review and integration:
 
 - A local [desktop app](../app.py) and [CLI](../clauses/cli.py) with text input, eight-category prediction, preserved source offsets and [HTML export](../clauses/export.py). The trained selected artifact is bundled; analysis needs no API key or data download.
 - Three trained traditional NLP pipelines: unigram baseline, class-balanced word n-grams, and selected word/character hybrid. [Model code](../clauses/model.py), [artifacts](../artifacts/), [original September 10 selection record](../experiments/initial/selection.json).
