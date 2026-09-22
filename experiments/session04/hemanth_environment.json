@@ -1,0 +1,51 @@
+{
+  "recorded_at_utc": "2026-09-22T18:02:56.825014+00:00",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "core_ready": true,
+  "checks": [
+    {
+      "name": "python",
+      "ok": true,
+      "actual": "3.12.0",
+      "expected": "3.12.x"
+    },
+    {
+      "name": "numpy",
+      "expected": "2.3.5",
+      "actual": "2.3.5",
+      "ok": true
+    },
+    {
+      "name": "scipy",
+      "expected": "1.17.0",
+      "actual": "1.17.0",
+      "ok": true
+    },
+    {
+      "name": "scikit-learn",
+      "expected": "1.8.0",
+      "actual": "1.8.0",
+      "ok": true
+    },
+    {
+      "name": "joblib",
+      "expected": "1.5.3",
+      "actual": "1.5.3",
+      "ok": true
+    },
+    {
+      "name": "selected_model",
+      "ok": true,
+      "sha256": "04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76",
+      "detail": "Matches manifest."
+    }
+  ],
+  "gui": {
+    "module_available": true,
+    "display_probe_requested": false,
+    "display_usable": null,
+    "detail": "Not probed. CLI/HTML does not require Tk."
+  },
+  "requested_checks_passed": true,
+  "remedy": "Use Python 3.12 and python -m pip install -r requirements.txt; no changes were made by this checker."
+}
