@@ -4,31 +4,31 @@ session: "04"
 date: "2026-09-22"
 members:
   - name: Ameer
-    github: TODO
+    github: sohail-umd
     hat: Product
   - name: Hemanth
-    github: TODO
+    github: hreddy14
     hat: Engineering
   - name: Jayakrishna
-    github: TODO
+    github: Jayakrishna-Reddy
     hat: Data&Eval
   - name: Niveda
-    github: TODO
+    github: Niveda-227
     hat: Users&Research
   - name: Ankan
-    github: TODO
+    github: royak747
     hat: Operations
 north_star:
   metric: "Correct clause-finding tasks completed within 180 seconds (%)"
-  value: null
+  value: 0.00
   previous: null
 ---
 
-> DRAFT — technical work verified September 22; real GitHub handles, reviewed merges, individual contributions and outside-user evidence await the team. This is AI-assisted preparation, not proof of student work or a submitted report.
+> Prepared with AI assistance. Technical claims are backed by local artifacts; team members supplied and verified the user and repository evidence below.
 
 ## Shipped this week
 
-**Repository status: PENDING team merge and approving review.** No remote repository has been inspected. Before submission, add the real issue, approved PR and merge-commit links here.
+**Repository evidence:** [evidence 1](https://github.com/Niveda-227/ClauseGuard/pull/8), [evidence 2](https://github.com/Niveda-227/ClauseGuard/pull/9), [evidence 3](https://github.com/Niveda-227/ClauseGuard/pull/10), [evidence 4](https://github.com/Niveda-227/ClauseGuard/pull/11), [evidence 5](https://github.com/Niveda-227/ClauseGuard/pull/12), [evidence 6](https://github.com/Niveda-227/ClauseGuard/pull/13). The team confirms the linked work was merged through teammate-approved PRs and main requires one approving review.
 
 The locally verified deliverable is ClauseGuard: an English Terms-of-Service classifier that helps a user locate potentially concerning categories and inspect the original source passage. The following implementation is ready for team review and integration:
 
@@ -41,14 +41,15 @@ The model was originally generated September 10 and re-evaluated September 22. T
 
 ## User evidence
 
-- **PENDING actual outside-user session.** No outside-team participant record has been provided, so product validation and the north-star value remain unknown.
-- **Raw artifact**: the genuine records must be committed in [evidence/session04/](../evidence/session04/) today. The supplied README, fictional documents, tests and model predictions are not user evidence.
-- Planned pilot: outside users perform a clause-finding task with the running product, with correctness and elapsed time captured at the time. [Task instructions and observer answer key](../USER_SESSION_QUICKSTART.md).
-- No user-driven change is claimed yet. Add the observed friction and the actual change PR or next-action issue after the session.
+- On 2026-09-22 one outside participant (U001, not a team member) used the running product in the desktop app after giving verbal consent. They completed task A1 on document A without the tool in a plain text editor, then task B1 on document B with ClauseGuard, each under a 180-second limit. The participant read the category list top to bottom before opening any source sentence, and hesitated at the sentence carrying three category tags.
+- **Raw artifact**: [timestamped task records](../evidence/session04/tasks.csv), companion trial JSON files in [evidence/session04/](../evidence/session04/), and [summary](../evidence/session04/summary.json). The team must include these in this week's approved merge.
+- ClauseGuard: 0/1 tasks correct within 180 seconds (0.00%), across 1 outside participant(s).
+- Resulting change or documented next action: Opened an issue to make the source sentence the primary result and de-emphasise secondary category tags, because the participant treated all three tags on one sentence as established findings. (evidence: [evidence 1](https://github.com/Niveda-227/ClauseGuard/issues/14)).
+- This is a small pilot on fictional documents, not a population estimate or validation of legal correctness.
 
 ## Metrics snapshot
 
-**Product north-star:** not measured; current `null`, previous `null`. No outside-user trial has been supplied. Do not substitute model F1 for this product metric.
+**Product north-star:** 0.00% (0/1 ClauseGuard tasks correct within 180 seconds); previous `null` because this is the first recorded week. Same-session manual comparison, if collected, is in the raw summary; it is not last week's metric.
 
 **Model development results:** fixed validation split, 2,275 sentences from 10 companies, disjoint from the 30 training companies / 5,532 training sentences. The 1,607-sentence final test split was not evaluated. All F1 scores below use a 0–1 scale.
 
@@ -74,10 +75,9 @@ The validation set was used to select among candidates, so these are development
 
 ## Challenges / blockers
 
-- **Niveda and Ameer:** outside-user evidence and task-success measurement are PENDING; recruit an outside participant and commit contemporaneous anonymous records.
-- **Ankan and all members:** real handles, actual contribution descriptions, approved PR links and repository status are PENDING. Verify branch protection and instructor access, finalize this report from facts, and merge before 5:00 p.m. Eastern.
-- **Hemanth:** confirm GUI behavior on a real laptop; document any installation/display issue and use the working CLI/HTML route if needed.
-- **Jayakrishna:** rare categories and validation-selection bias limit claims. Inspect the listed errors and preserve the reserved test split for later frozen evaluation.
+Arbitration F1 is 0.3226 on only 9 validation positives, and six of the eight categories have precision below 0.60, so single sentences receive several labels and users see confident wrong tags. Per-category thresholds tuned on validation are the next experiment (owner: Jayakrishna, Session 05). Outside-user evidence is one participant on short fictional documents, so the product metric is directional only and needs more participants next week.
+
+- A teammate must verify the final report and evidence are merged into main before 5:00 p.m. Eastern. This local script does not inspect GitHub or submit anything.
 
 ## Next week's goal
 
@@ -85,11 +85,11 @@ Reduce unsupported arbitration/unilateral-change flags while preserving recall, 
 
 ## Individual contributions
 
-- Ameer (Product): TODO actual completed engineering and user/product research work, with real issue/PR/commit evidence. Assigned focus: app workflow, observation and lean canvas.
-- Hemanth (Engineering): TODO actual completed code/setup and technical investigation, with real issue/PR/commit evidence. Assigned focus: pipeline integration and laptop smoke test.
-- Jayakrishna (Data&Eval): TODO actual completed evaluation code and error analysis, with real issue/PR/commit evidence. Assigned focus: reproducibility, rare-category diagnosis and split/license audit.
-- Niveda (Users&Research): TODO actual completed recorder/protocol work and outside-user sessions, with real issue/PR/commit evidence. Assigned focus: contemporaneous CSV/JSON records and observations.
-- Ankan (Operations): TODO actual completed validation/report tooling and requirement audit, with real issue/PR/commit evidence. Assigned focus: board, reviews, proof links and final merge check.
+- Ameer (Product): Integrated and verified the initial ClauseGuard implementation (desktop app, CLI with HTML export, three trained classifiers, validation evaluation and tests), rewrote the README with real setup commands and measured results, and observed the user session; found confident false positives where a terms-change sentence is also flagged Unilateral termination at score 0.841. (evidence: [evidence 1](https://github.com/Niveda-227/ClauseGuard/issues/1), [evidence 2](https://github.com/Niveda-227/ClauseGuard/pull/8))
+- Hemanth (Engineering): Added scripts/check_environment.py with tests, reporting Python and dependency versions, verifying the model file by SHA-256 against its manifest and probing Tk display availability; verified the desktop app on a real laptop with both study documents before the user session and documented a macOS SSL certificate failure that blocks the dataset download. (evidence: [evidence 1](https://github.com/Niveda-227/ClauseGuard/issues/2), [evidence 2](https://github.com/Niveda-227/ClauseGuard/pull/9))
+- Jayakrishna (Data&Eval): Added scripts/build_error_report.py with tests and produced the per-category validation error dashboard, recomputing macro-F1 0.6333; inspected six error cases by source ID and found arbitration misses cluster at 0.36 to 0.41 just below the fixed threshold while a four-word section heading scores 0.745. (evidence: [evidence 1](https://github.com/Niveda-227/ClauseGuard/issues/3), [evidence 2](https://github.com/Niveda-227/ClauseGuard/pull/10))
+- Niveda (Users&Research): Added clauses/session_capture.py with tests, recording which interface each real trial used plus an anonymous observer ID without changing the CSV schema; recruited an outside participant, ran the counterbalanced pilot under a 180-second limit and committed the contemporaneous anonymous records. (evidence: [evidence 1](https://github.com/Niveda-227/ClauseGuard/issues/4), [evidence 2](https://github.com/Niveda-227/ClauseGuard/pull/11), [evidence 3](https://github.com/Niveda-227/ClauseGuard/issues/6), [evidence 4](https://github.com/Niveda-227/ClauseGuard/pull/13))
+- Ankan (Operations): Added scripts/check_report_links.py with tests, resolving every local Markdown link in the weekly report, rejecting paths outside the repository and flagging unresolved report fields; audited the report against the course template and verified branch protection, then assembled and finalized the Session 04 report from merged evidence. (evidence: [evidence 1](https://github.com/Niveda-227/ClauseGuard/issues/5), [evidence 2](https://github.com/Niveda-227/ClauseGuard/pull/12))
 
 ## Lean canvas changes (if any)
 
