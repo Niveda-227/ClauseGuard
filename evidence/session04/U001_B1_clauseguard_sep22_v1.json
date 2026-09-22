@@ -1,0 +1,22 @@
+{
+  "started_at_utc": "2026-09-22T20:31:48.835022+00:00",
+  "stopped_at_utc": "2026-09-22T20:32:05.716848+00:00",
+  "record": {
+    "recorded_at_utc": "2026-09-22T20:32:24.012307+00:00",
+    "participant_id": "U001",
+    "task_id": "B1",
+    "condition": "clauseguard",
+    "correct": 0,
+    "seconds": 16.884,
+    "limit_seconds": 180,
+    "model_id": "04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76",
+    "protocol_version": "sep22_v1"
+  },
+  "participant_answer": "\"Disputes are subject to the exclusive jurisdiction of the courts of San Francisco.\" \u2014 said no binding arbitration required, courts of San Francisco handle disputes",
+  "observer_notes": "found a jurisdiction clause instead of the termination clause; may have confused with task A1 or misread the question",
+  "outside_team_and_consented": true,
+  "timing_note": "Observer-operated; includes time to enter the answer. Stop at the limit; late answers are unsuccessful.",
+  "interface": "desktop",
+  "observer_id": "OBS01",
+  "capture_tool": "clauses.session_capture.v1"
+}
