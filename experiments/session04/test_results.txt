@@ -1,0 +1,26 @@
+test_escape (test_core.ExportTests.test_escape) ... ok
+test_no_input (test_core.IntegrationTests.test_no_input) ... ok
+test_saved_model_and_batch_agree (test_core.IntegrationTests.test_saved_model_and_batch_agree) ... ok
+test_source_split_documents_disjoint (test_core.IntegrationTests.test_source_split_documents_disjoint) ... ok
+test_wrong_split_cannot_train (test_core.IntegrationTests.test_wrong_split_cannot_train) ... ok
+test_invalid (test_core.MetricTests.test_invalid) ... ok
+test_none_label (test_core.MetricTests.test_none_label) ... ok
+test_ordinary_sentences_can_hide_failure (test_core.MetricTests.test_ordinary_sentences_can_hide_failure) ... ok
+test_perfect_all_categories (test_core.MetricTests.test_perfect_all_categories) ... ok
+test_decimals_and_quoted_sentence (test_core.SegmentationTests.test_decimals_and_quoted_sentence) ... ok
+test_empty (test_core.SegmentationTests.test_empty) ... ok
+test_input_limit (test_core.SegmentationTests.test_input_limit) ... ok
+test_offsets_and_content (test_core.SegmentationTests.test_offsets_and_content) ... ok
+test_unicode (test_core.SegmentationTests.test_unicode) ... ok
+test_no_names_or_nonfinite_time (test_core.StudyTests.test_no_names_or_nonfinite_time) ... ok
+test_record_summarize_and_duplicate (test_core.StudyTests.test_record_summarize_and_duplicate) ... ok
+test_actual_records_determine_metric_and_all_members_are_filled (test_finalizer.FinalizerTests.test_actual_records_determine_metric_and_all_members_are_filled) ... ok
+test_missing_facts_does_not_change_report (test_finalizer.FinalizerTests.test_missing_facts_does_not_change_report) ... ok
+test_declining_consent_creates_no_evidence (test_timer.TimerTests.test_declining_consent_creates_no_evidence) ... ok
+test_late_correct_answer_is_unsuccessful (test_timer.TimerTests.test_late_correct_answer_is_unsuccessful) ... ok
+test_measured_duration_and_raw_record (test_timer.TimerTests.test_measured_duration_and_raw_record) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.524s
+
+OK

@@ -1,0 +1,73 @@
+{
+  "n": 2275,
+  "scale": "0_to_1",
+  "macro_f1_8": 0.6333313230392885,
+  "micro_f1_8": 0.6275115919629057,
+  "lexglue_macro_f1_9": 0.6695030238004419,
+  "lexglue_micro_f1_9": 0.912621359223301,
+  "exact_match": 0.9081318681318681,
+  "per_label": {
+    "Limitation of liability": {
+      "precision": 0.5092592592592593,
+      "recall": 0.8208955223880597,
+      "f1": 0.6285714285714286,
+      "support": 67
+    },
+    "Unilateral termination": {
+      "precision": 0.5196078431372549,
+      "recall": 0.8983050847457628,
+      "f1": 0.6583850931677019,
+      "support": 59
+    },
+    "Unilateral change": {
+      "precision": 0.38181818181818183,
+      "recall": 0.75,
+      "f1": 0.5060240963855421,
+      "support": 28
+    },
+    "Content removal": {
+      "precision": 0.47619047619047616,
+      "recall": 0.625,
+      "f1": 0.5405405405405406,
+      "support": 32
+    },
+    "Contract by using": {
+      "precision": 0.5625,
+      "recall": 1.0,
+      "f1": 0.72,
+      "support": 18
+    },
+    "Choice of law": {
+      "precision": 0.9285714285714286,
+      "recall": 0.7222222222222222,
+      "f1": 0.8125,
+      "support": 18
+    },
+    "Jurisdiction": {
+      "precision": 0.782608695652174,
+      "recall": 1.0,
+      "f1": 0.8780487804878049,
+      "support": 18
+    },
+    "Arbitration": {
+      "precision": 0.22727272727272727,
+      "recall": 0.5555555555555556,
+      "f1": 0.3225806451612903,
+      "support": 9
+    },
+    "No category": {
+      "precision": 0.9840452907874421,
+      "recall": 0.9349633251833741,
+      "f1": 0.958876629889669,
+      "support": 2045
+    }
+  },
+  "split": "validation",
+  "dataset_sha256": "934470d74b62139dfbfad4a13b75a32e4a4d26a680ab12eedfb7659cdf669d53",
+  "model_id": "04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76",
+  "threshold_source": "fixed_0.5",
+  "variant": "hybrid",
+  "inference_seconds": 0.3603066499999841,
+  "ms_per_sentence": 0.15837654945054244,
+  "timing_note": "Single batch timing on the recorded environment; not end-to-end UI latency."
+}

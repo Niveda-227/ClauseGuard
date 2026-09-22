@@ -1,0 +1,18 @@
+{
+  "checked_at_utc": "2026-09-22T14:34:02.958206+00:00",
+  "fresh_copy_without_dataset_cli_exit": 0,
+  "fictional_sentences": 11,
+  "selected_model_id": "04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76",
+  "dependency_environment": "Python 3.12.14 with requirements.txt versions already installed",
+  "gui_display_verified": false,
+  "remote_github_verified": false,
+  "outside_user_evidence_included": false,
+  "report_structure_valid": true,
+  "ready_for_evidenced_submission": false,
+  "outstanding": [
+    "Actual five GitHub handles and member contributions",
+    "Actual reviewed PR/commit links and main merge",
+    "Genuine outside-user session records and product metric",
+    "Laptop GUI smoke test and GitHub branch protection/access verification"
+  ]
+}

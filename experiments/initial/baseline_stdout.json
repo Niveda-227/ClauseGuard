@@ -1,0 +1,73 @@
+{
+  "n": 2275,
+  "scale": "0_to_1",
+  "macro_f1_8": 0.2551226169341224,
+  "micro_f1_8": 0.33003300330033003,
+  "lexglue_macro_f1_9": 0.33309660086948545,
+  "lexglue_micro_f1_9": 0.9153358127324437,
+  "exact_match": 0.9178021978021978,
+  "per_label": {
+    "Limitation of liability": {
+      "precision": 0.8947368421052632,
+      "recall": 0.2537313432835821,
+      "f1": 0.3953488372093023,
+      "support": 67
+    },
+    "Unilateral termination": {
+      "precision": 0.9375,
+      "recall": 0.2542372881355932,
+      "f1": 0.4,
+      "support": 59
+    },
+    "Unilateral change": {
+      "precision": 0.8888888888888888,
+      "recall": 0.2857142857142857,
+      "f1": 0.43243243243243246,
+      "support": 28
+    },
+    "Content removal": {
+      "precision": 1.0,
+      "recall": 0.125,
+      "f1": 0.2222222222222222,
+      "support": 32
+    },
+    "Contract by using": {
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "f1": 0.2857142857142857,
+      "support": 18
+    },
+    "Choice of law": {
+      "precision": 1.0,
+      "recall": 0.1111111111111111,
+      "f1": 0.2,
+      "support": 18
+    },
+    "Jurisdiction": {
+      "precision": 1.0,
+      "recall": 0.05555555555555555,
+      "f1": 0.10526315789473684,
+      "support": 18
+    },
+    "Arbitration": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "No category": {
+      "precision": 0.918578497525866,
+      "recall": 0.9985330073349633,
+      "f1": 0.9568884723523898,
+      "support": 2045
+    }
+  },
+  "split": "validation",
+  "dataset_sha256": "934470d74b62139dfbfad4a13b75a32e4a4d26a680ab12eedfb7659cdf669d53",
+  "model_id": "34dc0e2719bc89b7834167f9b0325dae33dea31c4308ea03742e0bd613865418",
+  "threshold_source": "fixed_0.5",
+  "variant": "baseline",
+  "inference_seconds": 0.029049102000044513,
+  "ms_per_sentence": 0.01276883604397561,
+  "timing_note": "Single batch timing on the recorded environment; not end-to-end UI latency."
+}

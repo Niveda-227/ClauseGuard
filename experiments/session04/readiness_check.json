@@ -1,0 +1,11 @@
+{
+  "mode": "ready",
+  "errors": [
+    "session04.md: unresolved draft/evidence fields",
+    "session04.md: missing north-star value"
+  ],
+  "notes": [
+    "This script checks structure/placeholders, not whether users, PR reviews or claims are genuine. Humans must verify evidence."
+  ],
+  "passed": false
+}

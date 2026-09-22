@@ -1,0 +1,9 @@
+{
+  "mode": "structural",
+  "errors": [],
+  "notes": [
+    "Final report words: 1462",
+    "This script checks structure/placeholders, not whether users, PR reviews or claims are genuine. Humans must verify evidence."
+  ],
+  "passed": true
+}

@@ -1,0 +1,29 @@
+{
+  "criterion": "validation macro_f1_8, fixed 0.5 thresholds",
+  "selected": "hybrid",
+  "model_id": "04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76",
+  "test_used_for_selection": false,
+  "candidates": [
+    {
+      "variant": "baseline",
+      "macro_f1_8": 0.2551226169341224,
+      "lexglue_macro_f1_9": 0.33309660086948545,
+      "lexglue_micro_f1_9": 0.9153358127324437,
+      "model_id": "34dc0e2719bc89b7834167f9b0325dae33dea31c4308ea03742e0bd613865418"
+    },
+    {
+      "variant": "balanced",
+      "macro_f1_8": 0.6156406323699569,
+      "lexglue_macro_f1_9": 0.6540095577689573,
+      "lexglue_micro_f1_9": 0.9107296137339056,
+      "model_id": "4affa6bef9ff6df7d863ecf056bb47cf0d6515acccab97aa8a91ce1d8dd44ad1"
+    },
+    {
+      "variant": "hybrid",
+      "macro_f1_8": 0.6333313230392885,
+      "lexglue_macro_f1_9": 0.6695030238004419,
+      "lexglue_micro_f1_9": 0.912621359223301,
+      "model_id": "04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76"
+    }
+  ]
+}
