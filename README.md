@@ -72,11 +72,21 @@ and the weekly reports.
 - `app.py` desktop app entry point
 - `artifacts/` the trained models, with hashes
 - `tests/` automated tests
-- `data/` dataset provenance and license notes (the dataset itself is downloaded, not committed)
+- `data/` dataset provenance and license (the dataset itself is downloaded by `python -m clauses.cli data`, not committed)
+- `examples/study/` fictional study documents and the public task bank; answer keys are never committed
+- `private/` (git-ignored) observer-only material such as answer keys; never pushed
 - `experiments/` validation metrics, per-category errors, error notes
 - `evidence/` anonymized user-session records
 - `docs/lean_canvas.md` our working hypotheses on user, problem, and value
 - `reports/` weekly progress reports
+
+## Documentation
+
+- [How it works](docs/HOW_IT_WORKS.md): pipeline, metrics and likely questions
+- [Study protocol v2](docs/STUDY_PROTOCOL_V2.md): how outside-user sessions are run from Session 05
+- [Model card](docs/MODEL_CARD.md) and [data provenance](data/README.md)
+- [Lean canvas](docs/lean_canvas.md)
+- Weekly reports: [reports/](reports/)
 
 ## Setup
 

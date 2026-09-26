@@ -1,4 +1,6 @@
-# Capture real evidence today
+# Capture real evidence today (Session 04, protocol sep22_v1, retired)
+
+> **Superseded.** This is the Session 04 procedure, kept so the Session 04 report remains reproducible. For Session 05 onwards use `docs/STUDY_PROTOCOL_V2.md`.
 
 **Owner: Niveda; observer/product partner: Ameer.** The course requires an outside-team user to use the running product. It does not prescribe a sample size. Aim for two outside participants for an initial pilot; report the actual number even if it is smaller.
 
@@ -49,14 +51,11 @@ python -m clauses.cli summarize-tasks --input evidence/session04/tasks.csv
 
 The report finalizer saves the same summary as `evidence/session04/summary.json`.
 
-## Observer-only answer key
+## Observer-only answer key (removed)
 
-Do not give this section to the participant before completion.
+The Session 04 answer key was removed from this public repository on 2026-09-24 because anyone could read it before taking part. Tasks A1 and B1 (documents A and B) are **retired**: do not use them in any future session.
 
-- **A1 / document A:** “Any dispute arising from these terms must be resolved by binding arbitration rather than a court trial.” Correct meaning: binding arbitration is required in this fictional agreement.
-- **B1 / document B:** “We may terminate your account at any time, for any reason, without prior notice.” Correct meaning: the provider claims it may terminate at any time and does not promise advance notice.
-
-These are textual-comprehension keys, not legal advice about enforceability.
+From Session 05 the team uses protocol `sep29_v2`: the public task bank is `examples/study/tasks_v2.json`, the recorder is `python -m clauses.session_v2`, and the procedure is in `docs/STUDY_PROTOCOL_V2.md`. Answer keys are kept only in the git-ignored `private/` folder on the observer's laptop.
 
 ## Report the result honestly
 
