@@ -9,7 +9,7 @@ from clauses.export import render_html
 
 class ClauseGuardApp:
     def __init__(self,root):
-        self.root=root;self.result=None;self.bundle=None
+        self.root=root;self.result=None;self.bundle=None;self.visible=[]
         root.title('ClauseGuard | Understand the terms before you accept');root.geometry('1180x820');root.minsize(800,600)
         root.configure(bg='#f7f6f1')
         style=ttk.Style();style.configure('TLabel',font=('Arial',11));style.configure('Title.TLabel',font=('Arial',25,'bold'))
@@ -38,9 +38,16 @@ class ClauseGuardApp:
         self.status=tk.StringVar(value='Local processing. Text is saved only when you explicitly export.')
         ttk.Label(root,textvariable=self.status,wraplength=1100,padding=12).pack(fill='x')
 
+    def clear_detail(self,message=''):
+        # Session 04 finding: loading a new document left the previous document's detail on screen.
+        self.detail.configure(state='normal');self.detail.delete('1.0','end')
+        if message:self.detail.insert('end',message)
+        self.detail.configure(state='disabled')
+
     def changed(self,event=None):
         if self.input.edit_modified():
-            self.result=None;self.export_btn.configure(state='disabled');self.listbox.delete(0,'end')
+            self.result=None;self.visible=[];self.export_btn.configure(state='disabled');self.listbox.delete(0,'end')
+            self.clear_detail('Text changed. Click "Analyze terms" to see results for this document.')
             self.input.tag_remove('source','1.0','end');self.input.edit_modified(False)
 
     def put_text(self,text):
