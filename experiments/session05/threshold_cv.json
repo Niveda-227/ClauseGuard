@@ -1,0 +1,226 @@
+{
+  "source": "experiments/session04/hybrid/predictions.jsonl",
+  "sentences": 2275,
+  "companies": [
+    "Airbnb",
+    "Crowdtangle",
+    "Fitbit",
+    "Headspace",
+    "LindenLab",
+    "Nintendo",
+    "Oculus",
+    "Supercell",
+    "TripAdvisor",
+    "Vimeo"
+  ],
+  "fixed_0_5": {
+    "macro_f1": 0.6333,
+    "micro_f1": 0.6275,
+    "flags_per_100_sentences": 17.49,
+    "per_label": {
+      "Limitation of liability": {
+        "support": 67,
+        "precision": 0.5093,
+        "recall": 0.8209,
+        "f1": 0.6286
+      },
+      "Unilateral termination": {
+        "support": 59,
+        "precision": 0.5196,
+        "recall": 0.8983,
+        "f1": 0.6584
+      },
+      "Unilateral change": {
+        "support": 28,
+        "precision": 0.3818,
+        "recall": 0.75,
+        "f1": 0.506
+      },
+      "Content removal": {
+        "support": 32,
+        "precision": 0.4762,
+        "recall": 0.625,
+        "f1": 0.5405
+      },
+      "Contract by using": {
+        "support": 18,
+        "precision": 0.5625,
+        "recall": 1.0,
+        "f1": 0.72
+      },
+      "Choice of law": {
+        "support": 18,
+        "precision": 0.9286,
+        "recall": 0.7222,
+        "f1": 0.8125
+      },
+      "Jurisdiction": {
+        "support": 18,
+        "precision": 0.7826,
+        "recall": 1.0,
+        "f1": 0.878
+      },
+      "Arbitration": {
+        "support": 9,
+        "precision": 0.2273,
+        "recall": 0.5556,
+        "f1": 0.3226
+      }
+    }
+  },
+  "tuned_in_sample_OPTIMISTIC": {
+    "macro_f1": 0.7244,
+    "micro_f1": 0.7254,
+    "flags_per_100_sentences": 10.51,
+    "per_label": {
+      "Limitation of liability": {
+        "support": 67,
+        "precision": 0.7302,
+        "recall": 0.6866,
+        "f1": 0.7077
+      },
+      "Unilateral termination": {
+        "support": 59,
+        "precision": 0.7097,
+        "recall": 0.7458,
+        "f1": 0.7273
+      },
+      "Unilateral change": {
+        "support": 28,
+        "precision": 0.6667,
+        "recall": 0.6429,
+        "f1": 0.6545
+      },
+      "Content removal": {
+        "support": 32,
+        "precision": 0.8947,
+        "recall": 0.5312,
+        "f1": 0.6667
+      },
+      "Contract by using": {
+        "support": 18,
+        "precision": 0.7273,
+        "recall": 0.8889,
+        "f1": 0.8
+      },
+      "Choice of law": {
+        "support": 18,
+        "precision": 0.9286,
+        "recall": 0.7222,
+        "f1": 0.8125
+      },
+      "Jurisdiction": {
+        "support": 18,
+        "precision": 0.8182,
+        "recall": 1.0,
+        "f1": 0.9
+      },
+      "Arbitration": {
+        "support": 9,
+        "precision": 0.5,
+        "recall": 0.5556,
+        "f1": 0.5263
+      }
+    },
+    "thresholds": {
+      "Limitation of liability": 0.75,
+      "Unilateral termination": 0.7,
+      "Unilateral change": 0.8,
+      "Content removal": 0.8,
+      "Contract by using": 0.8,
+      "Choice of law": 0.65,
+      "Jurisdiction": 0.55,
+      "Arbitration": 0.8
+    }
+  },
+  "leave_one_company_out_HONEST": {
+    "macro_f1": 0.6768,
+    "micro_f1": 0.688,
+    "flags_per_100_sentences": 11.03,
+    "per_label": {
+      "Limitation of liability": {
+        "support": 67,
+        "precision": 0.7333,
+        "recall": 0.6567,
+        "f1": 0.6929
+      },
+      "Unilateral termination": {
+        "support": 59,
+        "precision": 0.6377,
+        "recall": 0.7458,
+        "f1": 0.6875
+      },
+      "Unilateral change": {
+        "support": 28,
+        "precision": 0.6667,
+        "recall": 0.6429,
+        "f1": 0.6545
+      },
+      "Content removal": {
+        "support": 32,
+        "precision": 0.7083,
+        "recall": 0.5312,
+        "f1": 0.6071
+      },
+      "Contract by using": {
+        "support": 18,
+        "precision": 0.6818,
+        "recall": 0.8333,
+        "f1": 0.75
+      },
+      "Choice of law": {
+        "support": 18,
+        "precision": 0.9231,
+        "recall": 0.6667,
+        "f1": 0.7742
+      },
+      "Jurisdiction": {
+        "support": 18,
+        "precision": 0.8182,
+        "recall": 1.0,
+        "f1": 0.9
+      },
+      "Arbitration": {
+        "support": 9,
+        "precision": 0.2857,
+        "recall": 0.4444,
+        "f1": 0.3478
+      }
+    },
+    "threshold_range_across_folds": {
+      "Limitation of liability": [
+        0.75,
+        0.85
+      ],
+      "Unilateral termination": [
+        0.6,
+        0.7
+      ],
+      "Unilateral change": [
+        0.8,
+        0.8
+      ],
+      "Content removal": [
+        0.7,
+        0.8
+      ],
+      "Contract by using": [
+        0.7,
+        0.85
+      ],
+      "Choice of law": [
+        0.65,
+        0.7
+      ],
+      "Jurisdiction": [
+        0.55,
+        0.55
+      ],
+      "Arbitration": [
+        0.35,
+        0.9
+      ]
+    }
+  },
+  "note": "Validation predictions only. In-sample tuning is optimistic by construction; the leave-one-company-out row is the estimate to report."
+}
