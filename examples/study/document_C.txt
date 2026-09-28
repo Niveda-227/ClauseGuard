@@ -1,0 +1,20 @@
+Brightpath Photos — fictional study document C
+
+Brightpath Photos is a fictional service used only for a student usability exercise.
+The service lets you upload photos, organize albums and share an album with people you choose.
+You can change your profile picture and album titles at any time.
+You keep ownership of the photos you upload.
+By creating an account or using the service, you agree to these terms.
+You are responsible for the photos and comments you post.
+Albums you mark as private are visible only to people you invite.
+We may modify these terms from time to time, and continued use means you accept the changes.
+The free plan includes five gigabytes of storage.
+Paid storage plans are described on the pricing page before you buy.
+We may remove any photos or comments you upload at our discretion and without notice.
+You should keep your own backup of photos that matter to you.
+We are not liable for any loss of photos or data, whether or not we were advised of the risk.
+You can download all of your albums from the settings page.
+These terms are governed by the laws of the State of New York.
+Any dispute will be resolved exclusively in the state or federal courts located in New York County.
+Support is available by email on weekdays.
+This document is invented; it is not an agreement with a real provider.
