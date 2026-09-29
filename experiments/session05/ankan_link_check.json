@@ -1,0 +1,137 @@
+{
+  "report": "reports/session05.md",
+  "local_links": [
+    {
+      "target": "../clauses/session_v2.py",
+      "exists": true,
+      "repo_path": "clauses/session_v2.py"
+    },
+    {
+      "target": "../experiments/session05/threshold_cv.md",
+      "exists": true,
+      "repo_path": "experiments/session05/threshold_cv.md"
+    },
+    {
+      "target": "../data/README.md",
+      "exists": true,
+      "repo_path": "data/README.md"
+    },
+    {
+      "target": "../evidence/session05/tasks.csv",
+      "exists": true,
+      "repo_path": "evidence/session05/tasks.csv"
+    },
+    {
+      "target": "../evidence/session05/",
+      "exists": true,
+      "repo_path": "evidence/session05"
+    },
+    {
+      "target": "../evidence/session05/summary.json",
+      "exists": true,
+      "repo_path": "evidence/session05/summary.json"
+    },
+    {
+      "target": "../experiments/session05/threshold_cv.md",
+      "exists": true,
+      "repo_path": "experiments/session05/threshold_cv.md"
+    },
+    {
+      "target": "../experiments/session05/threshold_cv.md",
+      "exists": true,
+      "repo_path": "experiments/session05/threshold_cv.md"
+    },
+    {
+      "target": "../experiments/session05/threshold_cv.md",
+      "exists": true,
+      "repo_path": "experiments/session05/threshold_cv.md"
+    }
+  ],
+  "external_links": [
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/pull/23",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/pull/24",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/pull/25",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/pull/26",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/pull/27",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/issues/21",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/issues/21",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/issues/14",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/issues/18",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/pull/23",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/issues/14",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/pull/24",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/issues/19",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/pull/25",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/issues/20",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/issues/21",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/pull/26",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/pull/27",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/issues/22",
+      "checked_online": false
+    },
+    {
+      "url": "https://github.com/Niveda-227/ClauseGuard/pull/28",
+      "checked_online": false
+    }
+  ],
+  "path_checks_passed": true,
+  "issues": [],
+  "unresolved_submission_fields": false,
+  "limitations": "Checks inline local file/directory paths only, not anchors, legal/user claims, GitHub reviews, remote merges or real-user authenticity.",
+  "requested_checks_passed": true
+}
