@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "condition": "manual",
+      "protocol_version": "sep29_v2",
+      "limit_seconds": 180.0,
+      "model_id": "manual",
+      "tasks": 1,
+      "participants": 1,
+      "successful_tasks": 1,
+      "success_percent": 100.0,
+      "median_seconds_all_tasks": 86.996
+    },
+    {
+      "condition": "clauseguard",
+      "protocol_version": "sep29_v2",
+      "limit_seconds": 180.0,
+      "model_id": "04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76",
+      "tasks": 1,
+      "participants": 1,
+      "successful_tasks": 1,
+      "success_percent": 100.0,
+      "median_seconds_all_tasks": 51.787
+    }
+  ],
+  "note": "Descriptive task records, not proof of legal correctness or a controlled population estimate."
+}
