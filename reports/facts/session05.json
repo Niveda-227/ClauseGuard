@@ -12,12 +12,12 @@
     "https://github.com/Niveda-227/ClauseGuard/pull/27"
   ],
   "user_change_evidence_urls": [
-    "https://github.com/Niveda-227/ClauseGuard/issues/21"
+    "https://github.com/Niveda-227/ClauseGuard/issues/29"
   ],
   "members": {
     "Ameer": {
       "github": "sohail-umd",
-      "completed_work": "Restored the dataset provenance/license file and two other READMEs lost in Session 04, retired the public A1/B1 answer key and removed six one-off files while keeping every Session 04 report link valid.",
+      "completed_work": "Restored the dataset provenance/license file and two other READMEs lost in Session 04, retired the public A1/B1 answer key and removed seven one-off files while keeping every Session 04 report link valid.",
       "evidence_urls": [
         "https://github.com/Niveda-227/ClauseGuard/issues/18",
         "https://github.com/Niveda-227/ClauseGuard/pull/23"
