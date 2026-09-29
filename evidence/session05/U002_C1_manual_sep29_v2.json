@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-09-29T16:19:01.088135+00:00",
+  "stopped_at_utc": "2026-09-29T16:20:28.085633+00:00",
+  "record": {
+    "recorded_at_utc": "2026-09-29T16:23:20.812584+00:00",
+    "participant_id": "U002",
+    "task_id": "C1",
+    "condition": "manual",
+    "correct": 1,
+    "seconds": 86.996,
+    "limit_seconds": 180,
+    "model_id": "manual",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Find the sentence that lets the company delete photos you upload. Show me the passage, and tell me whether the company has to warn you first.",
+  "document": "examples/study/document_C.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 2,
+  "participant_answer": "No, the company does not have to warn me before deleting photos.",
+  "observer_notes": "The participant needed the task to be read twice before correctly restating it. They took 86.996 seconds to complete the task and correctly identified that the company does not have to provide notice before deleting uploaded photos. The final answer was correct. No additional difficulties or requested changes were recorded.",
+  "interface": "text_editor",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}
