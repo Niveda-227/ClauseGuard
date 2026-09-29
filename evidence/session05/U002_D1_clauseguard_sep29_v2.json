@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-09-29T16:27:23.188479+00:00",
+  "stopped_at_utc": "2026-09-29T16:28:14.975876+00:00",
+  "record": {
+    "recorded_at_utc": "2026-09-29T16:29:27.078646+00:00",
+    "participant_id": "U002",
+    "task_id": "D1",
+    "condition": "clauseguard",
+    "correct": 1,
+    "seconds": 51.787,
+    "limit_seconds": 180,
+    "model_id": "04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Find the sentence that limits how much the company will pay you if something goes wrong. Show me the passage, and tell me what the maximum amount is.",
+  "document": "examples/study/document_D.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "\"The maximum amount the company will pay me is the amount I paid them in the twelve months before the claim.\"",
+  "observer_notes": "The participant used ClauseGuard to analyze the document and identify the liability clause. They found the sentence limiting the company's liability and correctly explained that the maximum payment is the amount paid during the previous twelve months. The answer was correct. No additional difficulties or requested changes were recorded.",
+  "interface": "desktop",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}
