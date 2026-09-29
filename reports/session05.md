@@ -57,6 +57,7 @@ Session 04 used protocol sep22_v1, whose clock included the observer typing the 
 **Model development results** (validation split, 2,275 sentences, 10 companies; final test split not evaluated):
 
 | Decision rule | Macro-F1 (8) | Micro-F1 (8) | Source |
+|---|---:|---:|---|
 | Fixed 0.5, current product | 0.6333 | 0.6275 | [threshold_cv.md](../experiments/session05/threshold_cv.md) |
 | Per-category thresholds, tuned and scored on the same data (optimistic) | 0.7244 | 0.7254 | [threshold_cv.md](../experiments/session05/threshold_cv.md) |
 | Per-category thresholds, leave-one-company-out (honest estimate) | 0.6768 | 0.6880 | [threshold_cv.md](../experiments/session05/threshold_cv.md) |
