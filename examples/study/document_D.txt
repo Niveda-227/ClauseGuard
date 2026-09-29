@@ -1,0 +1,18 @@
+Tallyfit Tracker — fictional study document D
+
+Tallyfit Tracker is a fictional service used only for a student usability exercise.
+The app records your steps, workouts and sleep, and shows weekly summaries.
+You can connect the app to a supported watch from the devices page.
+You can turn off any tracking feature in the privacy settings.
+By accessing or using the app, you accept these terms.
+You are responsible for the accuracy of the information you enter.
+The app provides general fitness information and is not medical advice.
+We may suspend or close your account at any time if we believe you have misused the service.
+We may change these terms at any time by posting a new version in the app.
+Our total liability to you for any claim will not exceed the amount you paid us in the twelve months before the claim.
+You can export your workout history as a spreadsheet.
+Any dispute arising from these terms will be settled by binding individual arbitration.
+You waive any right to take part in a class action.
+These terms are governed by the laws of the State of Texas.
+Support replies to questions within two business days.
+This document is invented; it is not an agreement with a real provider.

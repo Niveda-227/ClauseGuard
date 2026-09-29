@@ -1,0 +1,26 @@
+{
+  "model_id": "04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76",
+  "tasks": [
+    {
+      "task_id": "C1",
+      "document": "examples/study/document_C.txt",
+      "target_category": "Content removal",
+      "answer_sentence_flagged_with_target": true,
+      "target_score": 0.985,
+      "extra_labels_on_answer_sentence": 2,
+      "other_sentences_with_target_label": 0,
+      "sentences_in_document": 19
+    },
+    {
+      "task_id": "D1",
+      "document": "examples/study/document_D.txt",
+      "target_category": "Limitation of liability",
+      "answer_sentence_flagged_with_target": true,
+      "target_score": 0.969,
+      "extra_labels_on_answer_sentence": 0,
+      "other_sentences_with_target_label": 0,
+      "sentences_in_document": 17
+    }
+  ],
+  "note": "Sanitized: contains no answer text or sentence positions."
+}

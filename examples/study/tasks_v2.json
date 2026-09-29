@@ -1,0 +1,14 @@
+{
+  "protocol": "sep29_v2",
+  "note": "Public task bank: prompts and documents only. The observer answer key is kept in private/ (git-ignored) and must never be committed.",
+  "tasks": {
+    "C1": {
+      "document": "examples/study/document_C.txt",
+      "prompt": "Find the sentence that lets the company delete photos you upload. Show me the passage, and tell me whether the company has to warn you first."
+    },
+    "D1": {
+      "document": "examples/study/document_D.txt",
+      "prompt": "Find the sentence that limits how much the company will pay you if something goes wrong. Show me the passage, and tell me what the maximum amount is."
+    }
+  }
+}
