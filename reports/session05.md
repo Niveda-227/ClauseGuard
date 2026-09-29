@@ -39,7 +39,6 @@ The model running in the product is unchanged this week: `04713fbf6e23784a5d32e5
 
 ## User evidence
 
-- On September 28, 2026, two outside participants (U002 and U003) completed tasks C1, C2, D1, and D2 using the ClauseGuard desktop application and manual workflow.
 - **Raw artifact**: [task records](../evidence/session05/tasks.csv), [trial files and notes](../evidence/session05/), [summary](../evidence/session05/summary.json). Protocol `sep29_v2`.
 - ClauseGuard: 1/1 ClauseGuard tasks correct within 180 seconds (100.00%), 1 outside participant(s), median 51.8 s.
 - Manual comparison: 1/1 manual tasks correct within the limit (100.00%), median 87.0 s.
