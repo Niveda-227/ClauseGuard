@@ -8,7 +8,10 @@ from pathlib import Path
 from clauses.session_v2 import run_trial_v2
 from scripts.finalize_report import finalize
 
-ROOT = Path(__file__).resolve().parents[1]
+# Frozen copies of the Session 05 report scaffold and facts. The live reports/session05.md and
+# reports/facts/session05.json are finalized and no longer contain placeholders, so the tests
+# must not read them.
+FIXTURES = Path(__file__).resolve().parent / 'fixtures'
 MODEL = 'b' * 64
 REPO = 'https://github.com/Niveda-227/ClauseGuard'
 TASKS = {'C1': {'document': 'd', 'prompt': 'p'}, 'D1': {'document': 'd', 'prompt': 'p'}}
@@ -29,10 +32,10 @@ class FinalizeReportTests(unittest.TestCase):
         self.root = Path(tempfile.mkdtemp())
         (self.root / 'reports/facts').mkdir(parents=True)
         (self.root / 'reports/session04.md').write_text('---\nnorth_star:\n  value: 0.00\n  previous: null\n---\n')
-        text = (ROOT / 'reports/session05.md').read_text()
+        text = (FIXTURES / 'session05_report_scaffold.md').read_text()
         self.scaffold = text
         (self.root / 'reports/session05.md').write_text(re.sub(r'<<HUMAN:?[^>]*>>', 'written by hand', text))
-        facts = json.loads((ROOT / 'reports/facts/session05.json').read_text())
+        facts = json.loads((FIXTURES / 'session05_facts_scaffold.json').read_text())
         facts.update(branch_protection_verified=True, outside_user_evidence_reviewed=True, contributions_verified=True)
         facts['shipped_evidence_urls'] = [f'{REPO}/pull/{n}' for n in (18, 19, 20)]
         facts['user_change_evidence_urls'] = [f'{REPO}/issues/25']
@@ -77,7 +80,7 @@ class FinalizeReportTests(unittest.TestCase):
     def test_refuses_placeholder_links(self):
         self.add_trials()
         with self.assertRaises(ValueError):
-            finalize(self.root, '05', ROOT / 'reports/facts/session05.json', model_id=MODEL)
+            finalize(self.root, '05', FIXTURES / 'session05_facts_scaffold.json', model_id=MODEL)
 
     def test_refuses_model_mismatch(self):
         self.add_trials()
