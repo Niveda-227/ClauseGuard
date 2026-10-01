@@ -1,0 +1,44 @@
+{
+  "repo_url": "https://github.com/Niveda-227/ClauseGuard",
+  "protocol": "sep29_v2",
+  "branch_protection_verified": false,
+  "outside_user_evidence_reviewed": false,
+  "contributions_verified": false,
+  "shipped_evidence_urls": [
+    "https://github.com/Niveda-227/ClauseGuard/pull/<<AMEER_CLEANUP_PR>>",
+    "https://github.com/Niveda-227/ClauseGuard/pull/<<HEMANTH_PR>>",
+    "https://github.com/Niveda-227/ClauseGuard/pull/<<JAYAKRISHNA_PR>>",
+    "https://github.com/Niveda-227/ClauseGuard/pull/<<NIVEDA_STUDY_PR>>",
+    "https://github.com/Niveda-227/ClauseGuard/pull/<<NIVEDA_EVIDENCE_PR>>"
+  ],
+  "user_change_evidence_urls": [
+    "https://github.com/Niveda-227/ClauseGuard/issues/<<USER_DRIVEN_ISSUE>>"
+  ],
+  "members": {
+    "Ameer": {
+      "github": "sohail-umd",
+      "completed_work": "<<AMEER_SENTENCE>>",
+      "evidence_urls": ["https://github.com/Niveda-227/ClauseGuard/issues/<<AMEER_ISSUE>>", "https://github.com/Niveda-227/ClauseGuard/pull/<<AMEER_CLEANUP_PR>>"]
+    },
+    "Hemanth": {
+      "github": "hreddy14",
+      "completed_work": "<<HEMANTH_SENTENCE>>",
+      "evidence_urls": ["https://github.com/Niveda-227/ClauseGuard/issues/14", "https://github.com/Niveda-227/ClauseGuard/pull/<<HEMANTH_PR>>"]
+    },
+    "Jayakrishna": {
+      "github": "Jayakrishna-Reddy",
+      "completed_work": "<<JAYAKRISHNA_SENTENCE>>",
+      "evidence_urls": ["https://github.com/Niveda-227/ClauseGuard/issues/<<JAYAKRISHNA_ISSUE>>", "https://github.com/Niveda-227/ClauseGuard/pull/<<JAYAKRISHNA_PR>>"]
+    },
+    "Niveda": {
+      "github": "Niveda-227",
+      "completed_work": "<<NIVEDA_SENTENCE>>",
+      "evidence_urls": ["https://github.com/Niveda-227/ClauseGuard/issues/<<NIVEDA_STUDY_ISSUE>>", "https://github.com/Niveda-227/ClauseGuard/pull/<<NIVEDA_STUDY_PR>>", "https://github.com/Niveda-227/ClauseGuard/issues/<<NIVEDA_EVIDENCE_ISSUE>>", "https://github.com/Niveda-227/ClauseGuard/pull/<<NIVEDA_EVIDENCE_PR>>"]
+    },
+    "Ankan": {
+      "github": "royak747",
+      "completed_work": "<<ANKAN_SENTENCE>>",
+      "evidence_urls": ["https://github.com/Niveda-227/ClauseGuard/issues/<<ANKAN_ISSUE>>", "https://github.com/Niveda-227/ClauseGuard/pull/<<ANKAN_REPORT_PR>>"]
+    }
+  }
+}

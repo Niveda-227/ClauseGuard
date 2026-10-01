@@ -1,0 +1,27 @@
+{
+  "rule_id": "midpoint_2026-10-06",
+  "status": "pre-registered: committed before any Session 06 participant session",
+  "owner": "sohail-umd (Product)",
+  "memo": "docs/decisions/2026-10-06_midpoint_decision.md",
+  "protocol": "sep29_v2",
+  "evidence_files": [
+    "evidence/session05/tasks.csv",
+    "evidence/session06/tasks.csv"
+  ],
+  "shipped_model_sha256": "04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76",
+  "time_limit_seconds": 180,
+  "model_gate_min_macro_f1_gain_over_baseline": 0.10,
+  "min_outside_participants_for_user_decision": 3,
+  "max_success_gap_points_for_persevere_with_change": 25,
+  "over_tagging_task": "C1",
+  "outcomes": {
+    "PIVOT": "The shipped model fails the model gate, OR (enough participants AND ClauseGuard success rate is more than 25 percentage points below manual). Users do clearly worse with the product, so the current product form is not worth continuing.",
+    "PERSEVERE_WITH_CHANGE": "Model gate passes, enough participants, and EITHER ClauseGuard success is below manual by at most 25 points OR at least one participant failed the over-tagged task C1 with ClauseGuard. Keep the user and the problem; change how flags are produced or shown.",
+    "PERSEVERE": "Model gate passes, enough participants, ClauseGuard success rate is at least the manual success rate, and nobody failed C1 with ClauseGuard.",
+    "PROVISIONAL_PERSEVERE": "Model gate passes but fewer than 3 outside participants under protocol sep29_v2. Continue, state that user value is unproven, and re-run this rule at Session 08 with at least 6 participants."
+  },
+  "not_part_of_the_rule": [
+    "Speed: median seconds per condition is reported but does not change the outcome, because C1 and D1 differ in difficulty.",
+    "Statistical significance: with fewer than 10 participants this rule is a pre-committed decision heuristic, not a statistical test."
+  ]
+}
