@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-10-05T22:27:46.051129+00:00",
+  "stopped_at_utc": "2026-10-05T22:28:37.618670+00:00",
+  "record": {
+    "recorded_at_utc": "2026-10-05T22:29:38.815715+00:00",
+    "participant_id": "U004",
+    "task_id": "D1",
+    "condition": "clauseguard",
+    "correct": 1,
+    "seconds": 51.568,
+    "limit_seconds": 180,
+    "model_id": "04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Find the sentence that limits how much the company will pay you if something goes wrong. Show me the passage, and tell me what the maximum amount is.",
+  "document": "examples/study/document_D.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "The company\u2019s total liability is limited to what I paid during the twelve months before the claim.",
+  "observer_notes": "Opened ClauseGuard, opened document D, clicked Analyze Terms, reviewed the results, opened the relevant liability result, and answered.",
+  "interface": "desktop",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}

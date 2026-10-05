@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-10-05T22:32:09.855235+00:00",
+  "stopped_at_utc": "2026-10-05T22:33:18.871665+00:00",
+  "record": {
+    "recorded_at_utc": "2026-10-05T22:34:02.992066+00:00",
+    "participant_id": "U005",
+    "task_id": "D1",
+    "condition": "manual",
+    "correct": 1,
+    "seconds": 69.017,
+    "limit_seconds": 180,
+    "model_id": "manual",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Find the sentence that limits how much the company will pay you if something goes wrong. Show me the passage, and tell me what the maximum amount is.",
+  "document": "examples/study/document_D.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "They can remove photos or comments without notice.",
+  "observer_notes": "Opened document C in Notepad, read the document, searched for the relevant clause, and answered.",
+  "interface": "text_editor",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}

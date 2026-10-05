@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-10-05T22:25:15.401715+00:00",
+  "stopped_at_utc": "2026-10-05T22:26:22.380008+00:00",
+  "record": {
+    "recorded_at_utc": "2026-10-05T22:27:06.800288+00:00",
+    "participant_id": "U004",
+    "task_id": "C1",
+    "condition": "manual",
+    "correct": 1,
+    "seconds": 66.978,
+    "limit_seconds": 180,
+    "model_id": "manual",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Find the sentence that lets the company delete photos you upload. Show me the passage, and tell me whether the company has to warn you first.",
+  "document": "examples/study/document_C.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "They can remove photos or comments I upload without notifying me.",
+  "observer_notes": "Opened document C in Notepad, read through the document, searched for the relevant clause, and answered.",
+  "interface": "text_editor",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}

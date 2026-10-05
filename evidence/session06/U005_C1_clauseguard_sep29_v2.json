@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-10-05T22:39:18.336071+00:00",
+  "stopped_at_utc": "2026-10-05T22:40:16.257403+00:00",
+  "record": {
+    "recorded_at_utc": "2026-10-05T22:41:13.746620+00:00",
+    "participant_id": "U005",
+    "task_id": "C1",
+    "condition": "clauseguard",
+    "correct": 1,
+    "seconds": 57.921,
+    "limit_seconds": 180,
+    "model_id": "04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Find the sentence that lets the company delete photos you upload. Show me the passage, and tell me whether the company has to warn you first.",
+  "document": "examples/study/document_C.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "They can remove any photos or comments I upload without notice.",
+  "observer_notes": "Opened ClauseGuard, opened document C, clicked Analyze Terms, reviewed the results, clicked the relevant result, and answered.",
+  "interface": "desktop",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}

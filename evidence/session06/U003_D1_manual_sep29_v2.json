@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-10-05T22:18:48.404719+00:00",
+  "stopped_at_utc": "2026-10-05T22:20:01.249496+00:00",
+  "record": {
+    "recorded_at_utc": "2026-10-05T22:20:44.764151+00:00",
+    "participant_id": "U003",
+    "task_id": "D1",
+    "condition": "manual",
+    "correct": 1,
+    "seconds": 72.844,
+    "limit_seconds": 180,
+    "model_id": "manual",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Find the sentence that limits how much the company will pay you if something goes wrong. Show me the passage, and tell me what the maximum amount is.",
+  "document": "examples/study/document_D.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "The company\u2019s total liability is limited to the amount I paid in the twelve months before the claim.",
+  "observer_notes": "Read through the document, searched for the liability clause, found the relevant sentence, and gave the answer.",
+  "interface": "text_editor",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}
