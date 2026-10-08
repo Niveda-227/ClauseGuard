@@ -60,6 +60,26 @@ Not part of the rule: speed (C1 and D1 differ in difficulty, so time is reported
 - **Change the interface:** show flags only when the user asks for a category, instead of tagging every sentence.
 - **Change the method:** a sentence-pair or retrieval model instead of eight independent classifiers.
 
-## 5. Decision
+## 5. Decision (October 6, 2026)
 
-Not yet decided. This section is completed on October 5, after the Session 06 participant sessions, from the output of `scripts/midpoint_facts.py`.
+**Decision: Persevere.** Keep the same user (English-reading students and app users reviewing Terms of Service) and the same problem (finding and verifying the clauses that matter).
+
+Rule outcome from `scripts/midpoint_facts.py` on the evidence merged by October 6: **Persevere**. All four conditions in section 3 passed:
+
+- Model gate: shipped hybrid macro-F1 0.6333 vs unigram baseline 0.2551 (+0.3782, required +0.10); the app runs the evaluated model.
+- Participants: 4 outside participants under protocol sep29_v2 (U002 in Session 05; 3 in Session 06); at least 3 required.
+- Success rate: ClauseGuard 4/4 correct within 180 s, manual 4/4.
+- Over-tagged task C1 with the app: 2/2 correct; nobody treated the wrong tags as true.
+
+Reasons:
+1. The model clearly beats its baseline, and in every outside-user trial the app was as accurate as manual reading.
+2. The main model problem (about 49% of validation flags name the wrong category) did not mislead users on the over-tagged task, and a tested fix exists (per-category thresholds: macro-F1 0.6768, 11.0 flags per 100 sentences under leave-one-company-out).
+
+Limits: 4 participants and two short fictional documents; C1 and D1 differ in difficulty. This is a pre-committed decision heuristic, not proof that the product helps.
+
+What would change our mind: from Session 08 onward, with at least 6 participants, a ClauseGuard success rate more than 25 percentage points below manual, or any participant misled by wrong tags, means changing the interface or the job (section 4); failing the model gate means a pivot.
+
+Changes for Session 07 (due October 20):
+- Ship per-category thresholds (Session 05 leave-one-company-out result).
+- Trial a filter for headings and short fragments that receive tags.
+- Recruit more outside participants and add a check of whether "no flags" is read as "safe".
