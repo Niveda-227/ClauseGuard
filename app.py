@@ -6,6 +6,7 @@ from tkinter.scrolledtext import ScrolledText
 from clauses.model import load,analyze
 from clauses.schema import LABELS,EXPLANATIONS,NOTICE
 from clauses.export import render_html
+from clauses.display import result_label
 
 class ClauseGuardApp:
     def __init__(self,root):
@@ -82,8 +83,8 @@ class ClauseGuardApp:
             if category=='Flagged only' and not row['labels']:continue
             if category in LABELS and category not in row['labels']:continue
             self.visible.append(row)
-            labels=', '.join(row['labels']) if row['labels'] else 'No category flagged'
-            self.listbox.insert('end',f'{row["sentence_id"]+1}. {labels}')
+            # Session 07: show the start of each sentence next to its tags (see clauses/display.py).
+            self.listbox.insert('end',result_label(row))
         if self.visible:self.listbox.selection_set(0);self.select()
         else:
             self.detail.configure(state='normal');self.detail.delete('1.0','end');self.detail.insert('end','No results for this filter. Inspect the full document.');self.detail.configure(state='disabled')
