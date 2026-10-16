@@ -1,0 +1,33 @@
+{
+  "shipped_utc": "2026-10-16T01:33:47+00:00",
+  "base_model_sha256": "04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76",
+  "tuned_model_sha256": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+  "thresholds": {
+    "Limitation of liability": 0.7500000000000002,
+    "Unilateral termination": 0.7000000000000002,
+    "Unilateral change": 0.8000000000000003,
+    "Content removal": 0.8000000000000003,
+    "Contract by using": 0.8000000000000003,
+    "Choice of law": 0.6500000000000001,
+    "Jurisdiction": 0.5500000000000002,
+    "Arbitration": 0.8000000000000003
+  },
+  "promoted_to_product": true,
+  "validation_in_sample_OPTIMISTIC": {
+    "macro_f1": 0.7244,
+    "micro_f1": 0.7254,
+    "note": "Thresholds were tuned on this same split, so these numbers overstate performance."
+  },
+  "honest_estimate_leave_one_company_out": {
+    "macro_f1": 0.6768,
+    "micro_f1": 0.688,
+    "flags_per_100_sentences": 11.03,
+    "source": "experiments/session05/threshold_cv.json"
+  },
+  "max_score_difference_vs_session04": 7.771561172376096e-16,
+  "environment": {
+    "python": "3.12.3",
+    "sklearn": "1.8.0"
+  },
+  "test_split_evaluated": false
+}

@@ -1,0 +1,80 @@
+{
+  "checked_utc": "2026-10-16T01:39:53+00:00",
+  "purpose": "Pre-flight check of the running app (model identity, demo flags, environment) and cost-to-serve measurement",
+  "machine": {
+    "os": "Darwin",
+    "os_release": "27.2.0",
+    "cpu_arch": "arm64",
+    "python": "3.12.15"
+  },
+  "model_sha256": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+  "threshold_source": "validation_per_label_F1_tuned",
+  "demo_document": "examples/fictional_terms.txt",
+  "checks": [
+    {
+      "check": "Python 3.12",
+      "status": "PASS",
+      "found": "3.12.15"
+    },
+    {
+      "check": "package numpy",
+      "status": "PASS",
+      "expected": "2.3.5",
+      "found": "2.3.5"
+    },
+    {
+      "check": "package scipy",
+      "status": "PASS",
+      "expected": "1.17.0",
+      "found": "1.17.0"
+    },
+    {
+      "check": "package scikit-learn",
+      "status": "PASS",
+      "expected": "1.8.0",
+      "found": "1.8.0"
+    },
+    {
+      "check": "package joblib",
+      "status": "PASS",
+      "expected": "1.5.3",
+      "found": "1.5.3"
+    },
+    {
+      "check": "demo model is the reported model",
+      "status": "PASS",
+      "model_sha256": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+      "compared": {
+        "artifacts/selected.joblib (file on disk)": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+        "artifacts/selected.json artifact_sha256": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+        "artifacts/tuned.joblib (evaluated model file)": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+        "experiments/session07/tuned/metrics.json model_id": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd"
+      }
+    },
+    {
+      "check": "demo document flags match the rehearsal",
+      "status": "PASS",
+      "sentences": 11,
+      "flagged": 8,
+      "differences": []
+    },
+    {
+      "check": "desktop app (Tk) available",
+      "status": "PASS",
+      "tk_version": 9.1
+    }
+  ],
+  "cost_to_serve": {
+    "model_load_seconds": 0.105,
+    "demo_document_sentences": 11,
+    "demo_document_median_seconds": 0.0014,
+    "long_document_sentences": 1100,
+    "long_document_characters": 75799,
+    "long_document_median_seconds": 0.063,
+    "ms_per_sentence_long_document": 0.057,
+    "network_calls": 0,
+    "api_cost_per_request_usd": 0.0,
+    "note": "Measured on this laptop only. The product runs locally on the user's CPU and makes no API or network calls, so there is no per-request service cost; the costs are the user's setup time and their own computer."
+  },
+  "passed": true
+}

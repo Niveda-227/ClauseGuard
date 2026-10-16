@@ -6,13 +6,13 @@ Reads (nothing is typed in by hand):
   - experiments/session04/{baseline,balanced,hybrid}/metrics.json   validation results
   - experiments/session04/hybrid/predictions.jsonl                   flag rates
   - experiments/session05/threshold_cv.json                          threshold experiment (NOT shipped)
-  - artifacts/selected.joblib                                        the model the app runs
+  - artifacts/hybrid.joblib                                          the model the app ran at the midpoint
   - experiments/session06/demo_check.json   (optional)               cost to serve (Hemanth)
   - evidence/session05/tasks.csv, evidence/session06/tasks.csv       outside-user task tests
   - docs/decisions/midpoint_rule.json                                the pre-registered decision rule (Ameer)
 
 Writes to reports/midpoint/:
-  facts.json          all values, plus a flat "tokens" map used by scripts/build_slides.py
+  facts.json          all values, plus a flat "tokens" map (was read by the slide builder, removed in Session 07)
   metrics.md          readable tables with sources
   figures/*.svg       metric vs baseline, per-category F1, user task results
 
@@ -68,7 +68,10 @@ def model_facts(root, rule):
     if len({tuple(v) for v in ids.values()}) > 1:
         raise ValueError('Prediction files cover different sentences. Not comparable.')
 
-    shipped = sha256(root / 'artifacts/selected.joblib')
+    # The model the app ran at the midpoint (Session 06). From Session 07 the app runs the
+    # tuned model (artifacts/tuned.joblib); this script describes the midpoint, so it checks
+    # the midpoint model file, which is kept unchanged as artifacts/hybrid.joblib.
+    shipped = sha256(root / 'artifacts/hybrid.joblib')
     identity = {
         'app_model_sha256': shipped,
         'evaluated_hybrid_model_id': metrics['hybrid']['model_id'],
@@ -452,7 +455,7 @@ def main(argv=None):
     (out / 'figures/per_category_f1.svg').write_text(fig_categories(facts['model']), encoding='utf-8')
     (out / 'figures/user_tasks.svg').write_text(fig_users(facts['users']), encoding='utf-8')
     t = facts['tokens']
-    print(f"Model {t['MODEL_SHA12']} (the app's model = the evaluated model)")
+    print(f"Model {t['MODEL_SHA12']} (the midpoint app model = the evaluated model)")
     print(f"Validation macro-F1: shipped {t['HYBRID_MACRO_F1']} vs baseline {t['BASELINE_MACRO_F1']} ({t['GAIN_OVER_BASELINE']})")
     print(f"Flags per 100 sentences: model {t['MODEL_FLAGS_PER_100']}, annotators {t['GOLD_FLAGS_PER_100']}; wrong flags {t['WRONG_FLAG_PCT']}")
     print(f"Outside participants: {t['PARTICIPANTS']} (S05 {t['PARTICIPANTS_S05']}, S06 {t['PARTICIPANTS_S06']})")
