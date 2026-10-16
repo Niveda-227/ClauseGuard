@@ -4,7 +4,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.demo_check import EXPECTED_DEMO_LABELS, check_identity, check_packages, compare_demo, run
+from scripts.demo_check import (EVALUATED_ARTIFACT, EVALUATED_METRICS, EXPECTED_DEMO_LABELS, check_identity,
+                                check_packages, compare_demo, run)
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -13,10 +14,10 @@ class DemoCheckTests(unittest.TestCase):
     def test_identity_fails_when_the_app_model_differs_from_the_evaluated_model(self):
         tmp = Path(tempfile.mkdtemp())
         (tmp / 'artifacts').mkdir()
-        (tmp / 'experiments/session04/hybrid').mkdir(parents=True)
+        (tmp / EVALUATED_METRICS).parent.mkdir(parents=True)
         shutil.copy(ROOT / 'artifacts/selected.json', tmp / 'artifacts/selected.json')
-        shutil.copy(ROOT / 'experiments/session04/hybrid/metrics.json', tmp / 'experiments/session04/hybrid/metrics.json')
-        shutil.copy(ROOT / 'artifacts/hybrid.joblib', tmp / 'artifacts/hybrid.joblib')
+        shutil.copy(ROOT / EVALUATED_METRICS, tmp / EVALUATED_METRICS)
+        shutil.copy(ROOT / EVALUATED_ARTIFACT, tmp / EVALUATED_ARTIFACT)
         (tmp / 'artifacts/selected.joblib').write_bytes(b'a different model')
         self.assertEqual(check_identity(tmp)['status'], 'FAIL')
 
@@ -40,7 +41,9 @@ class DemoCheckTests(unittest.TestCase):
 
     def test_full_run_is_ready_and_records_no_personal_details(self):
         report, html = run(repeats=1, long_copies=5)
-        self.assertEqual(report['model_sha256'][:12], '04713fbf6e23')
+        shipped = json.loads((ROOT / 'artifacts/selected.json').read_text())['artifact_sha256']
+        self.assertEqual(report['model_sha256'], shipped)
+        self.assertEqual(report['threshold_source'], 'validation_per_label_F1_tuned')
         names = {c['check']: c['status'] for c in report['checks']}
         self.assertEqual(names['demo model is the reported model'], 'PASS')
         self.assertEqual(names['demo document flags match the rehearsal'], 'PASS')

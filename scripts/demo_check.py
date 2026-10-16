@@ -6,14 +6,14 @@ Run it on the laptop that will present, the day before and one hour before:
 
 It answers four questions and exits with code 1 if any hard check fails:
   1. Is this the model we report numbers for? (the running artifact is byte-identical
-     to the evaluated hybrid model and to the Session 04 validation metrics)
+     to the evaluated model named below and to its validation metrics)
   2. Will the demo look like the rehearsal? (the fictional demo document gets the
      same flags as when the demo was scripted)
   3. How much does one request cost? (load time, time per document, time per
      sentence on a ~1,100-sentence document; no network calls are made)
   4. Can this laptop open the desktop app? (Tk available; display available)
 
-Writes experiments/session06/demo_check.json (no hostname, username or file paths)
+Writes experiments/session07/demo_check.json (no hostname, username or file paths)
 and an HTML fallback of the demo document to analysis.html (git-ignored), which can
 be opened in a browser if the desktop app fails during the presentation.
 """
@@ -32,8 +32,14 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 DEMO_DOC = 'examples/fictional_terms.txt'
+# The model the app should be running, and the evaluation of exactly that file.
+# Session 07: per-category thresholds were shipped (scripts/ship_thresholds.py --promote).
+EVALUATED_ARTIFACT = 'artifacts/tuned.joblib'
+EVALUATED_METRICS = 'experiments/session07/tuned/metrics.json'
 # Flags the shipped model gives the demo document, one entry per sentence, recorded
-# when the demo was scripted (Session 06). A change means the demo will not match
+# when the demo was scripted (Session 06) and re-checked when per-category thresholds
+# shipped (Session 07): unchanged, including the wrong 'Unilateral termination' tag on
+# sentence 3 (score 0.841 > its 0.70 threshold). A change means the demo will not match
 # the rehearsal, so the presenter must know before going live.
 EXPECTED_DEMO_LABELS = [
     [],
@@ -92,9 +98,8 @@ def check_identity(root):
     evidence = {
         'artifacts/selected.joblib (file on disk)': selected,
         'artifacts/selected.json artifact_sha256': json.loads((root / 'artifacts/selected.json').read_text())['artifact_sha256'],
-        'artifacts/hybrid.joblib (evaluated model file)': sha256(root / 'artifacts/hybrid.joblib'),
-        'experiments/session04/hybrid/metrics.json model_id': json.loads(
-            (root / 'experiments/session04/hybrid/metrics.json').read_text())['model_id'],
+        f'{EVALUATED_ARTIFACT} (evaluated model file)': sha256(root / EVALUATED_ARTIFACT),
+        f'{EVALUATED_METRICS} model_id': json.loads((root / EVALUATED_METRICS).read_text())['model_id'],
     }
     same = len(set(evidence.values())) == 1
     return {'check': 'demo model is the reported model', 'status': 'PASS' if same else 'FAIL',
@@ -175,7 +180,7 @@ def run(root=ROOT, repeats=5, long_copies=100):
     }
     return {
         'checked_utc': datetime.now(timezone.utc).isoformat(timespec='seconds'),
-        'purpose': 'Pre-flight check for the Session 06 live demo and cost-to-serve measurement',
+        'purpose': 'Pre-flight check of the running app (model identity, demo flags, environment) and cost-to-serve measurement',
         'machine': {'os': platform.system(), 'os_release': platform.release(), 'cpu_arch': platform.machine(),
                     'python': py},
         'model_sha256': bundle['model_id'],
@@ -189,7 +194,7 @@ def run(root=ROOT, repeats=5, long_copies=100):
 
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument('--output', default='experiments/session06/demo_check.json')
+    p.add_argument('--output', default='experiments/session07/demo_check.json')
     p.add_argument('--html-out', default='analysis.html', help='HTML fallback of the demo document (git-ignored)')
     p.add_argument('--repeats', type=int, default=5)
     a = p.parse_args(argv)

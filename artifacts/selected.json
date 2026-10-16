@@ -47,18 +47,20 @@
     "musically"
   ],
   "thresholds": [
-    0.5,
-    0.5,
-    0.5,
-    0.5,
-    0.5,
-    0.5,
-    0.5,
-    0.5
+    0.7500000000000002,
+    0.7000000000000002,
+    0.8000000000000003,
+    0.8000000000000003,
+    0.8000000000000003,
+    0.6500000000000001,
+    0.5500000000000002,
+    0.8000000000000003
   ],
-  "threshold_source": "fixed_0.5",
+  "threshold_source": "validation_per_label_F1_tuned",
   "python": "3.12.14",
   "sklearn": "1.8.0",
   "test_evaluated": false,
-  "artifact_sha256": "04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76"
+  "base_artifact_sha256": "04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76",
+  "threshold_note": "Per-category thresholds tuned on the full validation split (Session 07). Validation scores of this model are optimistic; report the leave-one-company-out estimate from experiments/session05/threshold_cv.json.",
+  "artifact_sha256": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd"
 }

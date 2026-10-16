@@ -50,9 +50,15 @@ Validation results (0-1 scale, eight-category scores):
 |---|---:|---:|
 | baseline (unigram, unweighted) | 0.2551 | 0.3300 |
 | balanced (1-2 grams, class-weighted) | 0.6156 | 0.6084 |
-| **hybrid (selected, + char n-grams)** | **0.6333** | **0.6275** |
+| hybrid (+ char n-grams), fixed 0.5 thresholds: product until Session 06 | 0.6333 | 0.6275 |
+| **hybrid, per-category thresholds: product from Session 07, honest estimate (leave-one-company-out)** | **0.6768** | **0.6880** |
 
 The reserved test split is untouched, for a later frozen evaluation.
+
+From Session 07 the app uses the same hybrid model with one threshold per category. Scored on the
+validation split the thresholds were tuned on, it reaches macro-F1 0.7244, but that number is
+optimistic; the honest estimate above tunes on 9 companies and tests on the 10th. It shows fewer
+wrong tags and misses more clauses than the fixed-0.5 version (see `docs/MODEL_CARD.md`).
 
 ## Team
 
