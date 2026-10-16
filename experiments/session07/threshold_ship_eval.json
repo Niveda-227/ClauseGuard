@@ -1,0 +1,254 @@
+{
+  "sentences": 2275,
+  "companies": 10,
+  "gold_labels": 249,
+  "gold_labels_per_100_sentences": 10.95,
+  "old_product_fixed_0_5": {
+    "model_id": "04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76",
+    "macro_f1": 0.6333,
+    "micro_f1": 0.6275,
+    "flags_per_100_sentences": 17.49,
+    "correct_tags": 203,
+    "wrong_tags": 195,
+    "missed_labels": 46,
+    "flags": 398,
+    "wrong_tag_share": 0.4899,
+    "per_category": {
+      "Limitation of liability": {
+        "support": 67,
+        "precision": 0.5093,
+        "recall": 0.8209,
+        "f1": 0.6286,
+        "wrong_tags": 53,
+        "missed_labels": 12
+      },
+      "Unilateral termination": {
+        "support": 59,
+        "precision": 0.5196,
+        "recall": 0.8983,
+        "f1": 0.6584,
+        "wrong_tags": 49,
+        "missed_labels": 6
+      },
+      "Unilateral change": {
+        "support": 28,
+        "precision": 0.3818,
+        "recall": 0.75,
+        "f1": 0.506,
+        "wrong_tags": 34,
+        "missed_labels": 7
+      },
+      "Content removal": {
+        "support": 32,
+        "precision": 0.4762,
+        "recall": 0.625,
+        "f1": 0.5405,
+        "wrong_tags": 22,
+        "missed_labels": 12
+      },
+      "Contract by using": {
+        "support": 18,
+        "precision": 0.5625,
+        "recall": 1.0,
+        "f1": 0.72,
+        "wrong_tags": 14,
+        "missed_labels": 0
+      },
+      "Choice of law": {
+        "support": 18,
+        "precision": 0.9286,
+        "recall": 0.7222,
+        "f1": 0.8125,
+        "wrong_tags": 1,
+        "missed_labels": 5
+      },
+      "Jurisdiction": {
+        "support": 18,
+        "precision": 0.7826,
+        "recall": 1.0,
+        "f1": 0.878,
+        "wrong_tags": 5,
+        "missed_labels": 0
+      },
+      "Arbitration": {
+        "support": 9,
+        "precision": 0.2273,
+        "recall": 0.5556,
+        "f1": 0.3226,
+        "wrong_tags": 17,
+        "missed_labels": 4
+      }
+    }
+  },
+  "new_product_tuned_OPTIMISTIC": {
+    "model_id": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+    "thresholds": {
+      "Limitation of liability": 0.7500000000000002,
+      "Unilateral termination": 0.7000000000000002,
+      "Unilateral change": 0.8000000000000003,
+      "Content removal": 0.8000000000000003,
+      "Contract by using": 0.8000000000000003,
+      "Choice of law": 0.6500000000000001,
+      "Jurisdiction": 0.5500000000000002,
+      "Arbitration": 0.8000000000000003
+    },
+    "macro_f1": 0.7244,
+    "micro_f1": 0.7254,
+    "flags_per_100_sentences": 10.51,
+    "correct_tags": 177,
+    "wrong_tags": 62,
+    "missed_labels": 72,
+    "flags": 239,
+    "wrong_tag_share": 0.2594,
+    "per_category": {
+      "Limitation of liability": {
+        "support": 67,
+        "precision": 0.7302,
+        "recall": 0.6866,
+        "f1": 0.7077,
+        "wrong_tags": 17,
+        "missed_labels": 21
+      },
+      "Unilateral termination": {
+        "support": 59,
+        "precision": 0.7097,
+        "recall": 0.7458,
+        "f1": 0.7273,
+        "wrong_tags": 18,
+        "missed_labels": 15
+      },
+      "Unilateral change": {
+        "support": 28,
+        "precision": 0.6667,
+        "recall": 0.6429,
+        "f1": 0.6545,
+        "wrong_tags": 9,
+        "missed_labels": 10
+      },
+      "Content removal": {
+        "support": 32,
+        "precision": 0.8947,
+        "recall": 0.5312,
+        "f1": 0.6667,
+        "wrong_tags": 2,
+        "missed_labels": 15
+      },
+      "Contract by using": {
+        "support": 18,
+        "precision": 0.7273,
+        "recall": 0.8889,
+        "f1": 0.8,
+        "wrong_tags": 6,
+        "missed_labels": 2
+      },
+      "Choice of law": {
+        "support": 18,
+        "precision": 0.9286,
+        "recall": 0.7222,
+        "f1": 0.8125,
+        "wrong_tags": 1,
+        "missed_labels": 5
+      },
+      "Jurisdiction": {
+        "support": 18,
+        "precision": 0.8182,
+        "recall": 1.0,
+        "f1": 0.9,
+        "wrong_tags": 4,
+        "missed_labels": 0
+      },
+      "Arbitration": {
+        "support": 9,
+        "precision": 0.5,
+        "recall": 0.5556,
+        "f1": 0.5263,
+        "wrong_tags": 5,
+        "missed_labels": 4
+      }
+    }
+  },
+  "new_product_leave_one_company_out_HONEST": {
+    "macro_f1": 0.6768,
+    "micro_f1": 0.688,
+    "flags_per_100_sentences": 11.03,
+    "correct_tags": 172,
+    "wrong_tags": 79,
+    "missed_labels": 77,
+    "flags": 251,
+    "wrong_tag_share": 0.3147,
+    "per_category": {
+      "Limitation of liability": {
+        "support": 67,
+        "precision": 0.7333,
+        "recall": 0.6567,
+        "f1": 0.6929,
+        "wrong_tags": 16,
+        "missed_labels": 23
+      },
+      "Unilateral termination": {
+        "support": 59,
+        "precision": 0.6377,
+        "recall": 0.7458,
+        "f1": 0.6875,
+        "wrong_tags": 25,
+        "missed_labels": 15
+      },
+      "Unilateral change": {
+        "support": 28,
+        "precision": 0.6667,
+        "recall": 0.6429,
+        "f1": 0.6545,
+        "wrong_tags": 9,
+        "missed_labels": 10
+      },
+      "Content removal": {
+        "support": 32,
+        "precision": 0.7083,
+        "recall": 0.5312,
+        "f1": 0.6071,
+        "wrong_tags": 7,
+        "missed_labels": 15
+      },
+      "Contract by using": {
+        "support": 18,
+        "precision": 0.6818,
+        "recall": 0.8333,
+        "f1": 0.75,
+        "wrong_tags": 7,
+        "missed_labels": 3
+      },
+      "Choice of law": {
+        "support": 18,
+        "precision": 0.9231,
+        "recall": 0.6667,
+        "f1": 0.7742,
+        "wrong_tags": 1,
+        "missed_labels": 6
+      },
+      "Jurisdiction": {
+        "support": 18,
+        "precision": 0.8182,
+        "recall": 1.0,
+        "f1": 0.9,
+        "wrong_tags": 4,
+        "missed_labels": 0
+      },
+      "Arbitration": {
+        "support": 9,
+        "precision": 0.2857,
+        "recall": 0.4444,
+        "f1": 0.3478,
+        "wrong_tags": 10,
+        "missed_labels": 5
+      }
+    }
+  },
+  "checks": {
+    "same_sentences": true,
+    "max_score_difference": 7.771561172376096e-16,
+    "app_runs_evaluated_tuned_model": true,
+    "thresholds_match_session05_experiment": true,
+    "test_split_read": false
+  },
+  "note": "Validation split only. The tuned numbers are optimistic (thresholds chosen on this split); the leave-one-company-out block is the estimate to report."
+}

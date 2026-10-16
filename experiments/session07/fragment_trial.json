@@ -1,0 +1,72 @@
+{
+  "sentences": 2275,
+  "product_flags": 239,
+  "product_wrong_tags": 62,
+  "sentences_under_6_words": 0,
+  "candidates": [
+    {
+      "sentences_hidden": 0,
+      "flags_removed": 0,
+      "wrong_tags_removed": 0,
+      "correct_tags_removed": 0,
+      "annotator_labels_on_hidden_sentences": 0,
+      "candidate": "fewer_than_3_words",
+      "description": "fewer than 3 words",
+      "passes": false
+    },
+    {
+      "sentences_hidden": 0,
+      "flags_removed": 0,
+      "wrong_tags_removed": 0,
+      "correct_tags_removed": 0,
+      "annotator_labels_on_hidden_sentences": 0,
+      "candidate": "fewer_than_4_words",
+      "description": "fewer than 4 words",
+      "passes": false
+    },
+    {
+      "sentences_hidden": 0,
+      "flags_removed": 0,
+      "wrong_tags_removed": 0,
+      "correct_tags_removed": 0,
+      "annotator_labels_on_hidden_sentences": 0,
+      "candidate": "fewer_than_5_words",
+      "description": "fewer than 5 words",
+      "passes": false
+    },
+    {
+      "sentences_hidden": 0,
+      "flags_removed": 0,
+      "wrong_tags_removed": 0,
+      "correct_tags_removed": 0,
+      "annotator_labels_on_hidden_sentences": 0,
+      "candidate": "fewer_than_6_words",
+      "description": "fewer than 6 words",
+      "passes": false
+    },
+    {
+      "sentences_hidden": 0,
+      "flags_removed": 0,
+      "wrong_tags_removed": 0,
+      "correct_tags_removed": 0,
+      "annotator_labels_on_hidden_sentences": 0,
+      "candidate": "no_lowercase",
+      "description": "letters but no lower case (ALL-CAPS heading)",
+      "passes": false
+    },
+    {
+      "sentences_hidden": 53,
+      "flags_removed": 2,
+      "wrong_tags_removed": 2,
+      "correct_tags_removed": 0,
+      "annotator_labels_on_hidden_sentences": 0,
+      "candidate": "short_no_end_mark",
+      "description": "8 words or fewer and no . ! ? ; : at the end",
+      "passes": false
+    }
+  ],
+  "rule": "PASS = removes at least 5 wrong tags AND no annotator label on any hidden sentence",
+  "recommendation": null,
+  "note": "Validation split only; counts are optimistic because the candidates are compared on the same split. Not shipped: a passing filter is a Session 08 candidate. No sentence text is stored.",
+  "test_split_read": false
+}
