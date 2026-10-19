@@ -1,0 +1,26 @@
+{
+  "model_id": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+  "tasks": [
+    {
+      "task_id": "E1",
+      "document": "examples/study/document_E.txt",
+      "target_category": "Unilateral change",
+      "answer_sentence_flagged_with_target": true,
+      "target_score": 0.969,
+      "extra_labels_on_answer_sentence": 0,
+      "other_sentences_with_target_label": 0,
+      "sentences_in_document": 17
+    },
+    {
+      "task_id": "F1",
+      "document": "examples/study/document_F.txt",
+      "target_category": "Jurisdiction",
+      "answer_sentence_flagged_with_target": false,
+      "target_score": 0.531,
+      "extra_labels_on_answer_sentence": 0,
+      "other_sentences_with_target_label": 0,
+      "sentences_in_document": 16
+    }
+  ],
+  "note": "Sanitized: contains no answer text or sentence positions."
+}
