@@ -1,0 +1,14 @@
+{
+  "protocol": "sep29_v2",
+  "note": "Public task bank for Session 07: prompts and documents only. Tasks C1 and D1 were retired because they were shown publicly in the mid-semester deck. The observer answer key is kept in private/ (git-ignored) and must never be committed.",
+  "tasks": {
+    "E1": {
+      "document": "examples/study/document_E.txt",
+      "prompt": "Find the sentence that lets the company change these terms. Show me the passage, and tell me whether the company has to tell you before it changes them."
+    },
+    "F1": {
+      "document": "examples/study/document_F.txt",
+      "prompt": "Find the sentence that says where you would have to go to court if you had a legal dispute with the company. Show me the passage, and tell me which city."
+    }
+  }
+}

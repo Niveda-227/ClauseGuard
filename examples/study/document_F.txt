@@ -1,0 +1,16 @@
+Harborline Rides — fictional study document F
+Harborline Rides is a fictional service used only for a student usability study.
+The app lets you book bike and scooter rides around the city.
+You must be at least 18 years old to start a ride.
+Prices for each ride are shown in the app before you unlock a vehicle.
+By creating an account, you accept these terms and our ride rules.
+You are responsible for parking vehicles in marked areas.
+We may change ride prices or these terms by posting an update in the app.
+We may end your access to the service if you damage a vehicle on purpose.
+Our liability for any accident or delay is limited to the cost of the ride involved.
+These terms are governed by the laws of the State of Delaware.
+Any legal action about these terms must be filed in the courts of Denver, Colorado.
+You can rate each ride after it ends.
+Ride history is kept in your account for twelve months.
+Support is available by chat from 8 a.m. to 8 p.m.
+This document is invented; it is not an agreement with a real provider.
