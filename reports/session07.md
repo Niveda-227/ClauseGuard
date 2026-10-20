@@ -42,18 +42,18 @@ The model running in the product changed this week. It is the Session 04 hybrid 
 - **Raw artifact**: [task records](../evidence/session07/tasks.csv), [trial files and notes](../evidence/session07/), [summary](../evidence/session07/summary.json). Protocol `sep29_v2`.
 - ClauseGuard: 2/2 ClauseGuard tasks correct within 180 seconds (100.00%), 2 outside participant(s), median 81.4 s.
 - Manual comparison: 1/2 manual tasks correct within the limit (50.00%), median 139.6 s.
-- Sessions took place on 2026-10-19 with 2 new outside participants (U006 and U007), who were classmates recruited outside the five-person team, using the desktop interface.
+- Sessions took place on 2026-10-19 (planned for 2026-10-16 to 2026-10-18) with 2 new outside participants (U006 and U007), who were classmates recruited outside the five-person team, using the desktop interface.
 - U006 did task E1 with ClauseGuard, quickly finding the answer and completing the task correctly in 89.72 seconds.
 - 1 participant (U007) did F1 with ClauseGuard and answered correctly in 73.107 seconds, providing the Denver court sentence. Whether they read sentences with no flag was not observed.
 - In 0 out of 2 ClauseGuard trials (U006 E1, U007 F1) was it observed whether the participant read the answer from the list text before clicking.
-- Resulting change or next action: Investigate improving near-threshold visibility and unflagged sentence guidance for Session 08, because Task F1 showed that participants may encounter key sentences that fall just below the decision threshold (evidence: [issue #42](https://github.com/Niveda-227/ClauseGuard/issues/42))
+- Resulting change or next action: Investigate improving near-threshold visibility and unflagged sentence guidance for Session 08, because Task F1 showed that participants may encounter key sentences that fall just below the decision threshold (evidence: [PR #50](https://github.com/Niveda-227/ClauseGuard/pull/50), [issue #52](https://github.com/Niveda-227/ClauseGuard/issues/52))
 - This is a small pilot on short fictional documents, not a population estimate or a check of legal correctness.
 
 ## Metrics snapshot
 
 **Product north-star:** 100.00% this week; previous 100.00%.
 
-The previous value is Session 05 (one ClauseGuard trial, task D1, fixed-0.5 model). This week uses new tasks (E1, F1) and the new product model, so the two numbers are not a like-for-like comparison. Session 06 had no weekly report; its user sessions (3 new participants, tasks C1 and D1) recorded 3/3 ClauseGuard tasks and 3/3 manual tasks correct. This week's north-star result shows that participants succeeded on both ClauseGuard tasks (E1 and F1) under a small two-participant pilot. However, because the app flags E1's answer but intentionally does not flag F1's, this small sample does not establish a population estimate or prove general legal correctness across unflagged clauses.
+The previous value is Session 05 (one ClauseGuard trial, task D1, fixed-0.5 model). This week uses new tasks (E1, F1) and the new product model, so the two numbers are not a like-for-like comparison. Session 06 had no weekly report; its user sessions (3 new participants, tasks C1 and D1) recorded 3/3 ClauseGuard tasks and 3/3 manual tasks correct. This week's north-star result is consistent with participants succeeding on both ClauseGuard tasks (E1 and F1) in a small two-participant pilot. However, because the app flags E1's answer but intentionally does not flag F1's, this small sample does not establish a population estimate or prove general legal correctness across unflagged clauses.
 
 **Model development results** (validation split, 2,275 sentences, 10 companies; final test split not evaluated). Source: [threshold_ship_eval.md](../experiments/session07/threshold_ship_eval.md).
 
@@ -74,7 +74,7 @@ The thresholds were chosen on the same validation split they are scored on, so t
 - Fewer wrong tags came with more missed clauses: under the honest estimate the new thresholds miss 77 annotator labels on the validation split, against 46 before. A sentence with no flag is not a safe sentence, and the app now shows fewer flags.
 - This week's own change caused a miss in our study material: the F1 answer sentence (where you must go to court) scores 0.531 for Jurisdiction, which the old fixed 0.5 flagged and the new 0.55 threshold does not ([study_doc_check.json](../experiments/session07/study_doc_check.json)). 1 participant (U007) did F1 with ClauseGuard and answered correctly in 73.107 seconds using the Denver court sentence, even though the app did not flag it.
 - Arbitration is still weak: under the honest estimate its precision is 0.286 and recall 0.444 on only 9 validation examples. Choice of law recall fell from 0.722 to 0.667.
-- The mid-semester decision record (section 5 of the decision memo) and the lean canvas update were not merged before the October 6 deadline; they were merged on 2026-10-15 (#46). The decision itself (Persevere) was presented on October 6 and did not change.
+- The mid-semester decision record (section 5 of the decision memo) and the lean canvas update were not merged before the October 6 deadline; they were merged on 2026-10-08 (#40). The decision itself (Persevere) was presented on October 6 and did not change.
 
 ## Challenges / blockers
 
@@ -82,16 +82,16 @@ Recruitment planned for 4 new outside participants, but only 2 came (U006 and U0
 
 ## Next week's goal
 
-The one thing the team will do in Session 08 is investigate improving near-threshold visibility and unflagged sentence guidance.
+The one thing the team will do in Session 08 is investigate improving near-threshold visibility and unflagged sentence guidance ([issue #52](https://github.com/Niveda-227/ClauseGuard/issues/52)).
 
 ## Individual contributions
 
-- Ameer (Product): Finished the mid-semester decision PR and created the Session 07 milestone and issues. (evidence: [issue #30](https://github.com/Niveda-227/ClauseGuard/issues/30), [PR #46](https://github.com/Niveda-227/ClauseGuard/pull/46))
-- Hemanth (Engineering): Shipped per-category thresholds into the product model. (evidence: [issue #41](https://github.com/Niveda-227/ClauseGuard/issues/41), [PR #47](https://github.com/Niveda-227/ClauseGuard/pull/47))
+- Ameer (Product): Finished the mid-semester decision PR, created the Session 07 milestone and issues, and changed the results list to show the start of each sentence. (evidence: [issue #30](https://github.com/Niveda-227/ClauseGuard/issues/30), [PR #40](https://github.com/Niveda-227/ClauseGuard/pull/40), [issue #41](https://github.com/Niveda-227/ClauseGuard/issues/41), [PR #46](https://github.com/Niveda-227/ClauseGuard/pull/46))
+- Hemanth (Engineering): Shipped per-category thresholds into the product model. (evidence: [issue #42](https://github.com/Niveda-227/ClauseGuard/issues/42), [PR #47](https://github.com/Niveda-227/ClauseGuard/pull/47))
 - Jayakrishna (Data&Eval): Evaluated threshold changes and ran the heading and short-fragment filter trial. (evidence: [issue #43](https://github.com/Niveda-227/ClauseGuard/issues/43), [PR #48](https://github.com/Niveda-227/ClauseGuard/pull/48))
 - Niveda (Users&Research): Prepared new study documents E/F, task bank v3, and conducted outside user sessions with 2 new participants. (evidence: [issue #44](https://github.com/Niveda-227/ClauseGuard/issues/44), [PR #49](https://github.com/Niveda-227/ClauseGuard/pull/49), [PR #50](https://github.com/Niveda-227/ClauseGuard/pull/50))
 - Ankan (Operations): Reviewed Niveda's PRs, finalized the Session 07 report, and cleaned up repository leftovers. (evidence: [issue #45](https://github.com/Niveda-227/ClauseGuard/issues/45), [PR #51](https://github.com/Niveda-227/ClauseGuard/pull/51))
 
 ## Lean canvas changes (if any)
 
-No changes this week, because the mid-semester decision memo and lean canvas updates were already finalized and merged under PR #46.
+Updated this week: the mid-semester decision memo and the lean canvas update were merged in PR #40 (merged 2026-10-08), which updated the current evidence and change log in docs/lean_canvas.md.

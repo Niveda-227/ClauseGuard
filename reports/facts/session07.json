@@ -12,14 +12,17 @@
     "https://github.com/Niveda-227/ClauseGuard/pull/50"
   ],
   "user_change_evidence_urls": [
-    "https://github.com/Niveda-227/ClauseGuard/issues/42"
+    "https://github.com/Niveda-227/ClauseGuard/pull/50",
+    "https://github.com/Niveda-227/ClauseGuard/issues/52"
   ],
   "members": {
     "Ameer": {
       "github": "sohail-umd",
-      "completed_work": "Finished the mid-semester decision PR and created the Session 07 milestone and issues.",
+      "completed_work": "Finished the mid-semester decision PR, created the Session 07 milestone and issues, and changed the results list to show the start of each sentence.",
       "evidence_urls": [
         "https://github.com/Niveda-227/ClauseGuard/issues/30",
+        "https://github.com/Niveda-227/ClauseGuard/pull/40",
+        "https://github.com/Niveda-227/ClauseGuard/issues/41",
         "https://github.com/Niveda-227/ClauseGuard/pull/46"
       ]
     },
@@ -27,7 +30,7 @@
       "github": "hreddy14",
       "completed_work": "Shipped per-category thresholds into the product model.",
       "evidence_urls": [
-        "https://github.com/Niveda-227/ClauseGuard/issues/41",
+        "https://github.com/Niveda-227/ClauseGuard/issues/42",
         "https://github.com/Niveda-227/ClauseGuard/pull/47"
       ]
     },
