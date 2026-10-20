@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-10-19T22:41:24.074480+00:00",
+  "stopped_at_utc": "2026-10-19T22:43:03.606616+00:00",
+  "record": {
+    "recorded_at_utc": "2026-10-19T22:44:32.625722+00:00",
+    "participant_id": "U007",
+    "task_id": "E1",
+    "condition": "manual",
+    "correct": 1,
+    "seconds": 99.55,
+    "limit_seconds": 180,
+    "model_id": "manual",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Find the sentence that lets the company change these terms. Show me the passage, and tell me whether the company has to tell you before it changes them.",
+  "document": "examples/study/document_E.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "company might update the terms wihtout notifying before.",
+  "observer_notes": "The user skimmed through the file and found the correct meaning and answer.",
+  "interface": "text_editor",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}
