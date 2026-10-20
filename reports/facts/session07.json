@@ -1,0 +1,60 @@
+{
+  "repo_url": "https://github.com/Niveda-227/ClauseGuard",
+  "protocol": "sep29_v2",
+  "branch_protection_verified": true,
+  "outside_user_evidence_reviewed": true,
+  "contributions_verified": true,
+  "shipped_evidence_urls": [
+    "https://github.com/Niveda-227/ClauseGuard/pull/46",
+    "https://github.com/Niveda-227/ClauseGuard/pull/47",
+    "https://github.com/Niveda-227/ClauseGuard/pull/48",
+    "https://github.com/Niveda-227/ClauseGuard/pull/49",
+    "https://github.com/Niveda-227/ClauseGuard/pull/50"
+  ],
+  "user_change_evidence_urls": [
+    "https://github.com/Niveda-227/ClauseGuard/issues/42"
+  ],
+  "members": {
+    "Ameer": {
+      "github": "sohail-umd",
+      "completed_work": "Finished the mid-semester decision PR and created the Session 07 milestone and issues.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/30",
+        "https://github.com/Niveda-227/ClauseGuard/pull/46"
+      ]
+    },
+    "Hemanth": {
+      "github": "hreddy14",
+      "completed_work": "Shipped per-category thresholds into the product model.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/41",
+        "https://github.com/Niveda-227/ClauseGuard/pull/47"
+      ]
+    },
+    "Jayakrishna": {
+      "github": "Jayakrishna-Reddy",
+      "completed_work": "Evaluated threshold changes and ran the heading and short-fragment filter trial.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/43",
+        "https://github.com/Niveda-227/ClauseGuard/pull/48"
+      ]
+    },
+    "Niveda": {
+      "github": "Niveda-227",
+      "completed_work": "Prepared new study documents E/F, task bank v3, and conducted outside user sessions with 2 new participants.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/44",
+        "https://github.com/Niveda-227/ClauseGuard/pull/49",
+        "https://github.com/Niveda-227/ClauseGuard/pull/50"
+      ]
+    },
+    "Ankan": {
+      "github": "royak747",
+      "completed_work": "Reviewed Niveda's PRs, finalized the Session 07 report, and cleaned up repository leftovers.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/45",
+        "https://github.com/Niveda-227/ClauseGuard/pull/51"
+      ]
+    }
+  }
+}
