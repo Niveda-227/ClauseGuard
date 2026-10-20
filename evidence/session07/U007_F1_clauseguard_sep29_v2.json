@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-10-19T22:46:22.020394+00:00",
+  "stopped_at_utc": "2026-10-19T22:47:35.113564+00:00",
+  "record": {
+    "recorded_at_utc": "2026-10-19T22:48:53.817804+00:00",
+    "participant_id": "U007",
+    "task_id": "F1",
+    "condition": "clauseguard",
+    "correct": 1,
+    "seconds": 73.107,
+    "limit_seconds": 180,
+    "model_id": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Find the sentence that says where you would have to go to court if you had a legal dispute with the company. Show me the passage, and tell me which city.",
+  "document": "examples/study/document_F.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "Legal action about these terms must be filled in the courts od Denver, Colorado.",
+  "observer_notes": "No, the user was easily able to find out the correct and entire sentence in the app.",
+  "interface": "desktop",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}
