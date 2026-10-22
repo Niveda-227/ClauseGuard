@@ -20,7 +20,8 @@ from .study import TOKEN, record
 PROTOCOL = 'sep29_v2'
 LIMIT_SECONDS = 180
 DEFAULT_TASKS = Path(__file__).resolve().parents[1] / 'examples/study/tasks_v2.json'
-INTERFACES = ('desktop', 'cli_html', 'text_editor')
+# 'web' (Session 08): the local web app, `python -m webapp`, same model and analyze() as the desktop app.
+INTERFACES = ('desktop', 'cli_html', 'web', 'text_editor')
 
 
 def load_tasks(path):
@@ -47,9 +48,9 @@ def run_trial_v2(output, participant, task, condition, interface, observer, mode
     if condition not in ('manual', 'clauseguard'):
         raise ValueError('Choose manual or clauseguard.')
     if interface not in INTERFACES:
-        raise ValueError('Choose desktop, cli_html or text_editor.')
+        raise ValueError('Choose desktop, cli_html, web or text_editor.')
     if (condition == 'manual') != (interface == 'text_editor'):
-        raise ValueError('Manual requires text_editor; ClauseGuard requires desktop or cli_html.')
+        raise ValueError('Manual requires text_editor; ClauseGuard requires desktop, cli_html or web.')
     if task not in tasks:
         raise ValueError(f'Task {task} is not in the task bank.')
     if limit <= 0:

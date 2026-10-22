@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClauseGuard</title>
+  <meta name="description" content="Find the clauses in a Terms of Service that let a company change the deal, close your account, remove your content or choose where disputes go. Runs on your computer.">
+  <link rel="icon" href="/static/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/app.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#analyze">Skip to the analyzer</a>
+
+  <div class="frame" id="top">
+    <svg class="cables" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="cable" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#B796F5"/>
+          <stop offset="0.6" stop-color="#9A74EC"/>
+          <stop offset="1" stop-color="#E7DDFD"/>
+        </linearGradient>
+        <radialGradient id="haze" cx="0.72" cy="0.42" r="0.55">
+          <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.95"/>
+          <stop offset="0.55" stop-color="#F3F0FA" stop-opacity="0.55"/>
+          <stop offset="1" stop-color="#F3F0FA" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="1400" height="900" fill="url(#haze)"/>
+      <g fill="none" stroke-linecap="round">
+        <path class="cable-body" d="M 1010 140 C 1180 110 1330 120 1420 160"/>
+        <path class="cable-shine" d="M 1010 140 C 1180 110 1330 120 1420 160"/>
+        <path class="cable-body" d="M 760 960 C 720 760 980 690 1010 560 C 1040 430 860 360 930 250 C 1000 140 1290 210 1300 330 C 1312 470 1150 560 1220 690 C 1290 820 1470 760 1500 640"/>
+        <path class="cable-shine" d="M 760 960 C 720 760 980 690 1010 560 C 1040 430 860 360 930 250 C 1000 140 1290 210 1300 330 C 1312 470 1150 560 1220 690 C 1290 820 1470 760 1500 640"/>
+        <path class="cable-body thin" d="M 1420 40 C 1360 260 1500 420 1300 560 C 1120 690 1060 820 1110 960"/>
+        <path class="cable-shine thin" d="M 1420 40 C 1360 260 1500 420 1300 560 C 1120 690 1060 820 1110 960"/>
+      </g>
+    </svg>
+
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="ClauseGuard home">
+        <img src="/static/mark.svg" alt="" width="30" height="30">
+        <span>ClauseGuard</span>
+      </a>
+      <nav class="pillnav" aria-label="Sections">
+        <a href="#analyze">Analyze</a>
+        <a href="#categories">Categories</a>
+        <a href="#how">How it works</a>
+      </nav>
+      <div class="topbar-actions">
+        <a class="pill pill-white" href="#analyze" data-action="focus-input"><span aria-hidden="true">+</span> Analyze terms</a>
+        <span class="pill pill-ghost" title="The server listens on 127.0.0.1 only. Nothing you paste is saved or sent.">Offline</span>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-type">
+        <h1 id="hero-title" class="display">
+          <span class="l1">Read the</span>
+          <span class="l2"><a class="round-btn" href="#analyze" aria-label="Go to the analyzer"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M12 4v15m0 0-6-6m6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><em>fine print</em></span>
+          <span class="l3">first<span class="caret" aria-hidden="true"></span></span>
+        </h1>
+        <div class="hero-rule"></div>
+        <div class="proof">
+          <span class="proof-pill"><b id="proof-f1">0.68</b> macro-F1</span>
+          <span class="proof-label">Leave-one-company-out</span>
+          <span class="proof-text">Checked on 10 companies it never saw. Runs on your computer; nothing is uploaded.</span>
+        </div>
+      </div>
+
+      <nav class="sidenav" aria-label="On this page">
+        <a href="#top" aria-current="true">Home</a>
+        <a href="#analyze">Analyze</a>
+        <a href="#categories">Categories</a>
+        <a href="#how">How it works</a>
+      </nav>
+
+      <figure class="specimen" aria-label="Live preview: the fictional example as the running model reads it">
+        <button class="orbit" type="button" data-action="load-example" aria-label="Try the fictional example">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <defs><path id="orbit-path" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+            <text><textPath href="#orbit-path">try the example · try the example · </textPath></text>
+          </svg>
+          <span class="orbit-core"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span>
+        </button>
+        <div class="specimen-card">
+          <p class="specimen-title">Fictional service terms</p>
+          <ol class="specimen-lines" id="specimen-lines">
+            <li><span class="wash">By accessing or using this service, you agree to these terms.</span></li>
+            <li><span class="wash">We may remove any content you submit without giving a reason.</span></li>
+            <li><span class="wash">All disputes will be resolved through binding arbitration.</span></li>
+          </ol>
+          <figcaption id="specimen-caption">The fictional example, as the running model reads it.</figcaption>
+        </div>
+      </figure>
+    </section>
+  </div>
+
+  <main>
+    <section class="workspace" id="analyze" aria-labelledby="analyze-title">
+      <div class="section-head">
+        <h2 id="analyze-title" class="display-sm">Analyze a document</h2>
+        <p>Paste the terms, open a .txt file or drop one on the page. Choose a result to see the sentence in its place.</p>
+      </div>
+
+      <div class="workbench">
+        <div class="paper-column">
+          <div class="paper" id="sheet" data-mode="edit">
+            <div class="paper-bar">
+              <div class="tools">
+                <label class="tool">
+                  <input type="file" id="file-input" accept=".txt,text/plain">
+                  <span>Open .txt file</span>
+                </label>
+                <button class="tool" type="button" data-action="load-example">Load example</button>
+                <button class="tool" type="button" data-action="clear">Clear</button>
+                <button class="tool tool-edit" type="button" data-action="edit">Edit text</button>
+              </div>
+              <span class="count" id="char-count" aria-live="polite">0 characters</span>
+            </div>
+            <label class="visually-hidden" for="terms">Terms of Service text</label>
+            <textarea id="terms" spellcheck="false" placeholder="Paste the Terms of Service here."></textarea>
+            <div class="doc" id="doc" tabindex="-1" aria-label="Analysed document. Highlighted sentences have at least one flag."></div>
+            <div class="drop-hint" aria-hidden="true">Drop a .txt file to open it</div>
+          </div>
+          <div class="analyze-row">
+            <button class="pill pill-dark pill-lg" type="button" id="analyze-btn" data-action="analyze">Analyze terms</button>
+            <p class="status" id="status" role="status" aria-live="polite">Your text stays on this computer.</p>
+          </div>
+        </div>
+
+        <aside class="findings" aria-labelledby="findings-title">
+          <div class="findings-head">
+            <h3 id="findings-title">Findings</h3>
+            <p class="summary" id="summary">No document analysed yet.</p>
+          </div>
+          <div class="chips" id="chips" role="toolbar" aria-label="Filter findings"></div>
+          <ol class="results" id="results" aria-label="Sentences"></ol>
+          <div class="empty" id="empty">
+            <p>Results appear here, one line per sentence, with the start of each sentence next to its categories.</p>
+            <button class="pill pill-soft" type="button" data-action="load-example">Load the fictional example</button>
+          </div>
+          <article class="detail" id="detail" aria-live="polite" hidden></article>
+          <div class="exports" id="exports" hidden>
+            <button class="pill pill-soft" type="button" data-action="export-html">Download report (HTML)</button>
+            <button class="pill pill-soft" type="button" data-action="export-json">Download data (JSON)</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="categories" id="categories" aria-labelledby="categories-title">
+      <div class="section-head">
+        <h2 id="categories-title" class="display-sm">Eight kinds of clause</h2>
+        <p>Each category comes from the UNFAIR-ToS research dataset. Choose a card to see that category's sentences in the current document.</p>
+      </div>
+      <div class="cards" id="cards"></div>
+    </section>
+
+    <section class="how" id="how" aria-labelledby="how-title">
+      <div class="section-head">
+        <h2 id="how-title" class="display-sm">How it works</h2>
+        <p>Three steps, all on this computer.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>Split into sentences</h3>
+          <p>The text is cut into sentences, and each sentence keeps its exact position so it can be highlighted in place.</p>
+        </li>
+        <li>
+          <h3>Score every sentence eight times</h3>
+          <p>A classifier trained on 5,532 sentences from 30 real Terms of Service scores each sentence once per category. A sentence is flagged when a score passes that category's cut-off.</p>
+        </li>
+        <li>
+          <h3>You read the original words</h3>
+          <p>Flags send you to sentences worth reading. The model makes mistakes in both directions, so the decision stays with you.</p>
+        </li>
+      </ol>
+      <p class="model-facts">Checked on 2,275 sentences from 10 companies the model never saw in training: macro-F1 0.68 (leave-one-company-out estimate). It still misses some clauses and mislabels others. Details are in <code>docs/MODEL_CARD.md</code>.</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>ClauseGuard is a course project for DATA 641 at the University of Maryland. It is not legal advice.</p>
+    <p class="model-line" id="model-line">Loading the model details.</p>
+  </footer>
+
+  <noscript><p class="noscript">This page needs JavaScript. You can also use the desktop app: <code>python app.py</code>.</p></noscript>
+</body>
+</html>
