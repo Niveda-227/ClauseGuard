@@ -7,9 +7,10 @@ def render_html(result):
     h=html.escape
     rows=[]
     for item in result['sentences']:
-        labels=item['labels']
-        descriptions='<br>'.join(h(label)+': '+h(EXPLANATIONS[label]) for label in labels)
+        labels=item['labels'];uncertain=item.get('uncertain',[]);possible=item.get('possible',[])
+        descriptions='<br>'.join(h(label)+(' (uncertain: score close to its cut-off)' if label in uncertain else '')+': '+h(EXPLANATIONS[label]) for label in labels)
         if not descriptions:descriptions='No category flagged. Read the original context.'
+        if possible:descriptions+='<br>Possible, not flagged (score just below its cut-off): '+h(', '.join(possible))
         marker=' <strong>Near a decision threshold</strong>' if item['near_threshold'] else ''
         rows.append(f'<article><p class="meta">Sentence {item["sentence_id"]+1}{marker}</p>'
                     f'<blockquote>{h(item["text"])}</blockquote><p>{descriptions}</p></article>')

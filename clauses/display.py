@@ -26,6 +26,15 @@ def snippet(text, width=60):
 
 
 def result_label(row, width=60):
-    """'3. Unilateral change | We may change these terms at any time…' for one analysed sentence."""
-    tags = ', '.join(row['labels']) if row['labels'] else NO_FLAG
+    """'3. Unilateral change | We may change these terms at any time…' for one analysed sentence.
+
+    Session 08 review cues (clauses/cues.py): a flag whose score is close to its cut-off is marked
+    '(uncertain)', and categories just below their cut-off are named as '(possible: ...)', e.g.
+    '12. No category flagged (possible: Jurisdiction) | Any legal action about these terms…'.
+    """
+    uncertain = set(row.get('uncertain', []))
+    tags = ', '.join(f'{l} (uncertain)' if l in uncertain else l for l in row['labels']) if row['labels'] else NO_FLAG
+    possible = row.get('possible', [])
+    if possible:
+        tags += f" (possible: {', '.join(possible)})"
     return f"{row['sentence_id'] + 1}. {tags} | {snippet(row['text'], width)}"

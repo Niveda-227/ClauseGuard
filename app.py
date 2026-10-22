@@ -101,9 +101,16 @@ class ClauseGuardApp:
             return f'{len(lines)}.{int(self.root.tk.call("string","length",lines[-1]))}'
         self.input.tag_add('source',tkoffset(row['start']),tkoffset(row['end']));self.input.see(tkoffset(row['start']))
         parts=[row['text'],'']
-        for label in row['labels']:parts.append(f'{label}\n{EXPLANATIONS[label]}\nModel score: {row["scores"][label]:.3f}\n')
-        if not row['labels']:parts.append('No category flagged. This is not a finding of safety.')
-        if row['near_threshold']:parts.append('One score is near its decision threshold. Review context carefully.')
+        cut=dict(zip(LABELS,self.bundle['manifest']['thresholds']))
+        uncertain=row.get('uncertain',[]);possible=row.get('possible',[])
+        for label in row['labels']:
+            note=f'\nUncertain: the score is close to the cut-off {cut[label]:.2f}.' if label in uncertain else ''
+            parts.append(f'{label}\n{EXPLANATIONS[label]}\nModel score: {row["scores"][label]:.3f}{note}\n')
+        if not row['labels']:parts.append('No category flagged. This is not a finding of safety.\n')
+        # Session 08 review cue: categories just below their cut-off are named, not hidden.
+        for label in possible:
+            parts.append(f'Possible: {label}\n{EXPLANATIONS[label]}\nModel score: {row["scores"][label]:.3f}, just below the cut-off {cut[label]:.2f}. Not flagged; read this sentence.\n')
+        if row['near_threshold'] and not (uncertain or possible):parts.append('One score is near its decision threshold. Review context carefully.')
         self.detail.configure(state='normal');self.detail.delete('1.0','end');self.detail.insert('end','\n'.join(parts));self.detail.configure(state='disabled')
 
     def export(self):

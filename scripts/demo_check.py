@@ -4,7 +4,7 @@ Run it on the laptop that will present, the day before and one hour before:
 
     python scripts/demo_check.py
 
-It answers four questions and exits with code 1 if any hard check fails:
+It answers five questions and exits with code 1 if any hard check fails:
   1. Is this the model we report numbers for? (the running artifact is byte-identical
      to the evaluated model named below and to its validation metrics)
   2. Will the demo look like the rehearsal? (the fictional demo document gets the
@@ -12,8 +12,10 @@ It answers four questions and exits with code 1 if any hard check fails:
   3. How much does one request cost? (load time, time per document, time per
      sentence on a ~1,100-sentence document; no network calls are made)
   4. Can this laptop open the desktop app? (Tk available; display available)
+  5. Does the web app (python -m webapp, Session 08) show exactly what the desktop app shows?
+     (it starts the web server on a free local port for a moment and compares the results)
 
-Writes experiments/session07/demo_check.json (no hostname, username or file paths)
+Writes experiments/session08/demo_check.json (no hostname, username or file paths)
 and an HTML fallback of the demo document to analysis.html (git-ignored), which can
 be opened in a browser if the desktop app fails during the presentation.
 """
@@ -142,6 +144,39 @@ def check_tk():
                 'detail': f'Tk is installed but no display was found here ({exc}). Fine on a laptop screen.'}
 
 
+def check_web(bundle, text):
+    """Start the web app's server on a free port on 127.0.0.1, analyse the demo document through it,
+    and compare with analyze() called directly (what the desktop app does)."""
+    import http.client
+    import threading
+    from clauses.model import analyze
+    from webapp.server import make_server
+    name = 'web app shows the same result as the desktop app'
+    try:
+        server = make_server(bundle, port=0, quiet=True)
+    except OSError as exc:
+        return {'check': name, 'status': 'FAIL', 'detail': f'could not start the web server: {exc}'}
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    try:
+        port = server.server_address[1]
+        headers = {'Host': f'127.0.0.1:{port}', 'Content-Type': 'application/json'}
+        conn = http.client.HTTPConnection('127.0.0.1', port, timeout=60)
+        conn.request('GET', '/api/meta', headers={'Host': headers['Host']})
+        meta = json.loads(conn.getresponse().read())
+        conn.request('POST', '/api/analyze', body=json.dumps({'text': text}), headers=headers)
+        response = conn.getresponse()
+        web = json.loads(response.read())
+        conn.close()
+    finally:
+        server.shutdown()
+        server.server_close()
+    direct = json.loads(json.dumps(analyze(text, bundle)))
+    same = response.status == 200 and web.get('result') == direct and meta.get('model_id') == bundle['model_id']
+    return {'check': name, 'status': 'PASS' if same else 'FAIL', 'web_model_sha256': meta.get('model_id'),
+            'detail': '' if same else 'the web app returned a different result or model'}
+
+
 def run(root=ROOT, repeats=5, long_copies=100):
     from clauses.model import load, analyze
     from clauses.export import render_html
@@ -158,7 +193,11 @@ def run(root=ROOT, repeats=5, long_copies=100):
     demo_text = (root / DEMO_DOC).read_text(encoding='utf-8')
     result = analyze(demo_text, bundle)
     checks.append(compare_demo(result))
-    checks.append(check_tk())
+    tk, web = check_tk(), check_web(bundle, demo_text)
+    if tk['status'] == 'FAIL' and web['status'] == 'PASS':
+        # From Session 08 the demo can run in the browser, so a laptop without Tk can still present.
+        tk = {**tk, 'status': 'WARN', 'detail': f"{tk.get('detail', '')} Present with the web app instead: python -m webapp".strip()}
+    checks += [tk, web]
 
     long_text = '\n'.join([demo_text.strip()] * long_copies)
     long_sentences = len(analyze(long_text, bundle)['sentences'])
@@ -194,7 +233,7 @@ def run(root=ROOT, repeats=5, long_copies=100):
 
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument('--output', default='experiments/session07/demo_check.json')
+    p.add_argument('--output', default='experiments/session08/demo_check.json')
     p.add_argument('--html-out', default='analysis.html', help='HTML fallback of the demo document (git-ignored)')
     p.add_argument('--repeats', type=int, default=5)
     a = p.parse_args(argv)
