@@ -76,6 +76,7 @@ and the weekly reports.
 ## Project structure
 - `clauses/` the classifier: training, inference, export and study tooling
 - `app.py` desktop app entry point
+- `webapp/` the local web app (`python -m webapp`): a small server and one page in `webapp/static/`
 - `artifacts/` the trained models, with hashes
 - `tests/` automated tests
 - `data/` dataset provenance and license (the dataset itself is downloaded by `python -m clauses.cli data`, not committed)
@@ -112,7 +113,15 @@ Analyze a document from the command line:
 python -m clauses.cli analyze --input examples/fictional_terms.txt --html-out analysis.html
 ```
 
-Or open the desktop app:
+Or open the web app (from Session 08), which opens in your browser:
+
+```bash
+python -m webapp                   # then visit http://127.0.0.1:8641 if no window opens
+```
+
+It uses the same model and the same analysis as the desktop app, listens
+only on this computer, and loads nothing from the internet. Stop it with
+Ctrl+C in the terminal. The desktop app still works too:
 
 ```bash
 python app.py
