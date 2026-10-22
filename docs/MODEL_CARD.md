@@ -2,9 +2,9 @@
 
 **Selected artifact:** `artifacts/selected.joblib` (a copy of `artifacts/tuned.joblib`)  
 **Variant:** hybrid, with one threshold per category  
-**SHA-256:** `<<NEW SHA: the full artifact_sha256 value in artifacts/selected.json>>`  
+**SHA-256:** `dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd`  
 **Base model:** `artifacts/hybrid.joblib`, SHA-256 `04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76` (same trained weights, fixed 0.5 thresholds; the product model until Session 06)  
-**Status:** Session 07 release, October 2026. Not a final semester freeze.
+**Status:** Session 07 model, unchanged in Session 08 (only review cues were added to what users see). Not a final semester freeze.
 
 Purpose: classify eight contractual categories in English ToS sentences for source-linked review. Not a legal-enforceability system, safety rating, or replacement for reading an agreement. The annotations reflect the source's consumer-law context.
 
@@ -24,6 +24,15 @@ A sentence gets a category when its score is **above** that category's threshold
 | Choice of law | 0.65 |
 | Jurisdiction | 0.55 |
 | Arbitration | 0.80 |
+
+## Review cues near a cut-off (Session 08)
+
+The model, its scores and its thresholds did not change in Session 08. What users see did: scores within **0.05** of a category's threshold are now named instead of hidden (`clauses/cues.py`).
+
+- **Uncertain flag:** the category is flagged, but its score is less than 0.05 above the threshold.
+- **Possible category:** the category is not flagged, but its score is less than 0.05 below the threshold (or exactly on it). The desktop list shows `(possible: Jurisdiction)`; the web app shows a dashed "Possible" tag and a dashed underline.
+
+The 0.05 margin is the distance the app has used since Session 04 for its note "One score is near its decision threshold". It was fixed before any Session 08 result and is not tuned on any split. How often the cues appear on the validation split, and how many missed labels they point to, is measured in `experiments/session08/cue_eval.md`.
 
 ## Results (validation split)
 

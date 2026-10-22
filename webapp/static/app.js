@@ -92,8 +92,24 @@
     return el('span', { class: 'tag tag-none', text: NO_FLAG });
   }
 
+  // Session 08 review cues (clauses/cues.py): a flag close to its cut-off is "uncertain";
+  // a category just below its cut-off is shown as "possible" instead of being hidden.
+  function flagTag(row, label) {
+    const uncertain = (row.uncertain || []).includes(label);
+    const tag = tagEl(label, uncertain ? 'tag-uncertain' : '');
+    if (uncertain) tag.append(el('span', { class: 'tag-note', text: 'uncertain' }));
+    return tag;
+  }
+
+  function possibleTag(label) {
+    return el('span', { class: 'tag tag-possible', style: `--ink-c:${INK[label] || '#7A758C'}`,
+      title: 'Not flagged: the score is just below the cut-off' },
+    el('span', { class: 'dot', 'aria-hidden': 'true' }), el('span', { text: `Possible: ${label}` }));
+  }
+
   function rowTags(row) {
-    return row.labels.length ? row.labels.map((l) => tagEl(l)) : [noneTag()];
+    const tags = row.labels.length ? row.labels.map((l) => flagTag(row, l)) : [noneTag()];
+    return tags.concat((row.possible || []).map(possibleTag));
   }
 
   function setStatus(message, isError = false) {
@@ -307,6 +323,11 @@
       const title = [row.labels.length ? row.labels.join(', ') : NO_FLAG];
       if (row.labels.length) { classes.push('flagged'); styles.push(`--wash:${washFor(row.labels, 0.17)}`); }
       if (row.near_threshold) classes.push('near');
+      if ((row.possible || []).length) {
+        classes.push('possible');
+        styles.push(`--possible-ink:${INK[row.possible[0]]}`);
+        title.push(...row.possible.map((l) => `possible: ${l}`));
+      }
       els.doc.append(el('span', {
         class: classes.join(' '), 'data-id': String(row.sentence_id), style: styles.join(';'), title: title.join('; '),
         onclick: () => select(row.sentence_id, { scrollDoc: false, fromDoc: true }),
@@ -364,16 +385,28 @@
       el('p', { class: 'where', text: `Sentence ${row.sentence_id + 1} of ${state.result.sentences.length}` }),
       el('blockquote', { text: row.text }),
     ];
+    const uncertain = row.uncertain || [];
+    const possible = row.possible || [];
     for (const label of row.labels) {
       parts.push(el('section', { class: 'reason' },
-        el('h4', {}, tagEl(label)),
+        el('h4', {}, flagTag(row, label)),
         el('p', { text: state.meta.explanations[label] }),
-        meter(label, row.scores[label])));
+        meter(label, row.scores[label]),
+        uncertain.includes(label)
+          ? el('p', { class: 'note', text: 'Close to the cut-off: treat this flag as uncertain and read the sentence.' })
+          : null));
     }
     if (!row.labels.length) {
       parts.push(el('p', { class: 'note', text: 'No category flagged. This is not a finding of safety.' }));
     }
-    if (row.near_threshold) {
+    for (const label of possible) {
+      parts.push(el('section', { class: 'reason reason-possible' },
+        el('h4', {}, possibleTag(label)),
+        el('p', { text: state.meta.explanations[label] }),
+        meter(label, row.scores[label]),
+        el('p', { class: 'note', text: 'Not flagged: the score is just below the cut-off. Read this sentence before deciding.' })));
+    }
+    if (row.near_threshold && !uncertain.length && !possible.length) {
       parts.push(el('p', { class: 'note', text: 'One score is near its decision threshold. Review context carefully.' }));
     }
     els.detail.replaceChildren(...parts);
@@ -388,6 +421,8 @@
       const rows = state.result ? state.result.sentences : null;
       const n = rows ? rows.filter((r) => r.labels.includes(label)).length : null;
       let countText = n === null ? 'Analyze to count' : (n === 1 ? '1 sentence' : `${n} sentences`);
+      const maybe = rows ? rows.filter((r) => (r.possible || []).includes(label)).length : 0;
+      if (maybe) countText += `, ${maybe} possible`;
       els.cards.append(el('button', {
         class: 'card', type: 'button', style: `--ink-c:${INK[label]}`,
         'aria-label': `${label}. ${state.meta.explanations[label]} ${n === null ? '' : `${countText} in this document.`}`,

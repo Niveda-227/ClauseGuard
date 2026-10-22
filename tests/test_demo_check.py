@@ -47,6 +47,7 @@ class DemoCheckTests(unittest.TestCase):
         names = {c['check']: c['status'] for c in report['checks']}
         self.assertEqual(names['demo model is the reported model'], 'PASS')
         self.assertEqual(names['demo document flags match the rehearsal'], 'PASS')
+        self.assertEqual(names['web app shows the same result as the desktop app'], 'PASS')
         self.assertEqual(report['cost_to_serve']['network_calls'], 0)
         text = json.dumps(report)
         import getpass, platform

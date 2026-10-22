@@ -15,6 +15,7 @@ from sklearn.metrics import f1_score
 from .schema import LABELS
 from .data import ARCHIVE_SHA256
 from .text import segment
+from .cues import review_cues
 
 DEFAULT_MODEL = Path(__file__).resolve().parents[1] / 'artifacts/selected.joblib'
 
@@ -103,12 +104,13 @@ def analyze(text,bundle):
     results=[]
     for i,sentence in enumerate(sentences):
         labels=[LABELS[k] for k in range(len(LABELS)) if pred[i,k]]
-        distances=np.abs(scores[i]-np.asarray(bundle['manifest']['thresholds']))
-        # A review cue only; no automatic success credit in evaluation.
-        uncertain=bool(np.min(distances)<0.05)
+        # Review cues only (Session 08, clauses/cues.py): flags, scores and metrics are unchanged.
+        # near_threshold keeps its Session 04 meaning: some score is within 0.05 of its cut-off.
+        uncertain,possible=review_cues(scores[i],bundle['manifest']['thresholds'])
         results.append({'sentence_id':i,'start':sentence.start,'end':sentence.end,'text':sentence.text,
                         'labels':labels,'scores':{l:float(scores[i,k]) for k,l in enumerate(LABELS)},
-                        'near_threshold':uncertain})
+                        'near_threshold':bool(uncertain or possible),
+                        'uncertain':uncertain,'possible':possible})
     return {'model_id':bundle.get('model_id','unsaved'), 'variant':bundle['manifest']['variant'],
             'threshold_source':bundle['manifest']['threshold_source'],
             'input_characters':len(text),'sentences':results}
