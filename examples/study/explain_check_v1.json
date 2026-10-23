@@ -1,0 +1,46 @@
+{
+  "version": "explain_v1",
+  "note": "Session 08 explanation check (decision memo: test whether users understand the category explanations). Each card shows one category name and the explanation ClauseGuard shows for it, word for word from clauses/schema.py, then three invented sentences. The participant picks the sentence that fits. The scoring key is in the git-ignored private/ folder.",
+  "items": [
+    {
+      "id": "X1",
+      "category": "Jurisdiction",
+      "explanation": "Specifies the courts or location for disputes.",
+      "options": {
+        "a": "These terms are governed by the laws of the Province of Ontario.",
+        "b": "Any lawsuit about this service must be brought in the courts of Halifax, Nova Scotia.",
+        "c": "We may change these terms by posting a notice on our website."
+      }
+    },
+    {
+      "id": "X2",
+      "category": "Choice of law",
+      "explanation": "Specifies which laws govern the agreement.",
+      "options": {
+        "a": "Any disagreement will be settled by a single arbitrator.",
+        "b": "You must file any claim in the courts of Burlington, Vermont.",
+        "c": "This agreement is governed by the laws of the State of Vermont."
+      }
+    },
+    {
+      "id": "X3",
+      "category": "Contract by using",
+      "explanation": "Treats using the service as accepting the terms.",
+      "options": {
+        "a": "By opening the app, you agree to these terms.",
+        "b": "You may cancel your plan at any time from the settings page.",
+        "c": "We may remove posts that break our community rules."
+      }
+    },
+    {
+      "id": "X4",
+      "category": "Limitation of liability",
+      "explanation": "Limits the kinds or amount of compensation the provider may owe.",
+      "options": {
+        "a": "We may close your account if a payment fails twice.",
+        "b": "Our total responsibility to you is limited to the fees you paid in the last month.",
+        "c": "These terms are governed by the laws of the State of Oregon."
+      }
+    }
+  ]
+}
