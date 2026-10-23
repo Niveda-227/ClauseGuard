@@ -1,0 +1,78 @@
+{
+  "rule_source": "docs/decisions/2026-10-06_midpoint_decision.md, section 5 (\"What would change our mind\")",
+  "protocol": "sep29_v2",
+  "model_gate": {
+    "honest_macro_f1": 0.6768,
+    "baseline_macro_f1": 0.2551,
+    "gain": 0.4217,
+    "required_gain": 0.1,
+    "app_runs_evaluated_model": true,
+    "passed": true
+  },
+  "participants": [
+    "U002",
+    "U003",
+    "U004",
+    "U005",
+    "U006",
+    "U007"
+  ],
+  "participant_count": 6,
+  "required_participants": 6,
+  "clauseguard": {
+    "trials": 6,
+    "successes": 6,
+    "success_percent": 100.0,
+    "median_seconds": 54.85
+  },
+  "manual": {
+    "trials": 6,
+    "successes": 5,
+    "success_percent": 83.33,
+    "median_seconds": 79.92
+  },
+  "gap_points_clauseguard_minus_manual": 16.67,
+  "max_gap_points_below_manual": 25,
+  "misled_by_wrong_tags": 0,
+  "misled_source": "evidence/session05, session06 and session07 session_notes.md",
+  "per_session": [
+    {
+      "session": "05",
+      "participants": [
+        "U002"
+      ],
+      "clauseguard": "1/1",
+      "manual": "1/1",
+      "clauseguard_models": [
+        "04713fbf6e23"
+      ]
+    },
+    {
+      "session": "06",
+      "participants": [
+        "U003",
+        "U004",
+        "U005"
+      ],
+      "clauseguard": "3/3",
+      "manual": "3/3",
+      "clauseguard_models": [
+        "04713fbf6e23"
+      ]
+    },
+    {
+      "session": "07",
+      "participants": [
+        "U006",
+        "U007"
+      ],
+      "clauseguard": "2/2",
+      "manual": "1/2",
+      "clauseguard_models": [
+        "dafbb5470f2f"
+      ]
+    }
+  ],
+  "outcome": "KEEP THE PRODUCT DIRECTION",
+  "note": "A pre-committed decision heuristic, not a statistical test. Speed is reported but does not decide. Tasks differ in difficulty between sessions; pooled rates mix tasks and product versions."
+}

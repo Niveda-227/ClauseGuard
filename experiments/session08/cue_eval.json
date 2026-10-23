@@ -1,0 +1,409 @@
+{
+  "source": "experiments/session07/tuned/predictions.jsonl",
+  "model_id": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+  "product_margin": 0.05,
+  "margins": {
+    "0.05": {
+      "product_cut_offs_OPTIMISTIC": {
+        "sentences": 2275,
+        "annotator_labels": 249,
+        "flags": 239,
+        "missed_labels": 72,
+        "possible_cues": 31,
+        "possible_cues_per_100_sentences": 1.36,
+        "possible_cues_that_are_annotator_labels": 4,
+        "missed_labels_with_a_possible_cue": 4,
+        "share_of_missed_labels_with_a_possible_cue": 0.0556,
+        "sentences_with_any_cue_per_100": 2.51,
+        "uncertain_flags": 26,
+        "wrong_share_of_uncertain_flags": 0.3077,
+        "wrong_share_of_other_flags": 0.2535,
+        "per_category": {
+          "Limitation of liability": {
+            "missed_labels": 21,
+            "possible_cues": 11,
+            "missed_labels_with_a_possible_cue": 2,
+            "uncertain_flags": 8
+          },
+          "Unilateral termination": {
+            "missed_labels": 15,
+            "possible_cues": 9,
+            "missed_labels_with_a_possible_cue": 1,
+            "uncertain_flags": 5
+          },
+          "Unilateral change": {
+            "missed_labels": 10,
+            "possible_cues": 3,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 5
+          },
+          "Content removal": {
+            "missed_labels": 15,
+            "possible_cues": 5,
+            "missed_labels_with_a_possible_cue": 1,
+            "uncertain_flags": 2
+          },
+          "Contract by using": {
+            "missed_labels": 2,
+            "possible_cues": 1,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 2
+          },
+          "Choice of law": {
+            "missed_labels": 5,
+            "possible_cues": 0,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 1
+          },
+          "Jurisdiction": {
+            "missed_labels": 0,
+            "possible_cues": 1,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 2
+          },
+          "Arbitration": {
+            "missed_labels": 4,
+            "possible_cues": 1,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 1
+          }
+        }
+      },
+      "leave_one_company_out_HONEST": {
+        "sentences": 2275,
+        "annotator_labels": 249,
+        "flags": 251,
+        "missed_labels": 77,
+        "possible_cues": 24,
+        "possible_cues_per_100_sentences": 1.05,
+        "possible_cues_that_are_annotator_labels": 6,
+        "missed_labels_with_a_possible_cue": 6,
+        "share_of_missed_labels_with_a_possible_cue": 0.0779,
+        "sentences_with_any_cue_per_100": 2.29,
+        "uncertain_flags": 28,
+        "wrong_share_of_uncertain_flags": 0.5357,
+        "wrong_share_of_other_flags": 0.287,
+        "per_category": {
+          "Limitation of liability": {
+            "missed_labels": 23,
+            "possible_cues": 9,
+            "missed_labels_with_a_possible_cue": 1,
+            "uncertain_flags": 6
+          },
+          "Unilateral termination": {
+            "missed_labels": 15,
+            "possible_cues": 6,
+            "missed_labels_with_a_possible_cue": 2,
+            "uncertain_flags": 8
+          },
+          "Unilateral change": {
+            "missed_labels": 10,
+            "possible_cues": 3,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 5
+          },
+          "Content removal": {
+            "missed_labels": 15,
+            "possible_cues": 1,
+            "missed_labels_with_a_possible_cue": 1,
+            "uncertain_flags": 3
+          },
+          "Contract by using": {
+            "missed_labels": 3,
+            "possible_cues": 1,
+            "missed_labels_with_a_possible_cue": 1,
+            "uncertain_flags": 2
+          },
+          "Choice of law": {
+            "missed_labels": 6,
+            "possible_cues": 1,
+            "missed_labels_with_a_possible_cue": 1,
+            "uncertain_flags": 0
+          },
+          "Jurisdiction": {
+            "missed_labels": 0,
+            "possible_cues": 1,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 2
+          },
+          "Arbitration": {
+            "missed_labels": 5,
+            "possible_cues": 2,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 2
+          }
+        }
+      }
+    },
+    "0.03": {
+      "product_cut_offs_OPTIMISTIC": {
+        "sentences": 2275,
+        "annotator_labels": 249,
+        "flags": 239,
+        "missed_labels": 72,
+        "possible_cues": 17,
+        "possible_cues_per_100_sentences": 0.75,
+        "possible_cues_that_are_annotator_labels": 1,
+        "missed_labels_with_a_possible_cue": 1,
+        "share_of_missed_labels_with_a_possible_cue": 0.0139,
+        "sentences_with_any_cue_per_100": 1.41,
+        "uncertain_flags": 15,
+        "wrong_share_of_uncertain_flags": 0.2,
+        "wrong_share_of_other_flags": 0.2634,
+        "per_category": {
+          "Limitation of liability": {
+            "missed_labels": 21,
+            "possible_cues": 8,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 4
+          },
+          "Unilateral termination": {
+            "missed_labels": 15,
+            "possible_cues": 4,
+            "missed_labels_with_a_possible_cue": 1,
+            "uncertain_flags": 4
+          },
+          "Unilateral change": {
+            "missed_labels": 10,
+            "possible_cues": 0,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 2
+          },
+          "Content removal": {
+            "missed_labels": 15,
+            "possible_cues": 3,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 1
+          },
+          "Contract by using": {
+            "missed_labels": 2,
+            "possible_cues": 0,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 1
+          },
+          "Choice of law": {
+            "missed_labels": 5,
+            "possible_cues": 0,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 0
+          },
+          "Jurisdiction": {
+            "missed_labels": 0,
+            "possible_cues": 1,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 2
+          },
+          "Arbitration": {
+            "missed_labels": 4,
+            "possible_cues": 1,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 1
+          }
+        }
+      },
+      "leave_one_company_out_HONEST": {
+        "sentences": 2275,
+        "annotator_labels": 249,
+        "flags": 251,
+        "missed_labels": 77,
+        "possible_cues": 12,
+        "possible_cues_per_100_sentences": 0.53,
+        "possible_cues_that_are_annotator_labels": 2,
+        "missed_labels_with_a_possible_cue": 2,
+        "share_of_missed_labels_with_a_possible_cue": 0.026,
+        "sentences_with_any_cue_per_100": 1.36,
+        "uncertain_flags": 19,
+        "wrong_share_of_uncertain_flags": 0.4737,
+        "wrong_share_of_other_flags": 0.3017,
+        "per_category": {
+          "Limitation of liability": {
+            "missed_labels": 23,
+            "possible_cues": 6,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 4
+          },
+          "Unilateral termination": {
+            "missed_labels": 15,
+            "possible_cues": 2,
+            "missed_labels_with_a_possible_cue": 1,
+            "uncertain_flags": 6
+          },
+          "Unilateral change": {
+            "missed_labels": 10,
+            "possible_cues": 0,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 2
+          },
+          "Content removal": {
+            "missed_labels": 15,
+            "possible_cues": 0,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 2
+          },
+          "Contract by using": {
+            "missed_labels": 3,
+            "possible_cues": 0,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 1
+          },
+          "Choice of law": {
+            "missed_labels": 6,
+            "possible_cues": 1,
+            "missed_labels_with_a_possible_cue": 1,
+            "uncertain_flags": 0
+          },
+          "Jurisdiction": {
+            "missed_labels": 0,
+            "possible_cues": 1,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 2
+          },
+          "Arbitration": {
+            "missed_labels": 5,
+            "possible_cues": 2,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 2
+          }
+        }
+      }
+    },
+    "0.10": {
+      "product_cut_offs_OPTIMISTIC": {
+        "sentences": 2275,
+        "annotator_labels": 249,
+        "flags": 239,
+        "missed_labels": 72,
+        "possible_cues": 59,
+        "possible_cues_per_100_sentences": 2.59,
+        "possible_cues_that_are_annotator_labels": 14,
+        "missed_labels_with_a_possible_cue": 14,
+        "share_of_missed_labels_with_a_possible_cue": 0.1944,
+        "sentences_with_any_cue_per_100": 4.79,
+        "uncertain_flags": 53,
+        "wrong_share_of_uncertain_flags": 0.4151,
+        "wrong_share_of_other_flags": 0.2151,
+        "per_category": {
+          "Limitation of liability": {
+            "missed_labels": 21,
+            "possible_cues": 17,
+            "missed_labels_with_a_possible_cue": 4,
+            "uncertain_flags": 15
+          },
+          "Unilateral termination": {
+            "missed_labels": 15,
+            "possible_cues": 21,
+            "missed_labels_with_a_possible_cue": 7,
+            "uncertain_flags": 12
+          },
+          "Unilateral change": {
+            "missed_labels": 10,
+            "possible_cues": 5,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 10
+          },
+          "Content removal": {
+            "missed_labels": 15,
+            "possible_cues": 7,
+            "missed_labels_with_a_possible_cue": 2,
+            "uncertain_flags": 4
+          },
+          "Contract by using": {
+            "missed_labels": 2,
+            "possible_cues": 3,
+            "missed_labels_with_a_possible_cue": 1,
+            "uncertain_flags": 5
+          },
+          "Choice of law": {
+            "missed_labels": 5,
+            "possible_cues": 0,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 3
+          },
+          "Jurisdiction": {
+            "missed_labels": 0,
+            "possible_cues": 2,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 2
+          },
+          "Arbitration": {
+            "missed_labels": 4,
+            "possible_cues": 4,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 2
+          }
+        }
+      },
+      "leave_one_company_out_HONEST": {
+        "sentences": 2275,
+        "annotator_labels": 249,
+        "flags": 251,
+        "missed_labels": 77,
+        "possible_cues": 53,
+        "possible_cues_per_100_sentences": 2.33,
+        "possible_cues_that_are_annotator_labels": 19,
+        "missed_labels_with_a_possible_cue": 19,
+        "share_of_missed_labels_with_a_possible_cue": 0.2468,
+        "sentences_with_any_cue_per_100": 4.92,
+        "uncertain_flags": 62,
+        "wrong_share_of_uncertain_flags": 0.5645,
+        "wrong_share_of_other_flags": 0.2328,
+        "per_category": {
+          "Limitation of liability": {
+            "missed_labels": 23,
+            "possible_cues": 16,
+            "missed_labels_with_a_possible_cue": 5,
+            "uncertain_flags": 12
+          },
+          "Unilateral termination": {
+            "missed_labels": 15,
+            "possible_cues": 18,
+            "missed_labels_with_a_possible_cue": 8,
+            "uncertain_flags": 19
+          },
+          "Unilateral change": {
+            "missed_labels": 10,
+            "possible_cues": 5,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 10
+          },
+          "Content removal": {
+            "missed_labels": 15,
+            "possible_cues": 3,
+            "missed_labels_with_a_possible_cue": 2,
+            "uncertain_flags": 8
+          },
+          "Contract by using": {
+            "missed_labels": 3,
+            "possible_cues": 3,
+            "missed_labels_with_a_possible_cue": 2,
+            "uncertain_flags": 5
+          },
+          "Choice of law": {
+            "missed_labels": 6,
+            "possible_cues": 1,
+            "missed_labels_with_a_possible_cue": 1,
+            "uncertain_flags": 2
+          },
+          "Jurisdiction": {
+            "missed_labels": 0,
+            "possible_cues": 2,
+            "missed_labels_with_a_possible_cue": 0,
+            "uncertain_flags": 2
+          },
+          "Arbitration": {
+            "missed_labels": 5,
+            "possible_cues": 5,
+            "missed_labels_with_a_possible_cue": 1,
+            "uncertain_flags": 4
+          }
+        }
+      }
+    }
+  },
+  "rule": "KEEP if, honest column at margin 0.05: possible cues point to at least 10% of missed labels AND add at most 5 per 100 sentences",
+  "rule_a_coverage_passed": false,
+  "rule_b_volume_passed": true,
+  "decision": "RECONSIDER the cue display in Session 09",
+  "note": "Validation split only; the test split is never read. Margins other than the product margin are sensitivity checks, not candidates. No sentence text is stored.",
+  "test_split_read": false
+}
