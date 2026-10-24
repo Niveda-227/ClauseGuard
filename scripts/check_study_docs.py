@@ -1,6 +1,10 @@
 """Check that each study task is fair before a session: the answer sentence exists and
 how the running model labels it. Reads the PRIVATE answer key; writes only a sanitized
-summary (no answer text, no sentence position) that is safe to commit."""
+summary (no answer text, no sentence position) that is safe to commit.
+
+Session 08: also reports the review cue the app shows on the answer sentence
+(clauses/cues.py): 'flagged', 'flagged, uncertain', 'possible' (not flagged, score just
+below the cut-off) or 'none'."""
 import argparse
 import json
 import sys
@@ -28,11 +32,16 @@ def check(tasks_path, key_path, bundle):
         target = matches[0]
         category = entry['target_category']
         others = [s for s in analysis['sentences'] if s is not target and category in s['labels']]
+        if category in target['labels']:
+            cue = 'flagged, uncertain' if category in target.get('uncertain', []) else 'flagged'
+        else:
+            cue = 'possible' if category in target.get('possible', []) else 'none'
         results.append({
             'task_id': task_id,
             'document': tasks[task_id]['document'],
             'target_category': category,
             'answer_sentence_flagged_with_target': category in target['labels'],
+            'answer_sentence_cue': cue,
             'target_score': round(target['scores'][category], 3),
             'extra_labels_on_answer_sentence': len([l for l in target['labels'] if l != category]),
             'other_sentences_with_target_label': len(others),
@@ -44,9 +53,9 @@ def check(tasks_path, key_path, bundle):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--tasks', default='examples/study/tasks_v2.json')
-    p.add_argument('--key', default='private/session05_answer_key.json')
-    p.add_argument('--output', default='experiments/session05/study_doc_check.json')
+    p.add_argument('--tasks', default='examples/study/tasks_v3.json')
+    p.add_argument('--key', default='private/session08_answer_key.json')
+    p.add_argument('--output', default='experiments/session08/study_doc_check.json')
     a = p.parse_args()
     try:
         summary = check(a.tasks, a.key, load())
@@ -55,7 +64,8 @@ def main():
     out = Path(a.output); out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(summary, indent=2) + '\n', encoding='utf-8')
     for t in summary['tasks']:
-        verdict = 'FAIR' if t['answer_sentence_flagged_with_target'] else 'MODEL MISSES IT'
+        verdict = {'flagged': 'FAIR', 'flagged, uncertain': 'FAIR (uncertain flag)',
+                   'possible': 'NOT FLAGGED, SHOWN AS POSSIBLE', 'none': 'MODEL MISSES IT'}[t['answer_sentence_cue']]
         print(f"{t['task_id']}: {verdict} | target score {t['target_score']} | "
               f"extra labels on answer {t['extra_labels_on_answer_sentence']} | "
               f"other '{t['target_category']}' sentences {t['other_sentences_with_target_label']}")

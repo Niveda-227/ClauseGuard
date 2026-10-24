@@ -9,6 +9,8 @@ Checks evidence/sessionNN/ for:
   - design: each participant did one task manually and the other with ClauseGuard
   - session_notes.md and README.md exist, with no unfilled << >> placeholders
   - privacy: no email addresses or phone numbers in any text file; screenshot names follow the pattern
+  - from Session 08: ClauseGuard trials used the web app, and every participant has an explanation
+    check record (<code>_explain_v1.json, clauses/explain_check.py) with consent recorded
 Prints PASS / WARN / FAIL per check and exits 1 if anything FAILs. It changes nothing.
 """
 import argparse
@@ -109,6 +111,26 @@ def check(root, session):
         if fname == 'session_notes.md':
             absent = [p for p in participants if p not in text]
             add('FAIL' if absent else 'PASS', 'session_notes.md has a section for every participant', ', '.join(absent))
+
+    if session >= '08':
+        not_web = []
+        for r in rows:
+            j = folder / f"{r['participant_id']}_{r['task_id']}_{r['condition']}_{r['protocol_version']}.json"
+            if r['condition'] == 'clauseguard' and j.exists():
+                if json.loads(j.read_text(encoding='utf-8')).get('interface') != 'web':
+                    not_web.append(f"{r['participant_id']} {r['task_id']}")
+        add('WARN' if not_web else 'PASS', 'ClauseGuard trials used the web app',
+            ', '.join(not_web) + (' (explain in session_notes.md)' if not_web else ''))
+        bad_explain = []
+        for f in sorted(folder.glob('*_explain_v1.json')):
+            data = json.loads(f.read_text(encoding='utf-8'))
+            if data.get('outside_team_and_consented') is not True or data.get('participant_id') not in participants:
+                bad_explain.append(f.name)
+        add('FAIL' if bad_explain else 'PASS', 'explanation checks have consent and belong to this week\'s participants',
+            ', '.join(bad_explain))
+        no_explain = [p for p in participants if not (folder / f'{p}_explain_v1.json').exists()]
+        add('WARN' if no_explain else 'PASS', 'every participant did the explanation check',
+            ', '.join(no_explain) + (' (say why in session_notes.md)' if no_explain else ''))
 
     leaks = []
     for f in sorted(folder.rglob('*')):
