@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-10-25T17:38:12.510651+00:00",
+  "stopped_at_utc": "2026-10-25T17:39:28.067836+00:00",
+  "record": {
+    "recorded_at_utc": "2026-10-25T17:40:06.042270+00:00",
+    "participant_id": "U010",
+    "task_id": "F1",
+    "condition": "manual",
+    "correct": 1,
+    "seconds": 75.559,
+    "limit_seconds": 180,
+    "model_id": "manual",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Find the sentence that says where you would have to go to court if you had a legal dispute with the company. Show me the passage, and tell me which city.",
+  "document": "examples/study/document_F.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "Oh, it wants the place where you go to court. This sentence says Denver, Colorado, so Denver is the answer.",
+  "observer_notes": "After the first reading, the participant asked whether the task was asking which state's laws applied or where a court case would have to be filed. The task was read aloud again. The participant then searched for \"legal action\" and found the relevant sentence.",
+  "interface": "text_editor",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}

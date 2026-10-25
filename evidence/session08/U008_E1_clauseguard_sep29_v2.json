@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-10-25T17:14:26.124063+00:00",
+  "stopped_at_utc": "2026-10-25T17:15:13.593852+00:00",
+  "record": {
+    "recorded_at_utc": "2026-10-25T17:16:31.296014+00:00",
+    "participant_id": "U008",
+    "task_id": "E1",
+    "condition": "clauseguard",
+    "correct": 1,
+    "seconds": 47.471,
+    "limit_seconds": 180,
+    "model_id": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Find the sentence that lets the company change these terms. Show me the passage, and tell me whether the company has to tell you before it changes them.",
+  "document": "examples/study/document_E.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "Here it says they can update the terms whenever they want without telling us beforehand. So no, they don't have to give me advance notice.",
+  "observer_notes": "The participant first looked through the results list and paused briefly to read the category labels. They opened the Category filter and selected Unilateral change. After looking at the results, they clicked a sentence to see it in the document before answering.",
+  "interface": "web",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}
