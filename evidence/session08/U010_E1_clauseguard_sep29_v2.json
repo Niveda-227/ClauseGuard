@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-10-25T17:40:50.638545+00:00",
+  "stopped_at_utc": "2026-10-25T17:41:26.853061+00:00",
+  "record": {
+    "recorded_at_utc": "2026-10-25T17:42:06.437313+00:00",
+    "participant_id": "U010",
+    "task_id": "E1",
+    "condition": "clauseguard",
+    "correct": 1,
+    "seconds": 36.215,
+    "limit_seconds": 180,
+    "model_id": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Find the sentence that lets the company change these terms. Show me the passage, and tell me whether the company has to tell you before it changes them.",
+  "document": "examples/study/document_E.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "They can update the terms without telling you in advance. So they don't have to warn you before changing them.",
+  "observer_notes": "The participant scanned the findings list, read a few category labels, and opened a sentence that appeared relevant. They checked the sentence in the document before explaining their answer.",
+  "interface": "web",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}

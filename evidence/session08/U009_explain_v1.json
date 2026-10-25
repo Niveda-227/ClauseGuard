@@ -1,0 +1,24 @@
+{
+  "recorded_at_utc": "2026-10-25T17:37:11.099118+00:00",
+  "participant_id": "U009",
+  "observer_id": "OBS01",
+  "version": "explain_v1",
+  "outside_team_and_consented": true,
+  "answers": {
+    "X1": "b",
+    "X2": "c",
+    "X3": "a",
+    "X4": "b"
+  },
+  "correct": {
+    "X1": true,
+    "X2": true,
+    "X3": true,
+    "X4": true
+  },
+  "answered": 4,
+  "score": 4,
+  "items": 4,
+  "observer_notes": "no",
+  "note": "Explanation check, not timed. Cards: examples/study/explain_check_v1.json. Key kept in private/."
+}
