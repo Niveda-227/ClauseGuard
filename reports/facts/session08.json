@@ -1,0 +1,61 @@
+{
+  "repo_url": "https://github.com/Niveda-227/ClauseGuard",
+  "protocol": "sep29_v2",
+  "branch_protection_verified": true,
+  "outside_user_evidence_reviewed": true,
+  "contributions_verified": true,
+  "shipped_evidence_urls": [
+    "https://github.com/Niveda-227/ClauseGuard/pull/57",
+    "https://github.com/Niveda-227/ClauseGuard/pull/58",
+    "https://github.com/Niveda-227/ClauseGuard/pull/59",
+    "https://github.com/Niveda-227/ClauseGuard/pull/60",
+    "https://github.com/Niveda-227/ClauseGuard/pull/61"
+  ],
+  "user_change_evidence_urls": [
+    "https://github.com/Niveda-227/ClauseGuard/issues/52",
+    "https://github.com/Niveda-227/ClauseGuard/pull/60",
+    "https://github.com/Niveda-227/ClauseGuard/pull/61"
+  ],
+  "members": {
+    "Ameer": {
+      "github": "sohail-umd",
+      "completed_work": "Built and shipped the ClauseGuard web app interface running locally in the browser.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/53",
+        "https://github.com/Niveda-227/ClauseGuard/pull/57"
+      ]
+    },
+    "Hemanth": {
+      "github": "hreddy14",
+      "completed_work": "Implemented review cues near decision cut-offs across the engine, desktop app, and web app.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/52",
+        "https://github.com/Niveda-227/ClauseGuard/pull/58"
+      ]
+    },
+    "Jayakrishna": {
+      "github": "Jayakrishna-Reddy",
+      "completed_work": "Evaluated review cues on the validation split and conducted the mid-semester decision rule re-check.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/54",
+        "https://github.com/Niveda-227/ClauseGuard/pull/59"
+      ]
+    },
+    "Niveda": {
+      "github": "Niveda-227",
+      "completed_work": "Conducted explanation checks and managed user study trials with three outside participants on the web app.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/55",
+        "https://github.com/Niveda-227/ClauseGuard/pull/61"
+      ]
+    },
+    "Ankan": {
+      "github": "royak747",
+      "completed_work": "Finalized the Session 08 report, ran the final mid-semester decision re-check, and prepared the web demo run-sheet.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/56",
+        "https://github.com/Niveda-227/ClauseGuard/pull/62"
+      ]
+    }
+  }
+}
