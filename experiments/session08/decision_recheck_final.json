@@ -1,0 +1,94 @@
+{
+  "rule_source": "docs/decisions/2026-10-06_midpoint_decision.md, section 5 (\"What would change our mind\")",
+  "protocol": "sep29_v2",
+  "model_gate": {
+    "honest_macro_f1": 0.6768,
+    "baseline_macro_f1": 0.2551,
+    "gain": 0.4217,
+    "required_gain": 0.1,
+    "app_runs_evaluated_model": true,
+    "passed": true
+  },
+  "participants": [
+    "U002",
+    "U003",
+    "U004",
+    "U005",
+    "U006",
+    "U007",
+    "U008",
+    "U009",
+    "U010"
+  ],
+  "participant_count": 9,
+  "required_participants": 6,
+  "clauseguard": {
+    "trials": 9,
+    "successes": 9,
+    "success_percent": 100.0,
+    "median_seconds": 51.79
+  },
+  "manual": {
+    "trials": 9,
+    "successes": 8,
+    "success_percent": 88.89,
+    "median_seconds": 72.84
+  },
+  "gap_points_clauseguard_minus_manual": 11.11,
+  "max_gap_points_below_manual": 25,
+  "misled_by_wrong_tags": 0,
+  "misled_source": "evidence/session05 to session08 session_notes.md",
+  "per_session": [
+    {
+      "session": "05",
+      "participants": [
+        "U002"
+      ],
+      "clauseguard": "1/1",
+      "manual": "1/1",
+      "clauseguard_models": [
+        "04713fbf6e23"
+      ]
+    },
+    {
+      "session": "06",
+      "participants": [
+        "U003",
+        "U004",
+        "U005"
+      ],
+      "clauseguard": "3/3",
+      "manual": "3/3",
+      "clauseguard_models": [
+        "04713fbf6e23"
+      ]
+    },
+    {
+      "session": "07",
+      "participants": [
+        "U006",
+        "U007"
+      ],
+      "clauseguard": "2/2",
+      "manual": "1/2",
+      "clauseguard_models": [
+        "dafbb5470f2f"
+      ]
+    },
+    {
+      "session": "08",
+      "participants": [
+        "U008",
+        "U009",
+        "U010"
+      ],
+      "clauseguard": "3/3",
+      "manual": "3/3",
+      "clauseguard_models": [
+        "dafbb5470f2f"
+      ]
+    }
+  ],
+  "outcome": "KEEP THE PRODUCT DIRECTION",
+  "note": "A pre-committed decision heuristic, not a statistical test. Speed is reported but does not decide. Tasks differ in difficulty between sessions; pooled rates mix tasks and product versions."
+}
