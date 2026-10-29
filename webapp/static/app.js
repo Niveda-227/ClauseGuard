@@ -25,13 +25,14 @@
   };
   const NO_FLAG = 'No category flagged';
 
-  const state = { meta: null, result: null, analyzedText: '', filter: 'all', activeId: null, busy: false };
+  const state = { meta: null, result: null, worth: null, analyzedText: '', filter: 'all', activeId: null, busy: false };
 
   const $ = (id) => document.getElementById(id);
   const els = {
     sheet: $('sheet'), terms: $('terms'), doc: $('doc'), count: $('char-count'),
     analyze: $('analyze-btn'), status: $('status'), summary: $('summary'), chips: $('chips'),
     results: $('results'), empty: $('empty'), detail: $('detail'), exports: $('exports'),
+    check: $('check'), checkList: $('check-list'),
     cards: $('cards'), file: $('file-input'), modelLine: $('model-line'),
     specimen: document.querySelector('.specimen'), specimenLines: $('specimen-lines'),
     specimenCaption: $('specimen-caption'),
@@ -165,6 +166,7 @@
 
   function clearResults(message) {
     state.result = null;
+    state.worth = null;
     state.analyzedText = '';
     state.activeId = null;
     state.filter = 'all';
@@ -199,8 +201,9 @@
     els.analyze.textContent = 'Analyzing…';
     setStatus('Analyzing on this computer…');
     try {
-      const { result } = await api('/api/analyze', { text });
+      const { result, worth_a_look: worth } = await api('/api/analyze', { text });
       state.result = result;
+      state.worth = worth || null;
       state.analyzedText = text;
       state.filter = 'all';
       state.activeId = null;
@@ -234,10 +237,12 @@
     renderSummary();
     renderChips();
     renderResults();
+    renderCheck();
     renderCards();
     const has = Boolean(state.result);
     els.empty.hidden = has;
     els.exports.hidden = !has;
+    els.check.hidden = !(has && state.worth);
     if (!has) els.detail.hidden = true;
   }
 
@@ -406,12 +411,87 @@
         meter(label, row.scores[label]),
         el('p', { class: 'note', text: 'Not flagged: the score is just below the cut-off. Read this sentence before deciding.' })));
     }
+    for (const look of looksFor(row.sentence_id)) {
+      parts.push(el('section', { class: 'reason reason-look' },
+        el('h4', {}, lookTag(look.category)),
+        el('p', { text: `Contains ${quoteWords(look.words)}. ${state.meta.explanations[look.category]}` }),
+        el('p', { class: 'note', text: 'Not flagged by the model. This is a word match, not a prediction: read the sentence and decide.' })));
+    }
     if (row.near_threshold && !uncertain.length && !possible.length) {
       parts.push(el('p', { class: 'note', text: 'One score is near its decision threshold. Review context carefully.' }));
     }
     els.detail.replaceChildren(...parts);
     els.detail.style.setProperty('--active-ink', inkOf(row));
     els.detail.hidden = false;
+  }
+
+  // ------------------------------------------------------------------ check it yourself (Session 09)
+  // clauses/absence.py: per category, the number of flagged sentences and the unflagged sentences that
+  // contain one of that category's search words. Word matches, not model predictions. Each category is
+  // collapsed, and nothing is added to the results list, so the extra marks stay out of the way.
+  function quoteWords(words) {
+    return words.map((w) => `'${w}'`).join(', ');
+  }
+
+  function looksFor(id) {
+    if (!state.worth) return [];
+    const out = [];
+    for (const c of state.worth.categories) {
+      for (const x of c.worth_a_look) {
+        if (x.sentence_id === id) out.push({ category: c.category, words: x.words });
+      }
+    }
+    return out;
+  }
+
+  function lookTag(label) {
+    return el('span', { class: 'tag tag-look', style: `--ink-c:${INK[label] || '#7A758C'}`,
+      title: 'Not flagged: the sentence contains a search word for this category' },
+    el('span', { class: 'dot', 'aria-hidden': 'true' }), el('span', { text: `Worth a look: ${label}` }));
+  }
+
+  function showSentence(id) {
+    if (!state.result) return;
+    const row = state.result.sentences[id];
+    if (!row) return;
+    if (!visibleRows().includes(row)) {
+      state.filter = 'all';
+      renderChips();
+      renderResults();
+    }
+    select(id, { scrollDoc: true });
+  }
+
+  function renderCheck() {
+    els.checkList.replaceChildren();
+    if (!state.result || !state.worth) return;
+    for (const c of state.worth.categories) {
+      const looks = c.worth_a_look;
+      const summary = el('summary', {},
+        el('span', { class: 'dot', 'aria-hidden': 'true' }),
+        el('span', { class: 'check-name', text: c.category }),
+        el('span', { class: 'check-count' }, 'Flagged: ', el('b', { text: String(c.flagged) })),
+        looks.length ? el('span', { class: 'check-look', text: looks.length === 1 ? '1 sentence worth a look' : `${looks.length} sentences worth a look` }) : null);
+      const body = [];
+      if (c.flagged === 0) body.push(el('p', { class: 'check-zero', text: state.worth.zero_flags_note }));
+      if (looks.length) {
+        body.push(el('p', { class: 'check-label', text: 'Not flagged, but worth a look:' }));
+        body.push(el('ul', { class: 'check-items' }, looks.map((x) => el('li', {},
+          el('button', { class: 'check-item', type: 'button', onclick: () => showSentence(x.sentence_id) },
+            `Sentence ${x.sentence_id + 1} `, el('span', { class: 'check-words', text: `(${quoteWords(x.words)})` }))))));
+      } else {
+        body.push(el('p', { class: 'check-none', text: "No unflagged sentence contains this category's search words." }));
+      }
+      body.push(el('p', { class: 'check-searched', text: `Words searched: ${c.search_words.join(', ')}` }));
+      els.checkList.append(el('details', { class: 'check-row', style: `--ink-c:${INK[c.category]}`, 'data-category': c.category },
+        summary, el('div', { class: 'check-body' }, body)));
+    }
+  }
+
+  function openCheck(label) {
+    for (const row of els.checkList.querySelectorAll('details')) {
+      if (row.dataset.category === label) row.open = true;
+    }
   }
 
   function renderCards() {
@@ -448,7 +528,8 @@
       return;
     }
     if (!n) {
-      setStatus(`No sentence in this document is flagged as ${label}. That does not mean the document has no such clause.`);
+      openCheck(label);
+      setStatus(`No sentence in this document is flagged as ${label}. That does not mean the document has no such clause. See Check it yourself under Findings.`);
       return;
     }
     state.filter = label;
@@ -471,7 +552,8 @@
 
   function exportJson() {
     if (!state.result) return;
-    const data = { notice: state.meta.notice, thresholds: state.meta.thresholds, result: state.result };
+    const data = { notice: state.meta.notice, thresholds: state.meta.thresholds, result: state.result,
+      worth_a_look: state.worth };
     download(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }), 'clauseguard-analysis.json');
     setStatus('Downloaded the data. The file contains the text you analysed.');
   }

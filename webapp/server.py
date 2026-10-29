@@ -1,4 +1,4 @@
-"""ClauseGuard web app (Session 08).
+"""ClauseGuard web app (Session 08; "Not flagged, but worth a look" panel added in Session 09).
 
     python -m webapp                      # opens http://127.0.0.1:8641 in your browser
     python -m webapp --port 8642          # if 8641 is busy
@@ -26,6 +26,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:  # allows `python webapp/server.py` as well as `python -m webapp`
     sys.path.insert(0, str(ROOT))
 
+from clauses.absence import worth_a_look  # noqa: E402
 from clauses.export import render_html  # noqa: E402
 from clauses.model import DEFAULT_MODEL, analyze, load  # noqa: E402
 from clauses.schema import EXPLANATIONS, LABELS, NOTICE  # noqa: E402
@@ -179,7 +180,10 @@ class Handler(BaseHTTPRequestHandler):
         app = self.server.app
         try:
             if path == '/api/analyze':
-                self._json(HTTPStatus.OK, {'result': app.analyze(payload['text'])})
+                # 'result' is exactly analyze(), as in the desktop app. 'worth_a_look' (Session 09,
+                # clauses/absence.py) is a separate field: word matches, not model predictions.
+                result = app.analyze(payload['text'])
+                self._json(HTTPStatus.OK, {'result': result, 'worth_a_look': worth_a_look(result)})
             else:
                 self._send(HTTPStatus.OK, app.export_html(payload['text']), 'text/html; charset=utf-8',
                            {'Content-Disposition': 'attachment; filename="clauseguard-analysis.html"'})
