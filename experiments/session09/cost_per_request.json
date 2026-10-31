@@ -1,0 +1,58 @@
+{
+  "measured_utc": "2026-10-31T21:48:30+00:00",
+  "purpose": "Cost per request of the web app on the real request path (HTTP to /api/analyze on 127.0.0.1)",
+  "machine": {
+    "os": "macOS",
+    "os_release": "27.2.0",
+    "cpu_arch": "arm64",
+    "python": "3.12.15"
+  },
+  "model_sha256": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+  "model_load_seconds": 0.174,
+  "warmup_requests_per_document": 2,
+  "documents": {
+    "study": {
+      "document": "examples/study/document_F.txt",
+      "sentences": 16,
+      "characters": 1033,
+      "requests": 30,
+      "median_seconds": 0.0044,
+      "p95_seconds": 0.0049,
+      "cpu_seconds_per_request": 0.0037,
+      "median_ms": 4.4,
+      "p95_ms": 4.9,
+      "cpu_ms_per_request": 3.7
+    },
+    "long": {
+      "document": "examples/fictional_terms.txt x 100",
+      "sentences": 1100,
+      "characters": 75799,
+      "requests": 30,
+      "median_seconds": 0.1406,
+      "p95_seconds": 0.1543,
+      "cpu_seconds_per_request": 0.1392,
+      "median_ms": 140.6,
+      "p95_ms": 154.3,
+      "cpu_ms_per_request": 139.2
+    }
+  },
+  "peak_memory_mb": 143.0,
+  "peak_memory_method": "resource.getrusage, peak resident memory of the whole process",
+  "network_calls_outside_this_computer": 0,
+  "api_cost_per_request_usd": 0.0,
+  "local_cost_note": "The product runs on the user's own computer and calls no API, so each request costs us nothing. The honest costs are the user's computer, its electricity and their setup time.",
+  "hosted_estimate": {
+    "plan": "DigitalOcean Basic Droplet, Regular: 1 GiB memory, 1 vCPU",
+    "price_per_hour_usd": 0.00893,
+    "price_source_url": "https://www.digitalocean.com/pricing/droplets",
+    "price_looked_up_on": "2026-10-31",
+    "assumption": "One server of this plan answers requests one at a time; the cost of a request is the price of the seconds it takes (price per hour x median seconds / 3600).",
+    "study_cost_per_million_requests_usd": 0.0109,
+    "study_requests_per_hour_one_at_a_time": 818182,
+    "long_cost_per_million_requests_usd": 0.3488,
+    "long_requests_per_hour_one_at_a_time": 25605,
+    "plan_memory_mb": 1024,
+    "peak_memory_fits_in_plan": true,
+    "note": "An always-on server is billed by the hour whatever the traffic, so at low traffic the hourly price, not the cost per request, is what matters."
+  }
+}

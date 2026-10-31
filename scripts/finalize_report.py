@@ -1,8 +1,17 @@
 """Fill a weekly report scaffold from facts + real task records. Works for any session.
 
-Two kinds of placeholders live in reports/sessionNN.md:
+Three kinds of placeholders live in reports/sessionNN.md:
   {{AUTO_...}}     filled by THIS script from reports/facts/sessionNN.json and evidence/
-  <<HUMAN: ...>>   written BY HAND before running this script
+  {{FROM:<path>#<key.path>}}   (Session 09) filled by THIS script with one value from a JSON file
+                   in the repository, for example
+                   {{FROM:experiments/session09/hint_eval.json#honest.marks_per_100_sentences}}
+                   Keys are separated by dots; a number picks a list item (groups.0.tasks); a key
+                   that itself contains a dot also works (margins.0.05.leave_one_company_out_HONEST).
+                   Optional format after a bar: |2 = two decimals, |%1 = times 100 with one decimal
+                   (a share of 0.5065 becomes 50.6). The file must be listed under "number_sources"
+                   in the facts file, so scripts/check_report_numbers.py checks it too.
+  <<HUMAN: ...>>   written BY HAND before running this script (words only: every number in the
+                   report must come from a token or a listed source, see check_report_numbers.py)
 
 The script refuses to write anything if a <<HUMAN>> placeholder is still present, if any
 fact is missing or malformed, or if the task records do not exist. It never invents data.
@@ -11,6 +20,7 @@ import argparse
 import json
 import re
 import sys
+from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,6 +32,59 @@ PEOPLE = [('Ameer', 'Product'), ('Hemanth', 'Engineering'), ('Jayakrishna', 'Dat
           ('Niveda', 'Users&Research'), ('Ankan', 'Operations')]
 REPORTED_SESSIONS = ['04', '05', '07', '08', '09', '10', '11', '12']
 HANDLE = re.compile(r'[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?')
+FROM = re.compile(r'{{FROM:([^#{}|]+)#([^{}|]+)(?:\|(%?)(\d))?}}')
+
+
+def from_value(root, rel, key, scale, decimals, sources):
+    """One value from a JSON file in the repository, formatted for the report."""
+    root = Path(root).resolve()
+    label = f'{{{{FROM:{rel}#{key}}}}}'
+    if rel not in sources:
+        raise ValueError(f'{label}: {rel} is not listed under number_sources in the facts file.')
+    path = (root / rel).resolve()
+    if not path.is_relative_to(root) or path.suffix != '.json' or not path.is_file():
+        raise ValueError(f'{label}: {rel} is not a JSON file in the repository.')
+    value = json.loads(path.read_text(encoding='utf-8'))
+    if isinstance(value, dict) and 'superseded_by' in value:
+        raise ValueError(f'{label}: {rel} is superseded by {value["superseded_by"]}.')
+    parts = key.split('.')
+    while parts:
+        part = parts.pop(0)
+        # A key may itself contain dots (cue_eval.json uses margins such as "0.05"): join the next parts until it matches.
+        while isinstance(value, dict) and part not in value and parts:
+            part = part + '.' + parts.pop(0)
+        if isinstance(value, list) and part.isdigit() and int(part) < len(value):
+            value = value[int(part)]
+        elif isinstance(value, dict) and part in value:
+            value = value[part]
+        else:
+            raise ValueError(f'{label}: no key {part!r} in {rel}.')
+    if isinstance(value, bool) or not isinstance(value, (int, float, str)):
+        raise ValueError(f'{label}: the value is not a number or a text.')
+    if decimals is None:
+        if scale:
+            raise ValueError(f'{label}: |% needs a number of decimals, for example |%1.')
+        return str(value)
+    if isinstance(value, str):
+        raise ValueError(f'{label}: a format was given but the value is text.')
+    number = Decimal(str(value)) * (100 if scale else 1)
+    return str(number.quantize(Decimal(1).scaleb(-int(decimals)), rounding=ROUND_HALF_UP))
+
+
+def trials_table(csv_path):
+    """A Markdown table with one row per trial in tasks.csv (and the interface from its trial record)."""
+    import csv
+    with Path(csv_path).open(newline='', encoding='utf-8') as f:
+        rows = list(csv.DictReader(f))
+    lines = ['| Participant | Task | Condition | Interface | Correct within the limit | Seconds |',
+             '|---|---|---|---|---|---:|']
+    for r in rows:
+        record = Path(csv_path).parent / f"{r['participant_id']}_{r['task_id']}_{r['condition']}_{r['protocol_version']}.json"
+        interface = json.loads(record.read_text(encoding='utf-8')).get('interface', 'not recorded') if record.exists() else 'not recorded'
+        ok = r['correct'] == '1' and float(r['seconds']) <= float(r['limit_seconds'])
+        condition = 'ClauseGuard' if r['condition'] == 'clauseguard' else 'manual'
+        lines.append(f"| {r['participant_id']} | {r['task_id']} | {condition} | {interface} | {'yes' if ok else 'no'} | {r['seconds']} |")
+    return '\n'.join(lines), sorted({r['participant_id'] for r in rows})
 
 
 def text_value(value, label):
@@ -103,6 +166,9 @@ def finalize(root, session, facts_path=None, model_id=None):
         'AUTO_SHIPPED_LINKS': links(facts.get('shipped_evidence_urls'), 'shipped_evidence_urls', repo),
         'AUTO_CHANGE_LINKS': links(facts.get('user_change_evidence_urls'), 'user_change_evidence_urls', repo),
     }
+    table, participants = trials_table(csv_path)
+    tokens['AUTO_TRIALS_TABLE'] = table
+    tokens['AUTO_PARTICIPANT_IDS'] = ', '.join(participants)
     contributions = []
     members = facts.get('members', {})
     for name, hat in PEOPLE:
@@ -117,9 +183,12 @@ def finalize(root, session, facts_path=None, model_id=None):
 
     for key, value in tokens.items():
         text = text.replace('{{' + key + '}}', value)
-    leftover = re.findall(r'{{[A-Z_a-z]+}}', text)
+    sources = facts.get('number_sources', [])
+    text = FROM.sub(lambda m: from_value(root, m.group(1).strip(), m.group(2).strip(), m.group(3) == '%',
+                                         m.group(4), sources), text)
+    leftover = re.findall(r'{{[^{}]*}}', text)
     if leftover:
-        raise ValueError(f'Unknown or unfilled token(s): {leftover}')
+        raise ValueError(f'Unknown or unfilled token(s): {leftover[:5]}')
     if re.search(r'TODO|PENDING|DRAFT', text):
         raise ValueError('TODO / PENDING / DRAFT still appears in the report.')
 
