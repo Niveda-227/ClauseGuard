@@ -141,6 +141,14 @@
             <button class="pill pill-soft" type="button" data-action="load-example">Load the fictional example</button>
           </div>
           <article class="detail" id="detail" aria-live="polite" hidden></article>
+          <section class="check" id="check" aria-labelledby="check-title" hidden>
+            <div class="check-head">
+              <h4 id="check-title">Check it yourself</h4>
+              <span class="check-badge">Word matches, not model predictions</span>
+            </div>
+            <p class="check-intro">For each category: how many sentences the model flagged, and the unflagged sentences that contain one of that category's search words. Open a category to see them.</p>
+            <div class="check-list" id="check-list"></div>
+          </section>
           <div class="exports" id="exports" hidden>
             <button class="pill pill-soft" type="button" data-action="export-html">Download report (HTML)</button>
             <button class="pill pill-soft" type="button" data-action="export-json">Download data (JSON)</button>

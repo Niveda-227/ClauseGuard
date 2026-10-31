@@ -7,3 +7,4 @@ The rule is written and merged **before** the evidence it uses is collected, so 
 | Date | Decision | Memo | Rule | Evaluated by |
 |---|---|---|---|---|
 | 2026-10-06 | Mid-semester: pivot or persevere | [2026-10-06_midpoint_decision.md](2026-10-06_midpoint_decision.md) | [midpoint_rule.json](midpoint_rule.json) | `scripts/midpoint_facts.py` |
+| 2026-10-28 | Review cues after Session 08; rule for the "Not flagged, but worth a look" search words | [2026-10-28_cue_decision.md](2026-10-28_cue_decision.md) | in the memo (section "The rule for the search words") | `scripts/hint_eval.py` (Session 09) |
