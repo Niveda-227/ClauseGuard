@@ -1,3 +1,5 @@
+SUPERSEDED by [decision_recheck_final.md](decision_recheck_final.md) (Sessions 05-08, 9 participants). This file is the interim run over Sessions 05-07 only. Do not quote its numbers.
+
 # Re-check of the mid-semester decision rule (Session 08)
 
 Rule: docs/decisions/2026-10-06_midpoint_decision.md, section 5 ("What would change our mind"). Protocol `sep29_v2` trials only.

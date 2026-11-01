@@ -1,0 +1,128 @@
+{
+  "source": "experiments/session07/tuned/predictions.jsonl",
+  "model_id": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+  "search_words": "clauses/absence.py SEARCH_WORDS",
+  "search_words_sha256": "23a25b09f82f62f6dfb6cdde927d347e89684b88ead2890f7b5cc14fbb2fb8af",
+  "optimistic": {
+    "sentences": 2275,
+    "annotator_labels": 249,
+    "flags": 239,
+    "missed_labels": 72,
+    "marks": 727,
+    "marks_per_100_sentences": 31.96,
+    "sentences_with_any_mark_per_100": 27.74,
+    "missed_labels_with_a_mark": 34,
+    "share_of_missed_labels_with_a_mark": 0.4722,
+    "percent_of_missed_labels_with_a_mark": 47.2,
+    "marks_that_are_annotator_labels": 34,
+    "percent_of_marks_that_are_annotator_labels": 4.7,
+    "per_category": {
+      "Limitation of liability": {
+        "missed_labels": 21,
+        "marks": 180,
+        "missed_labels_with_a_mark": 14
+      },
+      "Unilateral termination": {
+        "missed_labels": 15,
+        "marks": 70,
+        "missed_labels_with_a_mark": 5
+      },
+      "Unilateral change": {
+        "missed_labels": 10,
+        "marks": 87,
+        "missed_labels_with_a_mark": 3
+      },
+      "Content removal": {
+        "missed_labels": 15,
+        "marks": 53,
+        "missed_labels_with_a_mark": 5
+      },
+      "Contract by using": {
+        "missed_labels": 2,
+        "marks": 129,
+        "missed_labels_with_a_mark": 2
+      },
+      "Choice of law": {
+        "missed_labels": 5,
+        "marks": 20,
+        "missed_labels_with_a_mark": 1
+      },
+      "Jurisdiction": {
+        "missed_labels": 0,
+        "marks": 49,
+        "missed_labels_with_a_mark": 0
+      },
+      "Arbitration": {
+        "missed_labels": 4,
+        "marks": 139,
+        "missed_labels_with_a_mark": 4
+      }
+    }
+  },
+  "honest": {
+    "sentences": 2275,
+    "annotator_labels": 249,
+    "flags": 251,
+    "missed_labels": 77,
+    "marks": 720,
+    "marks_per_100_sentences": 31.65,
+    "sentences_with_any_mark_per_100": 27.52,
+    "missed_labels_with_a_mark": 39,
+    "share_of_missed_labels_with_a_mark": 0.5065,
+    "percent_of_missed_labels_with_a_mark": 50.6,
+    "marks_that_are_annotator_labels": 39,
+    "percent_of_marks_that_are_annotator_labels": 5.4,
+    "per_category": {
+      "Limitation of liability": {
+        "missed_labels": 23,
+        "marks": 183,
+        "missed_labels_with_a_mark": 16
+      },
+      "Unilateral termination": {
+        "missed_labels": 15,
+        "marks": 65,
+        "missed_labels_with_a_mark": 5
+      },
+      "Unilateral change": {
+        "missed_labels": 10,
+        "marks": 87,
+        "missed_labels_with_a_mark": 3
+      },
+      "Content removal": {
+        "missed_labels": 15,
+        "marks": 50,
+        "missed_labels_with_a_mark": 5
+      },
+      "Contract by using": {
+        "missed_labels": 3,
+        "marks": 130,
+        "missed_labels_with_a_mark": 3
+      },
+      "Choice of law": {
+        "missed_labels": 6,
+        "marks": 21,
+        "missed_labels_with_a_mark": 2
+      },
+      "Jurisdiction": {
+        "missed_labels": 0,
+        "marks": 49,
+        "missed_labels_with_a_mark": 0
+      },
+      "Arbitration": {
+        "missed_labels": 5,
+        "marks": 135,
+        "missed_labels_with_a_mark": 5
+      }
+    }
+  },
+  "rule": "KEEP if, honest column: marks reach at least 40% of missed labels AND add at most 20 per 100 sentences",
+  "min_coverage": 0.4,
+  "max_marks_per_100_sentences": 20.0,
+  "rule_a_coverage_passed": true,
+  "rule_b_volume_passed": false,
+  "coverage_result": "passed",
+  "volume_result": "failed",
+  "decision": "RECONSIDER the worth-a-look list in Session 10",
+  "note": "Validation split only; the test split is never read. No sentence text is stored. UNFAIR-ToS labels only potentially unfair clauses, so many marks are on-topic but fair sentences.",
+  "test_split_read": false
+}
