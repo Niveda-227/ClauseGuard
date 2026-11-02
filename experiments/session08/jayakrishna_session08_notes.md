@@ -20,6 +20,8 @@ The cues: an **uncertain** flag is less than 0.05 above its cut-off; a **possibl
 
 ## 2. Re-check of the mid-semester rule (`experiments/session08/decision_recheck.md`)
 
+**SUPERSEDED:** the numbers in this section are the interim run over Sessions 05-07. The final re-check over Sessions 05-08 is `experiments/session08/decision_recheck_final.md`; quote that file, never this section.
+
 - Inputs: 6 participants (U002, U003, U004, U005, U006, U007). ClauseGuard 6 of 6 correct, manual 5 of 6, a gap of 16.67 points in ClauseGuard's favour. The model gate passed: honest macro-F1 0.6768 against 0.2551 for the baseline, a gain of 0.4217.
 
 - Misled by wrong tags: 0. I read evidence/session05, session06 and session07 session_notes.md. In Session 06, U003 and U005 were asked directly whether they treated the wrong tags as true on the answer sentence, and both said no. U004 looked at the tags but answered from the sentence. In Session 07, how U006 and U007 used the tags was not observed, so 0 means none were seen misled, not that it was confirmed for every trial.
