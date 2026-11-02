@@ -1,0 +1,14 @@
+{
+  "protocol": "sep29_v2",
+  "note": "Public task bank for Session 09: prompts and documents only. Tasks C1 and D1 stay retired (shown publicly in the mid-semester deck); E1 and F1 were used in Sessions 07 and 08. The observer answer key is kept in private/ (git-ignored) and must never be committed.",
+  "tasks": {
+    "G1": {
+      "document": "examples/study/document_G.txt",
+      "prompt": "Can the company remove your photos without telling you first? Find the sentence that answers this, show me the passage, and tell me whether they must notify you."
+    },
+    "H1": {
+      "document": "examples/study/document_H.txt",
+      "prompt": "Find the sentence that says which courts you would have to use if you had a legal dispute with the company. Show me the passage. If the document has no such sentence, say so."
+    }
+  }
+}

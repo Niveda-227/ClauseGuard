@@ -1,0 +1,35 @@
+{
+  "model_id": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+  "tasks": [
+    {
+      "task_id": "G1",
+      "document": "examples/study/document_G.txt",
+      "target_category": "Content removal",
+      "target_cut_off": 0.8,
+      "sentences_in_document": 16,
+      "worth_a_look_sentences_for_target": 2,
+      "answer": "sentence",
+      "answer_sentence_flagged_with_target": false,
+      "answer_sentence_cue": "none",
+      "target_score": 0.288,
+      "extra_labels_on_answer_sentence": 0,
+      "other_sentences_with_target_label": 0,
+      "answer_sentence_in_worth_a_look": true
+    },
+    {
+      "task_id": "H1",
+      "document": "examples/study/document_H.txt",
+      "target_category": "Jurisdiction",
+      "target_cut_off": 0.55,
+      "sentences_in_document": 16,
+      "worth_a_look_sentences_for_target": 0,
+      "answer": "absent",
+      "sentences_flagged_with_target": 0,
+      "sentences_with_target_search_words": 0,
+      "distractor_flagged_categories": [
+        "Choice of law"
+      ]
+    }
+  ],
+  "note": "Sanitized: contains no answer text or sentence positions."
+}

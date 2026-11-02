@@ -9,8 +9,10 @@ Checks evidence/sessionNN/ for:
   - design: each participant did one task manually and the other with ClauseGuard
   - session_notes.md and README.md exist, with no unfilled << >> placeholders
   - privacy: no email addresses or phone numbers in any text file; screenshot names follow the pattern
-  - from Session 08: ClauseGuard trials used the web app, and every participant has an explanation
-    check record (<code>_explain_v1.json, clauses/explain_check.py) with consent recorded
+  - from Session 08: ClauseGuard trials used the web app
+  - Session 08 only: every participant has an explanation check record (<code>_explain_v1.json,
+    clauses/explain_check.py) with consent recorded. The explanation check is not repeated in
+    Session 09 by design, so later sessions are not asked for it.
 Prints PASS / WARN / FAIL per check and exits 1 if anything FAILs. It changes nothing.
 """
 import argparse
@@ -121,6 +123,7 @@ def check(root, session):
                     not_web.append(f"{r['participant_id']} {r['task_id']}")
         add('WARN' if not_web else 'PASS', 'ClauseGuard trials used the web app',
             ', '.join(not_web) + (' (explain in session_notes.md)' if not_web else ''))
+    if session == '08':
         bad_explain = []
         for f in sorted(folder.glob('*_explain_v1.json')):
             data = json.loads(f.read_text(encoding='utf-8'))
