@@ -1,0 +1,86 @@
+{
+  "repo_url": "https://github.com/Niveda-227/ClauseGuard",
+  "protocol": "sep29_v2",
+  "branch_protection_verified": true,
+  "outside_user_evidence_reviewed": true,
+  "contributions_verified": true,
+  "shipped_evidence_urls": [
+    "https://github.com/Niveda-227/ClauseGuard/pull/68",
+    "https://github.com/Niveda-227/ClauseGuard/pull/69",
+    "https://github.com/Niveda-227/ClauseGuard/pull/70",
+    "https://github.com/Niveda-227/ClauseGuard/pull/71",
+    "https://github.com/Niveda-227/ClauseGuard/pull/72"
+  ],
+  "user_change_evidence_urls": [
+    "https://github.com/Niveda-227/ClauseGuard/issues/63",
+    "https://github.com/Niveda-227/ClauseGuard/pull/68",
+    "https://github.com/Niveda-227/ClauseGuard/pull/72"
+  ],
+  "number_sources": [
+    "evidence/session09/summary.json",
+    "evidence/session08/summary.json",
+    "experiments/session09/hint_eval.json",
+    "experiments/session09/cost_per_request.json",
+    "experiments/session09/study_doc_check.json",
+    "experiments/session07/threshold_ship_eval.json",
+    "experiments/session08/decision_recheck_final.json",
+    "experiments/session08/cue_eval.json",
+    "docs/decisions/2026-10-28_cue_decision.md",
+    "evidence/session09/tasks.csv"
+  ],
+  "quoted_numbers": [
+    {
+      "number": "16.67",
+      "source": "reports/session08.md",
+      "why": "The wrong re-check gap printed in the Session 08 report, quoted in the correction note."
+    },
+    {
+      "number": "83.33",
+      "source": "reports/session08.md",
+      "why": "The wrong manual success rate printed in the Session 08 report, quoted in the correction note."
+    }
+  ],
+  "members": {
+    "Ameer": {
+      "github": "sohail-umd",
+      "completed_work": "Added the \"Check it yourself\" panel (not flagged, but worth a look) to the web app and the HTML export, and recorded the review-cue decision with the pre-set rule for the search words.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/63",
+        "https://github.com/Niveda-227/ClauseGuard/pull/68"
+      ]
+    },
+    "Hemanth": {
+      "github": "hreddy14",
+      "completed_work": "Measured the cost per request of the web app on the real request path, and added the report number check and source-file number tokens to the report finalizer.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/64",
+        "https://github.com/Niveda-227/ClauseGuard/pull/69"
+      ]
+    },
+    "Jayakrishna": {
+      "github": "Jayakrishna-Reddy",
+      "completed_work": "Measured on the validation split whether the search words reach the clauses the model misses, under the pre-set rule, and marked the interim Session 08 re-check as superseded.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/65",
+        "https://github.com/Niveda-227/ClauseGuard/pull/70"
+      ]
+    },
+    "Niveda": {
+      "github": "Niveda-227",
+      "completed_work": "Prepared the absence tasks G1 and H1 (documents G and H, study check for an absent answer) and ran the Session 09 study with new outside participants on the web app.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/66",
+        "https://github.com/Niveda-227/ClauseGuard/pull/71",
+        "https://github.com/Niveda-227/ClauseGuard/pull/72"
+      ]
+    },
+    "Ankan": {
+      "github": "royak747",
+      "completed_work": "Wrote the Session 09 report with every number filled from its source file, corrected the Session 08 report, and updated the lean canvas and the web demo run-sheet.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/67",
+        "https://github.com/Niveda-227/ClauseGuard/pull/73"
+      ]
+    }
+  }
+}
