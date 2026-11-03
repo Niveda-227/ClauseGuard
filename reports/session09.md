@@ -54,8 +54,8 @@ The model running in the product did not change this week. It is still `dafbb547
 | U013 | H1 | ClauseGuard | web | yes | 55.189 |
 | U013 | G1 | manual | text_editor | yes | 38.342 |
 
-- G1 with the web app: Reviewed the app's findings, inspected the relevant sentence, and answered that the company can take down photos without telling first.
-- H1 with the web app: Reviewed the app's results, looked at the Minnesota sentence first, and stated that the document does not specify which courts handle legal disputes.
+- G1 with the web app: Reviewed the app's findings, opened the "Check it yourself" panel, inspected the relevant sentence, and answered that the company can take down photos without telling first.
+- H1 with the web app: Reviewed the app's results, opened the "Check it yourself" panel, looked at the Minnesota sentence first, and stated that the document does not specify which courts handle legal disputes.
 - Manual trials: For task H1, the participant searched the document using Ctrl+F for courts and Minnesota and concluded that no court-location sentence was present. For task G1, the participant searched using Ctrl+F for photos, located the photo-removal sentence, and answered that the company can take down photos and albums without notifying first.
 - Resulting change or next action: test the "Check it yourself" panel and the hint rule on fresh hand-labelled documents in Session 10 (evidence: [issue #63](https://github.com/Niveda-227/ClauseGuard/issues/63), [PR #68](https://github.com/Niveda-227/ClauseGuard/pull/68), [PR #72](https://github.com/Niveda-227/ClauseGuard/pull/72)).
 - This is a small pilot on short fictional documents, not a population estimate or a check of legal correctness.
