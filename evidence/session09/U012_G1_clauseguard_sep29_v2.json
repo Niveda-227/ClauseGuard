@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-11-03T00:15:36.015742+00:00",
+  "stopped_at_utc": "2026-11-03T00:16:39.838431+00:00",
+  "record": {
+    "recorded_at_utc": "2026-11-03T00:17:15.299777+00:00",
+    "participant_id": "U012",
+    "task_id": "G1",
+    "condition": "clauseguard",
+    "correct": 1,
+    "seconds": 63.822,
+    "limit_seconds": 180,
+    "model_id": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Can the company remove your photos without telling you first? Find the sentence that answers this, show me the passage, and tell me whether they must notify you.",
+  "document": "examples/study/document_G.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "Yes, they can take down photos without telling me first. It says they don't have to notify me.",
+  "observer_notes": "The participant reviewed the app's findings and inspected the relevant sentence before answering.",
+  "interface": "web",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}

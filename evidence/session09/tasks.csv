@@ -1,0 +1,5 @@
+recorded_at_utc,participant_id,task_id,condition,correct,seconds,limit_seconds,model_id,protocol_version
+2026-11-03T00:17:15.299777+00:00,U012,G1,clauseguard,1,63.822,180,dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd,sep29_v2
+2026-11-03T00:20:12.005377+00:00,U012,H1,manual,1,83.948,180,manual,sep29_v2
+2026-11-03T00:22:55.035935+00:00,U013,H1,clauseguard,1,55.189,180,dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd,sep29_v2
+2026-11-03T00:25:32.226274+00:00,U013,G1,manual,1,38.342,180,manual,sep29_v2

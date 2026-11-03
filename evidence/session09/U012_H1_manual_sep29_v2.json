@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-11-03T00:18:19.333943+00:00",
+  "stopped_at_utc": "2026-11-03T00:19:43.282620+00:00",
+  "record": {
+    "recorded_at_utc": "2026-11-03T00:20:12.005377+00:00",
+    "participant_id": "U012",
+    "task_id": "H1",
+    "condition": "manual",
+    "correct": 1,
+    "seconds": 83.948,
+    "limit_seconds": 180,
+    "model_id": "manual",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Find the sentence that says which courts you would have to use if you had a legal dispute with the company. Show me the passage. If the document has no such sentence, say so.",
+  "document": "examples/study/document_H.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "I don't see a sentence saying which courts handle legal disputes. The Minnesota sentence is about governing law, so the document doesn't specify the courts.",
+  "observer_notes": "The participant searched the document using Ctrl+F and checked the Minnesota sentence before concluding that no court-location sentence was present.",
+  "interface": "text_editor",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}
