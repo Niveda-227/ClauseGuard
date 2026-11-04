@@ -1,0 +1,55 @@
+{
+  "purpose": "Fresh real Terms of Service for the Session 10 domain-shift check. None of these companies is in the UNFAIR-ToS train, validation or test split.",
+  "retrieved": "2026-11-03",
+  "conversion": "Markdown at the pinned commit converted to plain text with scripts/fresh_docs.py md_to_text(): front matter, links, emphasis and list markers removed; one paragraph or list item per line; no words changed.",
+  "documents": [
+    {
+      "doc_id": "basecamp",
+      "file": "examples/fresh/basecamp_terms.txt",
+      "title": "Terms of Service (37signals: Basecamp, HEY and other products)",
+      "company": "37signals",
+      "source_repository": "https://github.com/basecamp/policies",
+      "source_path": "terms/index.md",
+      "source_commit": "05fb1f9ddaaf604fc5816990fa66f3ffd7f0a462",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "document_date": "Last updated January 6, 2023",
+      "source_url": "https://github.com/basecamp/policies/blob/05fb1f9ddaaf604fc5816990fa66f3ffd7f0a462/terms/index.md",
+      "sha256": "fb46871e757f08daf082399d8c026008859ebd45af60280023539cfd8f941c95",
+      "sentences": 156,
+      "in_unfair_tos": false
+    },
+    {
+      "doc_id": "cloudup",
+      "file": "examples/fresh/cloudup_terms.txt",
+      "title": "Cloudup Terms of Service",
+      "company": "Automattic (Cloudup)",
+      "source_repository": "https://github.com/Automattic/legalmattic",
+      "source_path": "Terms of Service/Cloudup/EN-Terms-of-Service.md",
+      "source_commit": "99aa482bf6b602645bcb50c47a68db48a76dbce0",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "document_date": "Effective May 15, 2015",
+      "source_url": "https://github.com/Automattic/legalmattic/blob/99aa482bf6b602645bcb50c47a68db48a76dbce0/Terms%20of%20Service/Cloudup/EN-Terms-of-Service.md",
+      "sha256": "8ca161330c411fe492d6054afb34962adab93916543ee6d8815320dcfa100652",
+      "sentences": 77,
+      "in_unfair_tos": false
+    },
+    {
+      "doc_id": "crowdsignal",
+      "file": "examples/fresh/crowdsignal_terms.txt",
+      "title": "Crowdsignal Terms and Conditions",
+      "company": "Automattic (Crowdsignal)",
+      "source_repository": "https://github.com/Automattic/legalmattic",
+      "source_path": "Terms of Service/Crowdsignal/Crowdsignal Terms and Conditions.md",
+      "source_commit": "99aa482bf6b602645bcb50c47a68db48a76dbce0",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "document_date": "as published at the pinned commit",
+      "source_url": "https://github.com/Automattic/legalmattic/blob/99aa482bf6b602645bcb50c47a68db48a76dbce0/Terms%20of%20Service/Crowdsignal/Crowdsignal%20Terms%20and%20Conditions.md",
+      "sha256": "bb304bd9311477da5364a4a6cb61ebdecd0972548e0f30c3b0b94e22903d701a",
+      "sentences": 143,
+      "in_unfair_tos": false
+    }
+  ]
+}

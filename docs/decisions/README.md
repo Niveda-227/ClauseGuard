@@ -8,3 +8,4 @@ The rule is written and merged **before** the evidence it uses is collected, so 
 |---|---|---|---|---|
 | 2026-10-06 | Mid-semester: pivot or persevere | [2026-10-06_midpoint_decision.md](2026-10-06_midpoint_decision.md) | [midpoint_rule.json](midpoint_rule.json) | `scripts/midpoint_facts.py` |
 | 2026-10-28 | Review cues after Session 08; rule for the "Not flagged, but worth a look" search words | [2026-10-28_cue_decision.md](2026-10-28_cue_decision.md) | in the memo (section "The rule for the search words") | `scripts/hint_eval.py` (Session 09) |
+| 2026-11-04 | Fresh real Terms of Service: domain shift, cue margin 0.10, zero-flag-only marks | [2026-11-04_fresh_documents_rule.md](2026-11-04_fresh_documents_rule.md) | [fresh_rule.json](fresh_rule.json) | `scripts/fresh_eval.py` (Session 10) |

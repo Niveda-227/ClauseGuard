@@ -1,0 +1,35 @@
+{
+  "written": "2026-11-04",
+  "written_before": "any label of the fresh documents existed",
+  "evaluated_by": "scripts/fresh_eval.py",
+  "gold_for_rules": "strict (a category counts only when both annotators gave it); lenient is reported as a sensitivity check and decides nothing",
+  "validation_reference": {"source": "experiments/session07/threshold_ship_eval.json", "key": "new_product_leave_one_company_out_HONEST.macro_f1"},
+  "rules": {
+    "domain_shift": {
+      "question": "Does the shipped model hold up on fresh real Terms of Service?",
+      "measure": "macro-F1 on the fresh documents (strict), averaged over the categories that have at least one strict label",
+      "pass_if": "fresh macro-F1 is no more than 0.15 below the validation honest macro-F1",
+      "max_drop": 0.15,
+      "if_pass": "HOLDS UP on fresh documents",
+      "if_fail": "DOMAIN SHIFT: treat it as the main risk in Session 11"
+    },
+    "cue_margin": {
+      "question": "Should the possible cue use a 0.10 margin instead of 0.05?",
+      "measure": "possible cues at margin 0.10 on the fresh documents (strict)",
+      "pass_if": "they reach at least 20% of the missed labels AND add at most 5 per 100 sentences",
+      "min_coverage": 0.20,
+      "max_per_100": 5.0,
+      "if_pass": "ADOPT the 0.10 margin in Session 11",
+      "if_fail": "KEEP the 0.05 margin"
+    },
+    "zero_flag_marks": {
+      "question": "Should the Check it yourself panel show marks only for categories with no flag in the document?",
+      "measure": "worth-a-look marks kept only for categories with zero flags in that document (strict)",
+      "pass_if": "they reach at least 40% of the missed labels AND add at most 20 per 100 sentences (the Session 09 rule)",
+      "min_coverage": 0.40,
+      "max_per_100": 20.0,
+      "if_pass": "MAKE zero-flag-only the default in Session 11",
+      "if_fail": "KEEP showing all marks, off-by-default toggle stays"
+    }
+  }
+}
