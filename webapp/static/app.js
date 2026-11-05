@@ -32,7 +32,7 @@
     sheet: $('sheet'), terms: $('terms'), doc: $('doc'), count: $('char-count'),
     analyze: $('analyze-btn'), status: $('status'), summary: $('summary'), chips: $('chips'),
     results: $('results'), empty: $('empty'), detail: $('detail'), exports: $('exports'),
-    check: $('check'), checkList: $('check-list'),
+    check: $('check'), checkList: $('check-list'), checkZeroOnly: $('check-zero-only'),
     cards: $('cards'), file: $('file-input'), modelLine: $('model-line'),
     specimen: document.querySelector('.specimen'), specimenLines: $('specimen-lines'),
     specimenCaption: $('specimen-caption'),
@@ -462,11 +462,19 @@
     select(id, { scrollDoc: true });
   }
 
+  // Session 10: "Only for categories with no flag" (off by default). It hides the worth-a-look
+  // sentences of categories the model already flagged in this document. Whether it becomes the
+  // default is decided by docs/decisions/2026-11-04_fresh_documents_rule.md, not here.
+  function zeroOnly() {
+    return Boolean(els.checkZeroOnly && els.checkZeroOnly.checked);
+  }
+
   function renderCheck() {
     els.checkList.replaceChildren();
     if (!state.result || !state.worth) return;
     for (const c of state.worth.categories) {
-      const looks = c.worth_a_look;
+      const hiddenByToggle = zeroOnly() && c.flagged > 0;
+      const looks = hiddenByToggle ? [] : c.worth_a_look;
       const summary = el('summary', {},
         el('span', { class: 'dot', 'aria-hidden': 'true' }),
         el('span', { class: 'check-name', text: c.category }),
@@ -479,6 +487,8 @@
         body.push(el('ul', { class: 'check-items' }, looks.map((x) => el('li', {},
           el('button', { class: 'check-item', type: 'button', onclick: () => showSentence(x.sentence_id) },
             `Sentence ${x.sentence_id + 1} `, el('span', { class: 'check-words', text: `(${quoteWords(x.words)})` }))))));
+      } else if (hiddenByToggle) {
+        body.push(el('p', { class: 'check-none', text: 'Hidden because this category has flags. Turn off "Only for categories with no flag" to see its worth-a-look sentences.' }));
       } else {
         body.push(el('p', { class: 'check-none', text: "No unflagged sentence contains this category's search words." }));
       }
@@ -612,6 +622,7 @@
       if (event.key === 'Enter' && (event.metaKey || event.ctrlKey)) runAnalysis();
     });
     els.file.addEventListener('change', () => { readFile(els.file.files[0]); els.file.value = ''; });
+    if (els.checkZeroOnly) els.checkZeroOnly.addEventListener('change', () => renderCheck());
 
     for (const type of ['dragenter', 'dragover']) {
       els.sheet.addEventListener(type, (event) => { event.preventDefault(); els.sheet.classList.add('is-dragging'); });
