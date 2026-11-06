@@ -1,0 +1,1064 @@
+{
+  "format": "clauseguard-labels-v1",
+  "doc_id": "crowdsignal",
+  "doc_sha256": "bb304bd9311477da5364a4a6cb61ebdecd0972548e0f30c3b0b94e22903d701a",
+  "annotator": "A2",
+  "guide": "docs/LABELLING_GUIDE.md",
+  "total_sentences": 143,
+  "complete": true,
+  "started_utc": "2026-11-06T05:51:33+00:00",
+  "finished_utc": "2026-11-06T05:54:16+00:00",
+  "seconds_active": 163.1,
+  "sentences": [
+    {
+      "sentence_id": 0,
+      "start": 0,
+      "end": 18,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 1,
+      "start": 19,
+      "end": 66,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 2,
+      "start": 67,
+      "end": 186,
+      "labels": [
+        "Unilateral change",
+        "Contract by using"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 3,
+      "start": 187,
+      "end": 248,
+      "labels": [
+        "Unilateral change",
+        "Contract by using"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 4,
+      "start": 249,
+      "end": 289,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 5,
+      "start": 290,
+      "end": 390,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 6,
+      "start": 391,
+      "end": 465,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 7,
+      "start": 466,
+      "end": 632,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 8,
+      "start": 633,
+      "end": 783,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 9,
+      "start": 784,
+      "end": 973,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 10,
+      "start": 974,
+      "end": 1026,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 11,
+      "start": 1027,
+      "end": 1671,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 12,
+      "start": 1672,
+      "end": 1724,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 13,
+      "start": 1725,
+      "end": 1805,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 14,
+      "start": 1806,
+      "end": 1810,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 15,
+      "start": 1811,
+      "end": 2250,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 16,
+      "start": 2251,
+      "end": 2255,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 17,
+      "start": 2256,
+      "end": 2973,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 18,
+      "start": 2974,
+      "end": 2978,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 19,
+      "start": 2979,
+      "end": 3154,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 20,
+      "start": 3155,
+      "end": 3422,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 21,
+      "start": 3423,
+      "end": 3427,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 22,
+      "start": 3428,
+      "end": 3780,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 23,
+      "start": 3781,
+      "end": 3785,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 24,
+      "start": 3786,
+      "end": 4205,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 25,
+      "start": 4206,
+      "end": 4331,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 26,
+      "start": 4332,
+      "end": 4336,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 27,
+      "start": 4337,
+      "end": 4671,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 28,
+      "start": 4672,
+      "end": 4676,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 29,
+      "start": 4677,
+      "end": 5040,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 30,
+      "start": 5041,
+      "end": 5045,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 31,
+      "start": 5046,
+      "end": 5158,
+      "labels": [
+        "Unilateral termination",
+        "Content removal"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 32,
+      "start": 5159,
+      "end": 5266,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 33,
+      "start": 5267,
+      "end": 5527,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 34,
+      "start": 5528,
+      "end": 5542,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 35,
+      "start": 5543,
+      "end": 5666,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 36,
+      "start": 5667,
+      "end": 5768,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 37,
+      "start": 5769,
+      "end": 5860,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 38,
+      "start": 5861,
+      "end": 6211,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 39,
+      "start": 6212,
+      "end": 6393,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 40,
+      "start": 6394,
+      "end": 6409,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 41,
+      "start": 6410,
+      "end": 6504,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 42,
+      "start": 6505,
+      "end": 6509,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 43,
+      "start": 6510,
+      "end": 6791,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 44,
+      "start": 6792,
+      "end": 6796,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 45,
+      "start": 6797,
+      "end": 7068,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 46,
+      "start": 7069,
+      "end": 7073,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 47,
+      "start": 7074,
+      "end": 7236,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 48,
+      "start": 7237,
+      "end": 7241,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 49,
+      "start": 7242,
+      "end": 7361,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 50,
+      "start": 7362,
+      "end": 7366,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 51,
+      "start": 7367,
+      "end": 7482,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 52,
+      "start": 7483,
+      "end": 7487,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 53,
+      "start": 7488,
+      "end": 7512,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 54,
+      "start": 7513,
+      "end": 7517,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 55,
+      "start": 7518,
+      "end": 7615,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 56,
+      "start": 7616,
+      "end": 7620,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 57,
+      "start": 7621,
+      "end": 7650,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 58,
+      "start": 7651,
+      "end": 7655,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 59,
+      "start": 7656,
+      "end": 7712,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 60,
+      "start": 7713,
+      "end": 7718,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 61,
+      "start": 7719,
+      "end": 7728,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 62,
+      "start": 7729,
+      "end": 7734,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 63,
+      "start": 7735,
+      "end": 7917,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 64,
+      "start": 7918,
+      "end": 7923,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 65,
+      "start": 7924,
+      "end": 8094,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 66,
+      "start": 8095,
+      "end": 8100,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 67,
+      "start": 8101,
+      "end": 8196,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 68,
+      "start": 8197,
+      "end": 8202,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 69,
+      "start": 8203,
+      "end": 8242,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 70,
+      "start": 8243,
+      "end": 8248,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 71,
+      "start": 8249,
+      "end": 8297,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 72,
+      "start": 8298,
+      "end": 8327,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 73,
+      "start": 8328,
+      "end": 8922,
+      "labels": [
+        "Unilateral termination",
+        "Unilateral change"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 74,
+      "start": 8923,
+      "end": 8947,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 75,
+      "start": 8948,
+      "end": 8952,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 76,
+      "start": 8953,
+      "end": 9091,
+      "labels": [
+        "Limitation of liability",
+        "Unilateral termination"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 77,
+      "start": 9092,
+      "end": 9310,
+      "labels": [
+        "Limitation of liability"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 78,
+      "start": 9311,
+      "end": 9551,
+      "labels": [
+        "Limitation of liability"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 79,
+      "start": 9552,
+      "end": 9658,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 80,
+      "start": 9659,
+      "end": 9663,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 81,
+      "start": 9664,
+      "end": 9735,
+      "labels": [
+        "Limitation of liability",
+        "Contract by using"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 82,
+      "start": 9736,
+      "end": 10101,
+      "labels": [
+        "Limitation of liability"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 83,
+      "start": 10102,
+      "end": 10627,
+      "labels": [
+        "Limitation of liability"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 84,
+      "start": 10628,
+      "end": 10632,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 85,
+      "start": 10633,
+      "end": 10921,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 86,
+      "start": 10922,
+      "end": 11088,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 87,
+      "start": 11089,
+      "end": 11310,
+      "labels": [
+        "Limitation of liability"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 88,
+      "start": 11311,
+      "end": 11315,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 89,
+      "start": 11316,
+      "end": 11420,
+      "labels": [
+        "Unilateral change"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 90,
+      "start": 11421,
+      "end": 11496,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 91,
+      "start": 11497,
+      "end": 11627,
+      "labels": [
+        "Unilateral change",
+        "Contract by using"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 92,
+      "start": 11628,
+      "end": 11768,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 93,
+      "start": 11769,
+      "end": 11866,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 94,
+      "start": 11867,
+      "end": 11890,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 95,
+      "start": 11891,
+      "end": 11895,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 96,
+      "start": 11896,
+      "end": 12854,
+      "labels": [
+        "Limitation of liability"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 97,
+      "start": 12855,
+      "end": 13056,
+      "labels": [
+        "Limitation of liability"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 98,
+      "start": 13057,
+      "end": 13061,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 99,
+      "start": 13062,
+      "end": 13618,
+      "labels": [
+        "Limitation of liability"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 100,
+      "start": 13619,
+      "end": 14026,
+      "labels": [
+        "Limitation of liability"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 101,
+      "start": 14027,
+      "end": 14353,
+      "labels": [
+        "Limitation of liability"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 102,
+      "start": 14354,
+      "end": 14461,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 103,
+      "start": 14462,
+      "end": 14484,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 104,
+      "start": 14485,
+      "end": 14880,
+      "labels": [
+        "Limitation of liability"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 105,
+      "start": 14881,
+      "end": 14888,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 106,
+      "start": 14889,
+      "end": 14970,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 107,
+      "start": 14971,
+      "end": 15133,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 108,
+      "start": 15134,
+      "end": 15214,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 109,
+      "start": 15215,
+      "end": 15332,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 110,
+      "start": 15333,
+      "end": 15358,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 111,
+      "start": 15359,
+      "end": 15378,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 112,
+      "start": 15379,
+      "end": 15734,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 113,
+      "start": 15735,
+      "end": 15754,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 114,
+      "start": 15755,
+      "end": 15884,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 115,
+      "start": 15885,
+      "end": 15904,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 116,
+      "start": 15905,
+      "end": 15910,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 117,
+      "start": 15911,
+      "end": 16031,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 118,
+      "start": 16032,
+      "end": 16210,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 119,
+      "start": 16211,
+      "end": 16216,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 120,
+      "start": 16217,
+      "end": 16589,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 121,
+      "start": 16590,
+      "end": 16647,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 122,
+      "start": 16648,
+      "end": 16653,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 123,
+      "start": 16654,
+      "end": 16805,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 124,
+      "start": 16806,
+      "end": 16828,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 125,
+      "start": 16829,
+      "end": 16834,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 126,
+      "start": 16835,
+      "end": 16907,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 127,
+      "start": 16908,
+      "end": 17159,
+      "labels": [
+        "Unilateral termination"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 128,
+      "start": 17160,
+      "end": 17165,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 129,
+      "start": 17166,
+      "end": 17264,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 130,
+      "start": 17265,
+      "end": 17270,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 131,
+      "start": 17271,
+      "end": 17371,
+      "labels": [
+        "Unilateral termination"
+      ],
+      "unsure": false
+    },
+    {
+      "sentence_id": 132,
+      "start": 17372,
+      "end": 17377,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 133,
+      "start": 17378,
+      "end": 17487,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 134,
+      "start": 17488,
+      "end": 17644,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 135,
+      "start": 17645,
+      "end": 17658,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 136,
+      "start": 17659,
+      "end": 17664,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 137,
+      "start": 17665,
+      "end": 17782,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 138,
+      "start": 17783,
+      "end": 17788,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 139,
+      "start": 17789,
+      "end": 18010,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 140,
+      "start": 18011,
+      "end": 18016,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 141,
+      "start": 18017,
+      "end": 18284,
+      "labels": [],
+      "unsure": false
+    },
+    {
+      "sentence_id": 142,
+      "start": 18285,
+      "end": 18656,
+      "labels": [],
+      "unsure": false
+    }
+  ]
+}
