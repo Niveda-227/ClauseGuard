@@ -1,0 +1,33 @@
+{
+  "annotator": "A2",
+  "fingerprint": "9530769cf1c9cde0fed19b9140e1653af9a939746df7d454d3e4cfc9755aadbc",
+  "sentences": 376,
+  "labelled_sentences": 68,
+  "unsure": 0,
+  "minutes_labelling": 11,
+  "per_category": {
+    "Limitation of liability": 21,
+    "Unilateral termination": 23,
+    "Unilateral change": 15,
+    "Content removal": 6,
+    "Contract by using": 14,
+    "Choice of law": 1,
+    "Jurisdiction": 2,
+    "Arbitration": 7
+  },
+  "per_document": {
+    "basecamp": {
+      "sentences": 156,
+      "labelled_sentences": 23
+    },
+    "cloudup": {
+      "sentences": 77,
+      "labelled_sentences": 24
+    },
+    "crowdsignal": {
+      "sentences": 143,
+      "labelled_sentences": 21
+    }
+  },
+  "note": "Counts only, no sentence text. minutes_labelling is the time between showing a sentence and the answer, capped at 5 minutes per sentence."
+}
