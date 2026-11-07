@@ -1,0 +1,802 @@
+{
+  "model_id": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+  "cut_offs": [
+    0.75,
+    0.7,
+    0.8,
+    0.8,
+    0.8,
+    0.65,
+    0.55,
+    0.8
+  ],
+  "documents": {
+    "basecamp": 156,
+    "cloudup": 77,
+    "crowdsignal": 143
+  },
+  "sentences": 376,
+  "company_overlap_with_unfair_tos": [],
+  "rule_file": "docs/decisions/fresh_rule.json",
+  "validation_reference": {
+    "source": "experiments/session07/threshold_ship_eval.json",
+    "key": "new_product_leave_one_company_out_HONEST.macro_f1",
+    "macro_f1": 0.6768
+  },
+  "strict": {
+    "sentences": 376,
+    "answer_labels": 70,
+    "flags": 33,
+    "correct_tags": 22,
+    "wrong_tags": 11,
+    "missed_labels": 48,
+    "flags_per_100_sentences": 8.78,
+    "per_category": {
+      "Limitation of liability": {
+        "answers": 21,
+        "flags": 11,
+        "correct_tags": 7,
+        "wrong_tags": 4,
+        "missed_labels": 14,
+        "f1": 0.4375,
+        "f1_text": "0.44"
+      },
+      "Unilateral termination": {
+        "answers": 18,
+        "flags": 11,
+        "correct_tags": 7,
+        "wrong_tags": 4,
+        "missed_labels": 11,
+        "f1": 0.4828,
+        "f1_text": "0.48"
+      },
+      "Unilateral change": {
+        "answers": 9,
+        "flags": 4,
+        "correct_tags": 2,
+        "wrong_tags": 2,
+        "missed_labels": 7,
+        "f1": 0.3077,
+        "f1_text": "0.31"
+      },
+      "Content removal": {
+        "answers": 4,
+        "flags": 2,
+        "correct_tags": 1,
+        "wrong_tags": 1,
+        "missed_labels": 3,
+        "f1": 0.3333,
+        "f1_text": "0.33"
+      },
+      "Contract by using": {
+        "answers": 9,
+        "flags": 3,
+        "correct_tags": 3,
+        "wrong_tags": 0,
+        "missed_labels": 6,
+        "f1": 0.5,
+        "f1_text": "0.50"
+      },
+      "Choice of law": {
+        "answers": 1,
+        "flags": 1,
+        "correct_tags": 1,
+        "wrong_tags": 0,
+        "missed_labels": 0,
+        "f1": 1.0,
+        "f1_text": "1.00"
+      },
+      "Jurisdiction": {
+        "answers": 1,
+        "flags": 0,
+        "correct_tags": 0,
+        "wrong_tags": 0,
+        "missed_labels": 1,
+        "f1": 0.0,
+        "f1_text": "0.00"
+      },
+      "Arbitration": {
+        "answers": 7,
+        "flags": 1,
+        "correct_tags": 1,
+        "wrong_tags": 0,
+        "missed_labels": 6,
+        "f1": 0.25,
+        "f1_text": "0.25"
+      }
+    },
+    "categories_in_macro_f1": [
+      "Limitation of liability",
+      "Unilateral termination",
+      "Unilateral change",
+      "Content removal",
+      "Contract by using",
+      "Choice of law",
+      "Jurisdiction",
+      "Arbitration"
+    ],
+    "macro_f1": 0.4139,
+    "micro_f1": 0.4272,
+    "wrong_tag_share": 0.3333,
+    "possible_cues": {
+      "0.05": {
+        "cues": 6,
+        "cues_per_100_sentences": 1.6,
+        "missed_labels_reached": 2,
+        "share_of_missed_labels_reached": 0.0417,
+        "percent_of_missed_labels_reached": 4.2,
+        "that_are_answers": 2,
+        "reached_text": "2 of 48 (4.2%)"
+      },
+      "0.10": {
+        "cues": 11,
+        "cues_per_100_sentences": 2.93,
+        "missed_labels_reached": 4,
+        "share_of_missed_labels_reached": 0.0833,
+        "percent_of_missed_labels_reached": 8.3,
+        "that_are_answers": 4,
+        "reached_text": "4 of 48 (8.3%)"
+      }
+    },
+    "marks_all": {
+      "marks": 64,
+      "marks_per_100_sentences": 17.02,
+      "missed_labels_reached": 18,
+      "share_of_missed_labels_reached": 0.375,
+      "percent_of_missed_labels_reached": 37.5,
+      "that_are_answers": 18,
+      "reached_text": "18 of 48 (37.5%)"
+    },
+    "marks_zero_flag_only": {
+      "marks": 11,
+      "marks_per_100_sentences": 2.93,
+      "missed_labels_reached": 1,
+      "share_of_missed_labels_reached": 0.0208,
+      "percent_of_missed_labels_reached": 2.1,
+      "that_are_answers": 1,
+      "reached_text": "1 of 48 (2.1%)"
+    }
+  },
+  "lenient": {
+    "sentences": 376,
+    "answer_labels": 90,
+    "flags": 33,
+    "correct_tags": 22,
+    "wrong_tags": 11,
+    "missed_labels": 68,
+    "flags_per_100_sentences": 8.78,
+    "per_category": {
+      "Limitation of liability": {
+        "answers": 21,
+        "flags": 11,
+        "correct_tags": 7,
+        "wrong_tags": 4,
+        "missed_labels": 14,
+        "f1": 0.4375,
+        "f1_text": "0.44"
+      },
+      "Unilateral termination": {
+        "answers": 23,
+        "flags": 11,
+        "correct_tags": 7,
+        "wrong_tags": 4,
+        "missed_labels": 16,
+        "f1": 0.4118,
+        "f1_text": "0.41"
+      },
+      "Unilateral change": {
+        "answers": 15,
+        "flags": 4,
+        "correct_tags": 2,
+        "wrong_tags": 2,
+        "missed_labels": 13,
+        "f1": 0.2105,
+        "f1_text": "0.21"
+      },
+      "Content removal": {
+        "answers": 7,
+        "flags": 2,
+        "correct_tags": 1,
+        "wrong_tags": 1,
+        "missed_labels": 6,
+        "f1": 0.2222,
+        "f1_text": "0.22"
+      },
+      "Contract by using": {
+        "answers": 14,
+        "flags": 3,
+        "correct_tags": 3,
+        "wrong_tags": 0,
+        "missed_labels": 11,
+        "f1": 0.3529,
+        "f1_text": "0.35"
+      },
+      "Choice of law": {
+        "answers": 1,
+        "flags": 1,
+        "correct_tags": 1,
+        "wrong_tags": 0,
+        "missed_labels": 0,
+        "f1": 1.0,
+        "f1_text": "1.00"
+      },
+      "Jurisdiction": {
+        "answers": 2,
+        "flags": 0,
+        "correct_tags": 0,
+        "wrong_tags": 0,
+        "missed_labels": 2,
+        "f1": 0.0,
+        "f1_text": "0.00"
+      },
+      "Arbitration": {
+        "answers": 7,
+        "flags": 1,
+        "correct_tags": 1,
+        "wrong_tags": 0,
+        "missed_labels": 6,
+        "f1": 0.25,
+        "f1_text": "0.25"
+      }
+    },
+    "categories_in_macro_f1": [
+      "Limitation of liability",
+      "Unilateral termination",
+      "Unilateral change",
+      "Content removal",
+      "Contract by using",
+      "Choice of law",
+      "Jurisdiction",
+      "Arbitration"
+    ],
+    "macro_f1": 0.3606,
+    "micro_f1": 0.3577,
+    "wrong_tag_share": 0.3333,
+    "possible_cues": {
+      "0.05": {
+        "cues": 6,
+        "cues_per_100_sentences": 1.6,
+        "missed_labels_reached": 2,
+        "share_of_missed_labels_reached": 0.0294,
+        "percent_of_missed_labels_reached": 2.9,
+        "that_are_answers": 2,
+        "reached_text": "2 of 68 (2.9%)"
+      },
+      "0.10": {
+        "cues": 11,
+        "cues_per_100_sentences": 2.93,
+        "missed_labels_reached": 4,
+        "share_of_missed_labels_reached": 0.0588,
+        "percent_of_missed_labels_reached": 5.9,
+        "that_are_answers": 4,
+        "reached_text": "4 of 68 (5.9%)"
+      }
+    },
+    "marks_all": {
+      "marks": 64,
+      "marks_per_100_sentences": 17.02,
+      "missed_labels_reached": 19,
+      "share_of_missed_labels_reached": 0.2794,
+      "percent_of_missed_labels_reached": 27.9,
+      "that_are_answers": 19,
+      "reached_text": "19 of 68 (27.9%)"
+    },
+    "marks_zero_flag_only": {
+      "marks": 11,
+      "marks_per_100_sentences": 2.93,
+      "missed_labels_reached": 1,
+      "share_of_missed_labels_reached": 0.0147,
+      "percent_of_missed_labels_reached": 1.5,
+      "that_are_answers": 1,
+      "reached_text": "1 of 68 (1.5%)"
+    }
+  },
+  "rules": {
+    "domain_shift": {
+      "fresh_macro_f1": 0.4139,
+      "validation_macro_f1": 0.6768,
+      "drop": 0.2629,
+      "max_drop": 0.15,
+      "passed": false,
+      "result": "DOMAIN SHIFT: treat it as the main risk in Session 11",
+      "summary": "fresh macro-F1 0.4139 against 0.6768 on validation, a drop of 0.2629 (the limit is 0.15)"
+    },
+    "cue_margin": {
+      "share_of_missed_labels_reached": 0.0833,
+      "per_100_sentences": 2.93,
+      "min_coverage": 0.2,
+      "max_per_100": 5.0,
+      "coverage_passed": false,
+      "volume_passed": true,
+      "passed": false,
+      "result": "KEEP the 0.05 margin",
+      "summary": "reach 8.3% of the missed labels (4 of 48), 2.93 per 100 sentences (needs at least 20% and at most 5 per 100)"
+    },
+    "zero_flag_marks": {
+      "share_of_missed_labels_reached": 0.0208,
+      "per_100_sentences": 2.93,
+      "min_coverage": 0.4,
+      "max_per_100": 20.0,
+      "coverage_passed": false,
+      "volume_passed": true,
+      "passed": false,
+      "result": "KEEP showing all marks, off-by-default toggle stays",
+      "summary": "reach 2.1% of the missed labels (1 of 48), 2.93 per 100 sentences (needs at least 40% and at most 20 per 100)"
+    }
+  },
+  "errors_strict": [
+    {
+      "document": "basecamp",
+      "sentence": 17,
+      "category": "Contract by using",
+      "kind": "missed label",
+      "score": 0.519,
+      "cut_off": 0.8
+    },
+    {
+      "document": "basecamp",
+      "sentence": 19,
+      "category": "Limitation of liability",
+      "kind": "missed label",
+      "score": 0.723,
+      "cut_off": 0.75
+    },
+    {
+      "document": "basecamp",
+      "sentence": 25,
+      "category": "Limitation of liability",
+      "kind": "wrong tag",
+      "score": 0.997,
+      "cut_off": 0.75
+    },
+    {
+      "document": "basecamp",
+      "sentence": 35,
+      "category": "Unilateral termination",
+      "kind": "missed label",
+      "score": 0.037,
+      "cut_off": 0.7
+    },
+    {
+      "document": "basecamp",
+      "sentence": 36,
+      "category": "Unilateral termination",
+      "kind": "missed label",
+      "score": 0.12,
+      "cut_off": 0.7
+    },
+    {
+      "document": "basecamp",
+      "sentence": 37,
+      "category": "Unilateral termination",
+      "kind": "missed label",
+      "score": 0.158,
+      "cut_off": 0.7
+    },
+    {
+      "document": "basecamp",
+      "sentence": 52,
+      "category": "Content removal",
+      "kind": "missed label",
+      "score": 0.256,
+      "cut_off": 0.8
+    },
+    {
+      "document": "basecamp",
+      "sentence": 53,
+      "category": "Content removal",
+      "kind": "missed label",
+      "score": 0.287,
+      "cut_off": 0.8
+    },
+    {
+      "document": "basecamp",
+      "sentence": 54,
+      "category": "Content removal",
+      "kind": "missed label",
+      "score": 0.39,
+      "cut_off": 0.8
+    },
+    {
+      "document": "basecamp",
+      "sentence": 63,
+      "category": "Unilateral termination",
+      "kind": "missed label",
+      "score": 0.446,
+      "cut_off": 0.7
+    },
+    {
+      "document": "basecamp",
+      "sentence": 67,
+      "category": "Unilateral termination",
+      "kind": "missed label",
+      "score": 0.506,
+      "cut_off": 0.7
+    },
+    {
+      "document": "basecamp",
+      "sentence": 72,
+      "category": "Unilateral termination",
+      "kind": "wrong tag",
+      "score": 0.99,
+      "cut_off": 0.7
+    },
+    {
+      "document": "basecamp",
+      "sentence": 72,
+      "category": "Content removal",
+      "kind": "wrong tag",
+      "score": 0.824,
+      "cut_off": 0.8
+    },
+    {
+      "document": "basecamp",
+      "sentence": 75,
+      "category": "Unilateral change",
+      "kind": "missed label",
+      "score": 0.618,
+      "cut_off": 0.8
+    },
+    {
+      "document": "basecamp",
+      "sentence": 83,
+      "category": "Unilateral termination",
+      "kind": "missed label",
+      "score": 0.464,
+      "cut_off": 0.7
+    },
+    {
+      "document": "basecamp",
+      "sentence": 125,
+      "category": "Unilateral termination",
+      "kind": "wrong tag",
+      "score": 0.812,
+      "cut_off": 0.7
+    },
+    {
+      "document": "basecamp",
+      "sentence": 144,
+      "category": "Unilateral termination",
+      "kind": "wrong tag",
+      "score": 0.836,
+      "cut_off": 0.7
+    },
+    {
+      "document": "basecamp",
+      "sentence": 145,
+      "category": "Unilateral termination",
+      "kind": "missed label",
+      "score": 0.393,
+      "cut_off": 0.7
+    },
+    {
+      "document": "basecamp",
+      "sentence": 148,
+      "category": "Limitation of liability",
+      "kind": "missed label",
+      "score": 0.651,
+      "cut_off": 0.75
+    },
+    {
+      "document": "basecamp",
+      "sentence": 149,
+      "category": "Limitation of liability",
+      "kind": "wrong tag",
+      "score": 0.996,
+      "cut_off": 0.75
+    },
+    {
+      "document": "basecamp",
+      "sentence": 153,
+      "category": "Limitation of liability",
+      "kind": "missed label",
+      "score": 0.034,
+      "cut_off": 0.75
+    },
+    {
+      "document": "cloudup",
+      "sentence": 4,
+      "category": "Contract by using",
+      "kind": "missed label",
+      "score": 0.05,
+      "cut_off": 0.8
+    },
+    {
+      "document": "cloudup",
+      "sentence": 5,
+      "category": "Contract by using",
+      "kind": "missed label",
+      "score": 0.179,
+      "cut_off": 0.8
+    },
+    {
+      "document": "cloudup",
+      "sentence": 8,
+      "category": "Contract by using",
+      "kind": "missed label",
+      "score": 0.113,
+      "cut_off": 0.8
+    },
+    {
+      "document": "cloudup",
+      "sentence": 32,
+      "category": "Unilateral change",
+      "kind": "wrong tag",
+      "score": 0.837,
+      "cut_off": 0.8
+    },
+    {
+      "document": "cloudup",
+      "sentence": 33,
+      "category": "Unilateral change",
+      "kind": "missed label",
+      "score": 0.303,
+      "cut_off": 0.8
+    },
+    {
+      "document": "cloudup",
+      "sentence": 35,
+      "category": "Unilateral change",
+      "kind": "missed label",
+      "score": 0.174,
+      "cut_off": 0.8
+    },
+    {
+      "document": "cloudup",
+      "sentence": 36,
+      "category": "Unilateral change",
+      "kind": "missed label",
+      "score": 0.255,
+      "cut_off": 0.8
+    },
+    {
+      "document": "cloudup",
+      "sentence": 37,
+      "category": "Unilateral change",
+      "kind": "missed label",
+      "score": 0.024,
+      "cut_off": 0.8
+    },
+    {
+      "document": "cloudup",
+      "sentence": 37,
+      "category": "Contract by using",
+      "kind": "missed label",
+      "score": 0.632,
+      "cut_off": 0.8
+    },
+    {
+      "document": "cloudup",
+      "sentence": 38,
+      "category": "Unilateral change",
+      "kind": "missed label",
+      "score": 0.068,
+      "cut_off": 0.8
+    },
+    {
+      "document": "cloudup",
+      "sentence": 43,
+      "category": "Unilateral termination",
+      "kind": "missed label",
+      "score": 0.637,
+      "cut_off": 0.7
+    },
+    {
+      "document": "cloudup",
+      "sentence": 49,
+      "category": "Unilateral termination",
+      "kind": "wrong tag",
+      "score": 0.714,
+      "cut_off": 0.7
+    },
+    {
+      "document": "cloudup",
+      "sentence": 51,
+      "category": "Unilateral change",
+      "kind": "wrong tag",
+      "score": 0.989,
+      "cut_off": 0.8
+    },
+    {
+      "document": "cloudup",
+      "sentence": 55,
+      "category": "Limitation of liability",
+      "kind": "wrong tag",
+      "score": 0.97,
+      "cut_off": 0.75
+    },
+    {
+      "document": "cloudup",
+      "sentence": 57,
+      "category": "Limitation of liability",
+      "kind": "missed label",
+      "score": 0.426,
+      "cut_off": 0.75
+    },
+    {
+      "document": "cloudup",
+      "sentence": 65,
+      "category": "Arbitration",
+      "kind": "missed label",
+      "score": 0.057,
+      "cut_off": 0.8
+    },
+    {
+      "document": "cloudup",
+      "sentence": 66,
+      "category": "Arbitration",
+      "kind": "missed label",
+      "score": 0.758,
+      "cut_off": 0.8
+    },
+    {
+      "document": "cloudup",
+      "sentence": 67,
+      "category": "Arbitration",
+      "kind": "missed label",
+      "score": 0.558,
+      "cut_off": 0.8
+    },
+    {
+      "document": "cloudup",
+      "sentence": 68,
+      "category": "Arbitration",
+      "kind": "missed label",
+      "score": 0.033,
+      "cut_off": 0.8
+    },
+    {
+      "document": "cloudup",
+      "sentence": 72,
+      "category": "Jurisdiction",
+      "kind": "missed label",
+      "score": 0.094,
+      "cut_off": 0.55
+    },
+    {
+      "document": "cloudup",
+      "sentence": 74,
+      "category": "Arbitration",
+      "kind": "missed label",
+      "score": 0.194,
+      "cut_off": 0.8
+    },
+    {
+      "document": "cloudup",
+      "sentence": 75,
+      "category": "Arbitration",
+      "kind": "missed label",
+      "score": 0.118,
+      "cut_off": 0.8
+    },
+    {
+      "document": "crowdsignal",
+      "sentence": 3,
+      "category": "Contract by using",
+      "kind": "missed label",
+      "score": 0.235,
+      "cut_off": 0.8
+    },
+    {
+      "document": "crowdsignal",
+      "sentence": 32,
+      "category": "Unilateral termination",
+      "kind": "missed label",
+      "score": 0.511,
+      "cut_off": 0.7
+    },
+    {
+      "document": "crowdsignal",
+      "sentence": 77,
+      "category": "Limitation of liability",
+      "kind": "missed label",
+      "score": 0.022,
+      "cut_off": 0.75
+    },
+    {
+      "document": "crowdsignal",
+      "sentence": 78,
+      "category": "Limitation of liability",
+      "kind": "missed label",
+      "score": 0.098,
+      "cut_off": 0.75
+    },
+    {
+      "document": "crowdsignal",
+      "sentence": 79,
+      "category": "Limitation of liability",
+      "kind": "missed label",
+      "score": 0.029,
+      "cut_off": 0.75
+    },
+    {
+      "document": "crowdsignal",
+      "sentence": 82,
+      "category": "Limitation of liability",
+      "kind": "missed label",
+      "score": 0.079,
+      "cut_off": 0.75
+    },
+    {
+      "document": "crowdsignal",
+      "sentence": 83,
+      "category": "Limitation of liability",
+      "kind": "missed label",
+      "score": 0.203,
+      "cut_off": 0.75
+    },
+    {
+      "document": "crowdsignal",
+      "sentence": 84,
+      "category": "Limitation of liability",
+      "kind": "missed label",
+      "score": 0.33,
+      "cut_off": 0.75
+    },
+    {
+      "document": "crowdsignal",
+      "sentence": 88,
+      "category": "Limitation of liability",
+      "kind": "missed label",
+      "score": 0.042,
+      "cut_off": 0.75
+    },
+    {
+      "document": "crowdsignal",
+      "sentence": 92,
+      "category": "Unilateral change",
+      "kind": "missed label",
+      "score": 0.134,
+      "cut_off": 0.8
+    },
+    {
+      "document": "crowdsignal",
+      "sentence": 95,
+      "category": "Limitation of liability",
+      "kind": "wrong tag",
+      "score": 0.976,
+      "cut_off": 0.75
+    },
+    {
+      "document": "crowdsignal",
+      "sentence": 101,
+      "category": "Limitation of liability",
+      "kind": "missed label",
+      "score": 0.072,
+      "cut_off": 0.75
+    },
+    {
+      "document": "crowdsignal",
+      "sentence": 102,
+      "category": "Limitation of liability",
+      "kind": "missed label",
+      "score": 0.128,
+      "cut_off": 0.75
+    },
+    {
+      "document": "crowdsignal",
+      "sentence": 105,
+      "category": "Limitation of liability",
+      "kind": "missed label",
+      "score": 0.021,
+      "cut_off": 0.75
+    },
+    {
+      "document": "crowdsignal",
+      "sentence": 128,
+      "category": "Unilateral termination",
+      "kind": "missed label",
+      "score": 0.214,
+      "cut_off": 0.7
+    },
+    {
+      "document": "crowdsignal",
+      "sentence": 132,
+      "category": "Unilateral termination",
+      "kind": "missed label",
+      "score": 0.42,
+      "cut_off": 0.7
+    }
+  ],
+  "note": "Counts, sentence numbers (from 1) and scores only, no sentence text. The rules use the strict answer set; lenient is reported only. Three documents and two team annotators: a small check. The *_text and summary fields give the same values as text for the report."
+}

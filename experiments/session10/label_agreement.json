@@ -1,0 +1,89 @@
+{
+  "documents": [
+    "basecamp",
+    "cloudup",
+    "crowdsignal"
+  ],
+  "sentences": 376,
+  "annotators": {
+    "A1": "Hemanth (hreddy14)",
+    "A2": "Jayakrishna (Jayakrishna-Reddy)"
+  },
+  "per_category": {
+    "Limitation of liability": {
+      "A1": 21,
+      "A2": 21,
+      "both": 21,
+      "either": 21,
+      "kappa": 1.0,
+      "kappa_text": "1.00"
+    },
+    "Unilateral termination": {
+      "A1": 18,
+      "A2": 23,
+      "both": 18,
+      "either": 23,
+      "kappa": 0.8711,
+      "kappa_text": "0.87"
+    },
+    "Unilateral change": {
+      "A1": 9,
+      "A2": 15,
+      "both": 9,
+      "either": 15,
+      "kappa": 0.7423,
+      "kappa_text": "0.74"
+    },
+    "Content removal": {
+      "A1": 5,
+      "A2": 6,
+      "both": 4,
+      "either": 7,
+      "kappa": 0.7233,
+      "kappa_text": "0.72"
+    },
+    "Contract by using": {
+      "A1": 9,
+      "A2": 14,
+      "both": 9,
+      "either": 14,
+      "kappa": 0.7761,
+      "kappa_text": "0.78"
+    },
+    "Choice of law": {
+      "A1": 1,
+      "A2": 1,
+      "both": 1,
+      "either": 1,
+      "kappa": 1.0,
+      "kappa_text": "1.00"
+    },
+    "Jurisdiction": {
+      "A1": 1,
+      "A2": 2,
+      "both": 1,
+      "either": 2,
+      "kappa": 0.6655,
+      "kappa_text": "0.67"
+    },
+    "Arbitration": {
+      "A1": 7,
+      "A2": 7,
+      "both": 7,
+      "either": 7,
+      "kappa": 1.0,
+      "kappa_text": "1.00"
+    }
+  },
+  "pooled_kappa": 0.8716,
+  "pooled_kappa_text": "0.87",
+  "sentences_with_any_disagreement": 20,
+  "percent_sentences_with_any_disagreement": 5.3,
+  "minutes_labelling": {
+    "A1": 7,
+    "A2": 11
+  },
+  "strict_labels": 70,
+  "lenient_labels": 90,
+  "note": "Counts only, no sentence text. Strict = both annotators; lenient = either. Kappa is not defined (null) for a category neither annotator ever gave. The *_text fields give the same values as text for the report."
+}
