@@ -1,0 +1,41 @@
+{
+  "model_id": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+  "tasks": [
+    {
+      "task_id": "I1",
+      "document": "examples/fresh/basecamp_terms.txt",
+      "target_category": "Unilateral change",
+      "target_cut_off": 0.8,
+      "sentences_in_document": 156,
+      "worth_a_look_sentences_for_target": 2,
+      "answer": "sentence",
+      "answer_sentence_flagged_with_target": false,
+      "answer_sentence_cue": "none",
+      "target_score": 0.618,
+      "extra_labels_on_answer_sentence": 0,
+      "other_sentences_with_target_label": 1,
+      "answer_sentence_in_worth_a_look": false,
+      "distractor_flagged_categories": [
+        "Unilateral termination",
+        "Unilateral change",
+        "Content removal"
+      ]
+    },
+    {
+      "task_id": "J1",
+      "document": "examples/fresh/crowdsignal_terms.txt",
+      "target_category": "Unilateral termination",
+      "target_cut_off": 0.7,
+      "sentences_in_document": 143,
+      "worth_a_look_sentences_for_target": 2,
+      "answer": "sentence",
+      "answer_sentence_flagged_with_target": true,
+      "answer_sentence_cue": "flagged",
+      "target_score": 0.802,
+      "extra_labels_on_answer_sentence": 0,
+      "other_sentences_with_target_label": 0,
+      "answer_sentence_in_worth_a_look": false
+    }
+  ],
+  "note": "Sanitized: contains no answer text or sentence positions."
+}

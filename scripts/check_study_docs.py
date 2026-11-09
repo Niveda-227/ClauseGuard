@@ -12,7 +12,11 @@ sentence. In the private key such a task has "answer_absent": true instead of
 "answer_sentence_starts_with"; the check then reports how many sentences are flagged for the
 target category, how many are listed as "worth a look" for it, and how many contain its
 search words at all. An optional "distractor_starts_with" names a sentence people may wrongly
-give as the answer; the check reports the categories the app flags on it."""
+give as the answer; the check reports the categories the app flags on it.
+
+Session 10: the tasks use the fresh real Terms of Service in examples/fresh/ (task bank
+tasks_v5.json), and the verdict line also names the distractor's flags for a task whose answer
+is a sentence."""
 import argparse
 import json
 import sys
@@ -103,14 +107,16 @@ def verdict(t):
             f"extra labels on answer {t['extra_labels_on_answer_sentence']} | "
             f"other '{t['target_category']}' sentences {t['other_sentences_with_target_label']} | "
             f"answer listed as worth a look: {'yes' if t['answer_sentence_in_worth_a_look'] else 'no'} "
-            f"({t['worth_a_look_sentences_for_target']} listed)")
+            f"({t['worth_a_look_sentences_for_target']} listed)"
+            + (f" | distractor flagged as: {', '.join(t['distractor_flagged_categories']) or 'nothing'}"
+               if 'distractor_flagged_categories' in t else ''))
 
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--tasks', default='examples/study/tasks_v4.json')
-    p.add_argument('--key', default='private/session09_answer_key.json')
-    p.add_argument('--output', default='experiments/session09/study_doc_check.json')
+    p.add_argument('--tasks', default='examples/study/tasks_v5.json')
+    p.add_argument('--key', default='private/session10_answer_key.json')
+    p.add_argument('--output', default='experiments/session10/study_doc_check.json')
     a = p.parse_args()
     try:
         summary = check(a.tasks, a.key, load())
