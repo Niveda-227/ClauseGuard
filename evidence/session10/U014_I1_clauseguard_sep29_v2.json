@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-11-10T00:43:07.024675+00:00",
+  "stopped_at_utc": "2026-11-10T00:43:58.742459+00:00",
+  "record": {
+    "recorded_at_utc": "2026-11-10T00:44:27.324202+00:00",
+    "participant_id": "U014",
+    "task_id": "I1",
+    "condition": "clauseguard",
+    "correct": 1,
+    "seconds": 51.718,
+    "limit_seconds": 180,
+    "model_id": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Can the company raise the price for customers who already pay for the service? Find the sentence that answers this, show me the passage, and tell me how much notice they must give you.",
+  "document": "examples/fresh/basecamp_terms.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "Yes. The company can change prices for existing customers. It must give at least 30 days\u2019 notice by email.",
+  "observer_notes": "Participant opened the Basecamp document and initially reviewed the flagged sentence 72. They continued examining the document and searched for pricing-related information. They located the pricing clause in sentence 75 and the notice requirement in sentence 76, then correctly explained that existing customers can face price increases with at least 30 days\u2019 notice by email.",
+  "interface": "web",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}

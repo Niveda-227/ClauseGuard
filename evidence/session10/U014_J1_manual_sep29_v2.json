@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-11-10T00:45:02.694038+00:00",
+  "stopped_at_utc": "2026-11-10T00:46:16.423220+00:00",
+  "record": {
+    "recorded_at_utc": "2026-11-10T00:46:45.312319+00:00",
+    "participant_id": "U014",
+    "task_id": "J1",
+    "condition": "manual",
+    "correct": 1,
+    "seconds": 73.729,
+    "limit_seconds": 180,
+    "model_id": "manual",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Can the company end your access to the service without warning you first? Find the sentence that answers this, show me the passage, and tell me whether they must warn you.",
+  "document": "examples/fresh/crowdsignal_terms.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "Yes. The company can suspend or terminate my access without notice. It does not have to warn me first.",
+  "observer_notes": "Participant searched the document for termination-related terms and navigated to the termination section. They read the clause under the heading and identified that the company can suspend or terminate access with or without notice. They gave the correct answer.",
+  "interface": "text_editor",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}
