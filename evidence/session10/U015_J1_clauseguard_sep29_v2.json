@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-11-10T00:47:25.168270+00:00",
+  "stopped_at_utc": "2026-11-10T00:48:05.498237+00:00",
+  "record": {
+    "recorded_at_utc": "2026-11-10T00:48:43.945047+00:00",
+    "participant_id": "U015",
+    "task_id": "J1",
+    "condition": "clauseguard",
+    "correct": 1,
+    "seconds": 40.33,
+    "limit_seconds": 180,
+    "model_id": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Can the company end your access to the service without warning you first? Find the sentence that answers this, show me the passage, and tell me whether they must warn you.",
+  "document": "examples/fresh/crowdsignal_terms.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "Yes. The company can suspend or terminate my access at its discretion, with or without notice. It does not have to warn me first.",
+  "observer_notes": "Participant opened the Crowdsignal document and reviewed the flagged termination section. They moved from the heading to the actual clause and read sentence 74. They correctly identified that the company can terminate access without giving prior notice.",
+  "interface": "web",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}

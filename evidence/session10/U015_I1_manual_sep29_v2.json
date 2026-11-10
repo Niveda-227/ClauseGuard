@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-11-10T00:49:37.026648+00:00",
+  "stopped_at_utc": "2026-11-10T00:51:00.203420+00:00",
+  "record": {
+    "recorded_at_utc": "2026-11-10T00:51:31.519972+00:00",
+    "participant_id": "U015",
+    "task_id": "I1",
+    "condition": "manual",
+    "correct": 1,
+    "seconds": 83.177,
+    "limit_seconds": 180,
+    "model_id": "manual",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Can the company raise the price for customers who already pay for the service? Find the sentence that answers this, show me the passage, and tell me how much notice they must give you.",
+  "document": "examples/fresh/basecamp_terms.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "Yes. The company can raise prices for existing customers, but it must give at least 30 days\u2019 notice by email.",
+  "observer_notes": "Participant used the document search to find pricing-related information and navigated to the relevant section. They read the clauses about price changes for existing customers and the required notice period. They correctly stated that the company can raise prices with at least 30 days\u2019 notice by email.",
+  "interface": "text_editor",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}
