@@ -1,0 +1,75 @@
+{
+  "repo_url": "https://github.com/Niveda-227/ClauseGuard",
+  "protocol": "sep29_v2",
+  "branch_protection_verified": true,
+  "outside_user_evidence_reviewed": true,
+  "contributions_verified": true,
+  "shipped_evidence_urls": [
+    "https://github.com/Niveda-227/ClauseGuard/pull/79",
+    "https://github.com/Niveda-227/ClauseGuard/pull/80",
+    "https://github.com/Niveda-227/ClauseGuard/pull/81",
+    "https://github.com/Niveda-227/ClauseGuard/pull/82",
+    "https://github.com/Niveda-227/ClauseGuard/pull/83"
+  ],
+  "user_change_evidence_urls": [
+    "https://github.com/Niveda-227/ClauseGuard/issues/77",
+    "https://github.com/Niveda-227/ClauseGuard/pull/83",
+    "https://github.com/Niveda-227/ClauseGuard/pull/81"
+  ],
+  "number_sources": [
+    "evidence/session10/summary.json",
+    "evidence/session09/summary.json",
+    "experiments/session10/fresh_eval.json",
+    "experiments/session10/label_agreement.json",
+    "experiments/session10/labels_A1.json",
+    "experiments/session10/labels_A2.json",
+    "experiments/session10/study_doc_check.json",
+    "experiments/session07/threshold_ship_eval.json",
+    "docs/decisions/fresh_rule.json",
+    "evidence/session10/tasks.csv"
+  ],
+  "quoted_numbers": [],
+  "members": {
+    "Ameer": {
+      "github": "sohail-umd",
+      "completed_work": "Chose three fresh, real, openly licensed Terms of Service from companies outside UNFAIR-ToS, wrote the labelling guide, the labelling tool and the rules for judging the model before any label existed, and added the \"Only for categories with no flag\" switch to the web app.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/74",
+        "https://github.com/Niveda-227/ClauseGuard/pull/79"
+      ]
+    },
+    "Hemanth": {
+      "github": "hreddy14",
+      "completed_work": "Labelled every sentence of the fresh documents as the first annotator, and added the label checker, the agreement measure between the two annotators and the notes filler.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/75",
+        "https://github.com/Niveda-227/ClauseGuard/pull/80"
+      ]
+    },
+    "Jayakrishna": {
+      "github": "Jayakrishna-Reddy",
+      "completed_work": "Labelled every sentence of the fresh documents as the second annotator, and measured the shipped model on them with the three pre-set rules (domain shift, cue margin, marks only for categories with no flag).",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/76",
+        "https://github.com/Niveda-227/ClauseGuard/pull/81"
+      ]
+    },
+    "Niveda": {
+      "github": "Niveda-227",
+      "completed_work": "Prepared study tasks I1 and J1 on two of the fresh real documents and ran the Session 10 study with new outside participants on the web app.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/77",
+        "https://github.com/Niveda-227/ClauseGuard/pull/82",
+        "https://github.com/Niveda-227/ClauseGuard/pull/83"
+      ]
+    },
+    "Ankan": {
+      "github": "royak747",
+      "completed_work": "Wrote the Session 10 report with every number filled from its source file, and updated the lean canvas.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/78",
+        "https://github.com/Niveda-227/ClauseGuard/pull/84"
+      ]
+    }
+  }
+}
