@@ -1,0 +1,14 @@
+{
+  "protocol": "sep29_v2",
+  "note": "Public task bank for Session 10: prompts and documents only. The documents are the fresh real Terms of Service in examples/fresh/ (openly licensed, see examples/fresh/SOURCES.md). Tasks C1 and D1 stay retired; E1, F1, G1 and H1 were used in Sessions 07 to 09. The observer answer key is kept in private/ (git-ignored) and must never be committed.",
+  "tasks": {
+    "I1": {
+      "document": "examples/fresh/basecamp_terms.txt",
+      "prompt": "Can the company raise the price for customers who already pay for the service? Find the sentence that answers this, show me the passage, and tell me how much notice they must give you."
+    },
+    "J1": {
+      "document": "examples/fresh/crowdsignal_terms.txt",
+      "prompt": "Can the company end your access to the service without warning you first? Find the sentence that answers this, show me the passage, and tell me whether they must warn you."
+    }
+  }
+}
