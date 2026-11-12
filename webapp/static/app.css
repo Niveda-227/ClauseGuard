@@ -337,6 +337,7 @@ main > section { max-width: var(--max); margin: 0 auto; padding-inline: var(--gu
 .meter .fill { position: absolute; inset: 0 auto 0 0; border-radius: inherit; background: var(--ink-c); }
 .meter .cut { position: absolute; top: -4px; bottom: -4px; width: 2px; background: var(--ink); border-radius: 2px; }
 .meter-label { display: flex; justify-content: space-between; font-size: var(--t-xs); color: var(--muted); font-variant-numeric: tabular-nums; }
+.shift-note { margin: 0 0 12px; padding: 10px 12px; border-radius: 12px; font-size: var(--t-sm); line-height: 1.45; background: #F4F1FA; border: 1px solid var(--line); color: var(--ink-2); }
 .note { margin: 12px 0 0; padding: 10px 12px; border-radius: 12px; font-size: var(--t-sm); background: var(--white); border: 1px solid var(--line); color: var(--ink-2); }
 .reason-possible .meter .fill { opacity: 0.5; }
 .exports { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }

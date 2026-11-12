@@ -1,0 +1,47 @@
+{
+  "written": "2026-11-10",
+  "written_before": "the ablation was first run (one dry run on 2026-11-10, after this rule was frozen, to check the kit); merged on main before scripts/ablation.py was added; never changed after",
+  "evaluated_by": "scripts/ablation.py",
+  "split_used": "validation only (2,275 sentences, 10 companies); the test split stays unread until Session 12",
+  "shipped": {
+    "features": "hybrid",
+    "class_weight": "balanced",
+    "cut_offs": "per_category"
+  },
+  "grid": {
+    "features": {
+      "word": "TF-IDF word 1-2-grams, min_df 2, at most 30000 features, sublinear tf",
+      "char": "TF-IDF character 3-5-grams inside word boundaries, min_df 3, at most 25000 features, sublinear tf",
+      "hybrid": "word and char together (the shipped model)"
+    },
+    "class_weight": [
+      "balanced",
+      "none"
+    ],
+    "cut_offs": {
+      "per_category": "one cut-off per category from 0.10 to 0.90 in steps of 0.05, tuned on validation; measured honestly with leave-one-company-out",
+      "fixed_0.5": "0.5 for every category (nothing tuned, so the validation score is already honest)"
+    },
+    "classifier": "one logistic regression per category (liblinear, C 1.0, seed 641), trained on the train split only"
+  },
+  "measure": "honest validation macro-F1 over the 8 categories (leave-one-company-out for per_category, plain for fixed_0.5)",
+  "rule": {
+    "min_gain": 0.02,
+    "tie_margin": 0.005,
+    "simpler_order": [
+      "features: word or char before hybrid",
+      "cut_offs: fixed_0.5 before per_category",
+      "class_weight: none before balanced"
+    ],
+    "text": "Keep the shipped configuration unless another configuration's honest macro-F1 is at least 0.02 higher. If one or more are, choose the highest; among configurations within 0.005 of the highest, choose the simplest. A switch is shipped at the Session 12 freeze, not during Session 11.",
+    "if_keep": "KEEP the shipped model for the final release",
+    "if_switch": "SWITCH to {name} at the Session 12 freeze"
+  },
+  "reported_only": [
+    "micro-F1 and flags per 100 sentences for every configuration",
+    "macro-F1 on the Session 10 fresh documents (strict answers) for every configuration; these labels were not made independently (reports/session10.md), so they decide nothing",
+    "training seconds per configuration (printed only, not saved, because they differ on every laptop)"
+  ],
+  "sanity_check": "the retrained shipped configuration must reproduce the committed validation predictions of the product model (experiments/session07/tuned/predictions.jsonl); otherwise the ablation stops",
+  "not_included": "a contextual model (for example sentence embeddings): it cannot be installed offline on every laptop, so it is not a candidate"
+}
