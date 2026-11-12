@@ -32,7 +32,7 @@
     sheet: $('sheet'), terms: $('terms'), doc: $('doc'), count: $('char-count'),
     analyze: $('analyze-btn'), status: $('status'), summary: $('summary'), chips: $('chips'),
     results: $('results'), empty: $('empty'), detail: $('detail'), exports: $('exports'),
-    check: $('check'), checkList: $('check-list'), checkZeroOnly: $('check-zero-only'),
+    check: $('check'), checkList: $('check-list'), checkZeroOnly: $('check-zero-only'), shiftNote: $('shift-note'),
     cards: $('cards'), file: $('file-input'), modelLine: $('model-line'),
     specimen: document.querySelector('.specimen'), specimenLines: $('specimen-lines'),
     specimenCaption: $('specimen-caption'),
@@ -243,6 +243,8 @@
     els.empty.hidden = has;
     els.exports.hidden = !has;
     els.check.hidden = !(has && state.worth);
+    // Session 11: the domain-shift reminder (docs/decisions/2026-11-11_final_model_rule.md), shown with every result.
+    if (els.shiftNote) els.shiftNote.hidden = !has;
     if (!has) els.detail.hidden = true;
   }
 
