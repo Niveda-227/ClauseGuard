@@ -1,0 +1,40 @@
+{
+  "reproduced": true,
+  "result_text": "REPRODUCED",
+  "checks_passed_text": "6 of 6",
+  "checks": {
+    "validation_scores_within_one_millionth": true,
+    "same_validation_flags": true,
+    "demo_document_flags_as_rehearsed": true,
+    "train_count_matches_manifest": true,
+    "training_companies_match_manifest": true,
+    "dataset_matches_manifest": true
+  },
+  "configuration": {
+    "variant": "hybrid",
+    "seed": 641,
+    "features": "word 1-2-grams + character 3-5-grams (TF-IDF)",
+    "classifier": "one logistic regression per category (liblinear, C 1.0, balanced class weights)"
+  },
+  "fingerprints": {
+    "dataset_sha256": "934470d74b62139dfbfad4a13b75a32e4a4d26a680ab12eedfb7659cdf669d53",
+    "product_artifact_sha256": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+    "training_sentences": 5532,
+    "training_companies": 30,
+    "validation_sentences": 2275,
+    "cut_offs": {
+      "Limitation of liability": 0.75,
+      "Unilateral termination": 0.7,
+      "Unilateral change": 0.8,
+      "Content removal": 0.8,
+      "Contract by using": 0.8,
+      "Choice of law": 0.65,
+      "Jurisdiction": 0.55,
+      "Arbitration": 0.8
+    },
+    "validation_flags_sha256": "0e635d75ca4662bd4e5b0511f101117e78c3b0d14da76b16a22c03a9565cea3b"
+  },
+  "largest_score_difference_below_one_millionth": true,
+  "test_split_read": false,
+  "note": "The rebuilt model is compared by its outputs, not by its file bytes: a saved joblib file contains a creation time and so never has the same SHA-256 twice."
+}

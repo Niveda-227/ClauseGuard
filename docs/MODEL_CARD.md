@@ -4,7 +4,7 @@
 **Variant:** hybrid, with one threshold per category  
 **SHA-256:** `dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd`  
 **Base model:** `artifacts/hybrid.joblib`, SHA-256 `04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76` (same trained weights, fixed 0.5 thresholds; the product model until Session 06)  
-**Status:** Session 07 model, unchanged in Session 08 (only review cues were added to what users see). Not a final semester freeze.
+**Status:** Session 07 model, unchanged through Session 11 (Sessions 08 to 10 changed only what users see). A rebuild check was added in Session 11 (see below and `experiments/session11/reproduce.md`). Not a final semester freeze: the freeze and the one-time test-split result come in Session 12.
 
 Purpose: classify eight contractual categories in English ToS sentences for source-linked review. Not a legal-enforceability system, safety rating, or replacement for reading an agreement. The annotations reflect the source's consumer-law context.
 
@@ -53,3 +53,26 @@ Current scores are not calibrated probabilities. The near-threshold cue is a heu
 No runtime API calls or default input logging. A requested export includes the supplied text; users should store it appropriately. English input and a 100,000-character limit apply. An application of this model to new services, new document versions or other languages needs separate testing. The synthetic demo cannot establish domain generalization.
 
 Outside-user results are in `evidence/` and the weekly reports in `reports/`. Version the card as actual studies and model changes occur. After final evaluation, update test status with evidence rather than silently changing previous claims.
+
+## Rebuild from a clean clone (Session 11)
+
+`python scripts/reproduce_model.py` retrains this model with the product code (`clauses.model.train`, variant hybrid, seed 641) on the train split only, gives it the product cut-offs, and checks that it reproduces the product model: the same validation scores (within one millionth), the same flags on every validation sentence, and the same flags on the demo document. It records the fingerprints of the release (dataset archive, product file, training data, cut-offs, and a SHA-256 over the validation flags) in [experiments/session11/reproduce.md](../experiments/session11/reproduce.md). The rebuilt model is compared by its outputs, not by its file bytes: a saved file contains its creation time.
+
+## Real documents (Session 10)
+
+On three real Terms of Service from companies outside UNFAIR-ToS ([experiments/session10/fresh_eval.md](../experiments/session10/fresh_eval.md)) the model found clearly fewer clauses than on validation. Those labels were made by two team members but not independently ([reports/session10.md](../reports/session10.md)), so the number is a warning, not a precise estimate. Since Session 11 the web app says above the findings that no flag does not mean the clause is not there.
+
+## Numbers checked against their sources (Session 11)
+
+Each row below is checked by `tests/test_model_card.py` against its source file, so these numbers cannot drift from the results.
+
+| Number | Value | Source file | Key |
+|---|---:|---|---|
+| Training sentences | 5532 | artifacts/selected.json | train_count |
+| Validation macro-F1, honest (leave-one-company-out) | 0.6768 | experiments/session07/threshold_ship_eval.json | new_product_leave_one_company_out_HONEST.macro_f1 |
+| Validation macro-F1, cut-offs tuned and scored on the same split (optimistic) | 0.7244 | experiments/session07/threshold_ship_eval.json | new_product_tuned_OPTIMISTIC.macro_f1 |
+| Validation micro-F1, honest | 0.688 | experiments/session07/threshold_ship_eval.json | new_product_leave_one_company_out_HONEST.micro_f1 |
+| Flags per 100 validation sentences, honest | 11.03 | experiments/session07/threshold_ship_eval.json | new_product_leave_one_company_out_HONEST.flags_per_100_sentences |
+| Annotator labels per 100 validation sentences | 10.95 | experiments/session07/threshold_ship_eval.json | gold_labels_per_100_sentences |
+| Weakest category: Arbitration F1, honest | 0.3478 | experiments/session07/threshold_ship_eval.json | new_product_leave_one_company_out_HONEST.per_category.Arbitration.f1 |
+| Fresh real documents, strict macro-F1 (labels not made independently) | 0.4139 | experiments/session10/fresh_eval.json | strict.macro_f1 |
