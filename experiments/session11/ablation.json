@@ -1,0 +1,300 @@
+{
+  "rule_file": "docs/decisions/final_model_rule.json",
+  "split": "validation",
+  "sentences": 2275,
+  "companies": 10,
+  "test_split_read": false,
+  "sanity_check": {
+    "scores_within_one_millionth": true,
+    "same_flags_with_product_cut_offs": true,
+    "passed": true
+  },
+  "configurations": [
+    {
+      "name": "word / balanced / per_category",
+      "features": "word",
+      "class_weight": "balanced",
+      "cut_offs": "per_category",
+      "honest_macro_f1": 0.6563,
+      "micro_f1": 0.6571,
+      "flags_per_100_sentences": 10.59,
+      "per_category_f1": {
+        "Limitation of liability": 0.6774,
+        "Unilateral termination": 0.6462,
+        "Unilateral change": 0.5283,
+        "Content removal": 0.5763,
+        "Contract by using": 0.8,
+        "Choice of law": 0.7742,
+        "Jurisdiction": 0.7778,
+        "Arbitration": 0.4706
+      },
+      "fresh_strict_macro_f1": 0.4359,
+      "fresh_text": "0.4359"
+    },
+    {
+      "name": "word / balanced / fixed_0.5",
+      "features": "word",
+      "class_weight": "balanced",
+      "cut_offs": "fixed_0.5",
+      "honest_macro_f1": 0.6156,
+      "micro_f1": 0.6084,
+      "flags_per_100_sentences": 18.24,
+      "per_category_f1": {
+        "Limitation of liability": 0.6369,
+        "Unilateral termination": 0.6375,
+        "Unilateral change": 0.4583,
+        "Content removal": 0.5128,
+        "Contract by using": 0.6792,
+        "Choice of law": 0.7879,
+        "Jurisdiction": 0.8421,
+        "Arbitration": 0.3704
+      },
+      "fresh_strict_macro_f1": 0.473,
+      "fresh_text": "0.4730"
+    },
+    {
+      "name": "word / none / per_category",
+      "features": "word",
+      "class_weight": "none",
+      "cut_offs": "per_category",
+      "honest_macro_f1": 0.4927,
+      "micro_f1": 0.5826,
+      "flags_per_100_sentences": 9.27,
+      "per_category_f1": {
+        "Limitation of liability": 0.6032,
+        "Unilateral termination": 0.6763,
+        "Unilateral change": 0.52,
+        "Content removal": 0.4706,
+        "Contract by using": 0.5882,
+        "Choice of law": 0.6667,
+        "Jurisdiction": 0.4167,
+        "Arbitration": 0.0
+      },
+      "fresh_strict_macro_f1": 0.4158,
+      "fresh_text": "0.4158"
+    },
+    {
+      "name": "word / none / fixed_0.5",
+      "features": "word",
+      "class_weight": "none",
+      "cut_offs": "fixed_0.5",
+      "honest_macro_f1": 0.1405,
+      "micro_f1": 0.2151,
+      "flags_per_100_sentences": 1.32,
+      "per_category_f1": {
+        "Limitation of liability": 0.3457,
+        "Unilateral termination": 0.2121,
+        "Unilateral change": 0.4,
+        "Content removal": 0.0606,
+        "Contract by using": 0.0,
+        "Choice of law": 0.1053,
+        "Jurisdiction": 0.0,
+        "Arbitration": 0.0
+      },
+      "fresh_strict_macro_f1": 0.0891,
+      "fresh_text": "0.0891"
+    },
+    {
+      "name": "char / balanced / per_category",
+      "features": "char",
+      "class_weight": "balanced",
+      "cut_offs": "per_category",
+      "honest_macro_f1": 0.6455,
+      "micro_f1": 0.6545,
+      "flags_per_100_sentences": 13.1,
+      "per_category_f1": {
+        "Limitation of liability": 0.6667,
+        "Unilateral termination": 0.6533,
+        "Unilateral change": 0.6,
+        "Content removal": 0.5714,
+        "Contract by using": 0.7179,
+        "Choice of law": 0.7647,
+        "Jurisdiction": 0.8421,
+        "Arbitration": 0.3478
+      },
+      "fresh_strict_macro_f1": 0.4055,
+      "fresh_text": "0.4055"
+    },
+    {
+      "name": "char / balanced / fixed_0.5",
+      "features": "char",
+      "class_weight": "balanced",
+      "cut_offs": "fixed_0.5",
+      "honest_macro_f1": 0.5684,
+      "micro_f1": 0.5615,
+      "flags_per_100_sentences": 21.93,
+      "per_category_f1": {
+        "Limitation of liability": 0.6032,
+        "Unilateral termination": 0.6034,
+        "Unilateral change": 0.44,
+        "Content removal": 0.4396,
+        "Contract by using": 0.5625,
+        "Choice of law": 0.7429,
+        "Jurisdiction": 0.8,
+        "Arbitration": 0.3556
+      },
+      "fresh_strict_macro_f1": 0.4257,
+      "fresh_text": "0.4257"
+    },
+    {
+      "name": "char / none / per_category",
+      "features": "char",
+      "class_weight": "none",
+      "cut_offs": "per_category",
+      "honest_macro_f1": 0.5598,
+      "micro_f1": 0.6051,
+      "flags_per_100_sentences": 11.43,
+      "per_category_f1": {
+        "Limitation of liability": 0.5797,
+        "Unilateral termination": 0.6667,
+        "Unilateral change": 0.4255,
+        "Content removal": 0.6038,
+        "Contract by using": 0.6,
+        "Choice of law": 0.6154,
+        "Jurisdiction": 0.8333,
+        "Arbitration": 0.1538
+      },
+      "fresh_strict_macro_f1": 0.4055,
+      "fresh_text": "0.4055"
+    },
+    {
+      "name": "char / none / fixed_0.5",
+      "features": "char",
+      "class_weight": "none",
+      "cut_offs": "fixed_0.5",
+      "honest_macro_f1": 0.254,
+      "micro_f1": 0.3366,
+      "flags_per_100_sentences": 2.37,
+      "per_category_f1": {
+        "Limitation of liability": 0.4,
+        "Unilateral termination": 0.4359,
+        "Unilateral change": 0.4,
+        "Content removal": 0.2222,
+        "Contract by using": 0.1053,
+        "Choice of law": 0.3636,
+        "Jurisdiction": 0.1053,
+        "Arbitration": 0.0
+      },
+      "fresh_strict_macro_f1": 0.164,
+      "fresh_text": "0.1640"
+    },
+    {
+      "name": "hybrid / balanced / per_category",
+      "features": "hybrid",
+      "class_weight": "balanced",
+      "cut_offs": "per_category",
+      "honest_macro_f1": 0.6768,
+      "micro_f1": 0.688,
+      "flags_per_100_sentences": 11.03,
+      "per_category_f1": {
+        "Limitation of liability": 0.6929,
+        "Unilateral termination": 0.6875,
+        "Unilateral change": 0.6545,
+        "Content removal": 0.6071,
+        "Contract by using": 0.75,
+        "Choice of law": 0.7742,
+        "Jurisdiction": 0.9,
+        "Arbitration": 0.3478
+      },
+      "fresh_strict_macro_f1": 0.4139,
+      "fresh_text": "0.4139"
+    },
+    {
+      "name": "hybrid / balanced / fixed_0.5",
+      "features": "hybrid",
+      "class_weight": "balanced",
+      "cut_offs": "fixed_0.5",
+      "honest_macro_f1": 0.6333,
+      "micro_f1": 0.6275,
+      "flags_per_100_sentences": 17.49,
+      "per_category_f1": {
+        "Limitation of liability": 0.6286,
+        "Unilateral termination": 0.6584,
+        "Unilateral change": 0.506,
+        "Content removal": 0.5405,
+        "Contract by using": 0.72,
+        "Choice of law": 0.8125,
+        "Jurisdiction": 0.878,
+        "Arbitration": 0.3226
+      },
+      "fresh_strict_macro_f1": 0.4653,
+      "fresh_text": "0.4653"
+    },
+    {
+      "name": "hybrid / none / per_category",
+      "features": "hybrid",
+      "class_weight": "none",
+      "cut_offs": "per_category",
+      "honest_macro_f1": 0.6277,
+      "micro_f1": 0.6498,
+      "flags_per_100_sentences": 9.89,
+      "per_category_f1": {
+        "Limitation of liability": 0.6441,
+        "Unilateral termination": 0.7031,
+        "Unilateral change": 0.4815,
+        "Content removal": 0.6038,
+        "Contract by using": 0.6829,
+        "Choice of law": 0.6667,
+        "Jurisdiction": 0.8649,
+        "Arbitration": 0.375
+      },
+      "fresh_strict_macro_f1": 0.4041,
+      "fresh_text": "0.4041"
+    },
+    {
+      "name": "hybrid / none / fixed_0.5",
+      "features": "hybrid",
+      "class_weight": "none",
+      "cut_offs": "fixed_0.5",
+      "honest_macro_f1": 0.3598,
+      "micro_f1": 0.4343,
+      "flags_per_100_sentences": 3.43,
+      "per_category_f1": {
+        "Limitation of liability": 0.4835,
+        "Unilateral termination": 0.4878,
+        "Unilateral change": 0.5366,
+        "Content removal": 0.2703,
+        "Contract by using": 0.56,
+        "Choice of law": 0.4348,
+        "Jurisdiction": 0.1053,
+        "Arbitration": 0.0
+      },
+      "fresh_strict_macro_f1": 0.1961,
+      "fresh_text": "0.1961"
+    }
+  ],
+  "ranking": [
+    "hybrid / balanced / per_category",
+    "word / balanced / per_category",
+    "char / balanced / per_category",
+    "hybrid / balanced / fixed_0.5",
+    "hybrid / none / per_category",
+    "word / balanced / fixed_0.5",
+    "char / balanced / fixed_0.5",
+    "char / none / per_category",
+    "word / none / per_category",
+    "hybrid / none / fixed_0.5",
+    "char / none / fixed_0.5",
+    "word / none / fixed_0.5"
+  ],
+  "shipped": {
+    "name": "hybrid / balanced / per_category",
+    "honest_macro_f1": 0.6768
+  },
+  "best": {
+    "name": "hybrid / balanced / per_category",
+    "honest_macro_f1": 0.6768
+  },
+  "decision": {
+    "result": "KEEP the shipped model for the final release",
+    "chosen": "hybrid / balanced / per_category",
+    "switch": false,
+    "best_other": "word / balanced / per_category",
+    "best_other_honest_macro_f1": 0.6563,
+    "shipped_honest_macro_f1": 0.6768,
+    "gain_of_best_over_shipped": 0.0,
+    "min_gain": 0.02
+  },
+  "summary": "best hybrid / balanced / per_category 0.6768; shipped 0.6768; gain 0.0000 (a switch needs at least 0.02)",
+  "note": "Validation split only; honest = leave-one-company-out for per-category cut-offs. Choosing among 12 configurations on one split flatters the best one; the Session 12 test-split run is the unbiased number. Fresh-document macro-F1 is reported only: those labels were not made independently."
+}
