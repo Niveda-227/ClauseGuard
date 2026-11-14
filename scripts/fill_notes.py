@@ -1,16 +1,16 @@
-"""Fill the numbers in a teammate's session notes from the result files, and check the notes (Session 10).
+"""Fill the numbers in a teammate's session notes from the result files, and check the notes (Sessions 10 and 11).
 
-    python scripts/fill_notes.py experiments/session10/hemanth_session10_notes.md
+    python scripts/fill_notes.py experiments/session11/hemanth_session11_notes.md
 
 A notes file has two kinds of places:
   <<...>>   written BY HAND first: your own words (what you saw, how you decided). Words only:
             do not type any number with a decimal point; numbers come from the tokens.
-  {{FROM:experiments/session10/<file>.json#<key>|2}}   filled by THIS script with one value
+  {{FROM:experiments/sessionNN/<file>.json#<key>|2}}   filled by THIS script with one value
             from a result file (same token format as scripts/finalize_report.py).
 
 The script refuses to change anything while a <<...>> place is left, while a hand-written part
-has a decimal number, or when a token points to a file that is not a JSON result in
-experiments/session10/. It then writes the filled notes back to the same file, with a last line
+has a decimal number, or when a token points to a file that is not a JSON result in an
+experiments/sessionNN/ folder (Session 11: any session, not only Session 10). It then writes the filled notes back to the same file, with a last line
 saying it was filled, and prints PASS. Running it again on a filled file only checks that no
 <<...>> or {{...}} place is left, and changes nothing.
 """
@@ -23,16 +23,17 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from scripts.finalize_report import FROM, from_value  # noqa: E402
 
-RESULTS = 'experiments/session10/'
+RESULTS = re.compile(r'experiments/session\d{2}/[^/]+\.json')
 DECIMAL = re.compile(r'(?<![\w.])\d+\.\d+(?![\w.])')
-MARK = '<!-- Numbers filled by scripts/fill_notes.py from the result files in experiments/session10/. -->'
+MARK = '<!-- Numbers filled by scripts/fill_notes.py from the result files in experiments/. -->'
+OLD_MARKS = ('<!-- Numbers filled by scripts/fill_notes.py from the result files in experiments/session10/. -->',)
 
 
 def fill(path, root=ROOT):
     """Return the filled text, or raise ValueError saying what to fix."""
     root = Path(root)
     text = Path(path).read_text(encoding='utf-8')
-    if MARK in text:
+    if MARK in text or any(m in text for m in OLD_MARKS):
         if re.search(r'<<|{{', text):
             raise ValueError('The notes were filled before but now contain <<...>> or {{...}} again.')
         return text
@@ -46,8 +47,8 @@ def fill(path, root=ROOT):
         raise ValueError(f'Numbers typed by hand: {", ".join(typed[:5])}. Use a {{{{FROM:...}}}} token instead.')
     sources = sorted({m.group(1).strip() for m in FROM.finditer(text)})
     for rel in sources:
-        if not rel.startswith(RESULTS) or not rel.endswith('.json'):
-            raise ValueError(f'{rel}: tokens may only read JSON results in {RESULTS}')
+        if not RESULTS.fullmatch(rel):
+            raise ValueError(f'{rel}: tokens may only read JSON results in an experiments/sessionNN/ folder')
     text = FROM.sub(lambda m: from_value(root, m.group(1).strip(), m.group(2).strip(), m.group(3) == '%',
                                          m.group(4), sources), text)
     leftover = re.findall(r'{{[^{}]*}}', text)

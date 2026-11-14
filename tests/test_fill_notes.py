@@ -39,9 +39,18 @@ class FillNotesTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, '0.61'):
             fill(self.write('Kappa was 0.61 by my count.'), self.root)
 
-    def test_tokens_outside_session10_results_are_refused(self):
-        with self.assertRaisesRegex(ValueError, 'experiments/session10/'):
-            fill(self.write('{{FROM:experiments/session09/old.json#k}}'), self.root)
+    def test_tokens_outside_the_experiments_result_folders_are_refused(self):
+        (self.root / 'reports').mkdir()
+        (self.root / 'reports/x.json').write_text(json.dumps({'k': 1}))
+        with self.assertRaisesRegex(ValueError, 'experiments/sessionNN/'):
+            fill(self.write('{{FROM:reports/x.json#k}}'), self.root)
+        with self.assertRaisesRegex(ValueError, 'experiments/sessionNN/'):
+            fill(self.write('{{FROM:experiments/session09/deeper/old.json#k}}'), self.root)
+
+    def test_results_of_any_session_can_be_used_and_old_marks_still_count_as_filled(self):
+        self.assertEqual(fill(self.write('{{FROM:experiments/session09/old.json#k}}'), self.root).splitlines()[0], '1')
+        old = '<!-- Numbers filled by scripts/fill_notes.py from the result files in experiments/session10/. -->'
+        self.assertEqual(fill(self.write('Kappa 0.61.\n' + old + '\n'), self.root), 'Kappa 0.61.\n' + old + '\n')
 
 
 if __name__ == '__main__':
