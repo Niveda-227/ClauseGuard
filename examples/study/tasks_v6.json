@@ -1,0 +1,14 @@
+{
+  "protocol": "sep29_v2",
+  "note": "Public task bank for Session 11: prompts and documents only. The documents are fresh real Terms of Service in examples/fresh/ (openly licensed, see examples/fresh/SOURCES.md). Both answers are sentences the model does not flag but the Check it yourself panel lists. Tasks C1 and D1 stay retired; E1 to J1 were used in Sessions 07 to 10. The observer answer key is kept in private/ (git-ignored) and must never be committed.",
+  "tasks": {
+    "K1": {
+      "document": "examples/fresh/cloudup_terms.txt",
+      "prompt": "Is there a limit on how much money the company would have to pay you if something goes wrong? Find the sentence that answers this, show me the passage, and tell me the limit."
+    },
+    "L1": {
+      "document": "examples/fresh/crowdsignal_terms.txt",
+      "prompt": "Can the company delete your free account if you stop using it? Find the sentence that answers this, show me the passage, and tell me after how long."
+    }
+  }
+}
