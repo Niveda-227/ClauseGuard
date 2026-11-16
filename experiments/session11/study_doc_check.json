@@ -1,0 +1,40 @@
+{
+  "model_id": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+  "tasks": [
+    {
+      "task_id": "K1",
+      "document": "examples/fresh/cloudup_terms.txt",
+      "target_category": "Limitation of liability",
+      "target_cut_off": 0.75,
+      "sentences_in_document": 77,
+      "worth_a_look_sentences_for_target": 5,
+      "answer": "sentence",
+      "answer_sentence_flagged_with_target": false,
+      "answer_sentence_cue": "none",
+      "target_score": 0.426,
+      "extra_labels_on_answer_sentence": 0,
+      "other_sentences_with_target_label": 3,
+      "answer_sentence_in_worth_a_look": true,
+      "distractor_flagged_categories": [
+        "Limitation of liability"
+      ]
+    },
+    {
+      "task_id": "L1",
+      "document": "examples/fresh/crowdsignal_terms.txt",
+      "target_category": "Content removal",
+      "target_cut_off": 0.8,
+      "sentences_in_document": 143,
+      "worth_a_look_sentences_for_target": 4,
+      "answer": "sentence",
+      "answer_sentence_flagged_with_target": false,
+      "answer_sentence_cue": "none",
+      "target_score": 0.37,
+      "extra_labels_on_answer_sentence": 0,
+      "other_sentences_with_target_label": 0,
+      "answer_sentence_in_worth_a_look": true,
+      "distractor_flagged_categories": []
+    }
+  ],
+  "note": "Sanitized: contains no answer text or sentence positions."
+}

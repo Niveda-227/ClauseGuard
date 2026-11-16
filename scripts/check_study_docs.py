@@ -16,7 +16,9 @@ give as the answer; the check reports the categories the app flags on it.
 
 Session 10: the tasks use the fresh real Terms of Service in examples/fresh/ (task bank
 tasks_v5.json), and the verdict line also names the distractor's flags for a task whose answer
-is a sentence."""
+is a sentence.
+
+Session 11: task bank tasks_v6.json (tasks K1 and L1), private key session11_answer_key.json."""
 import argparse
 import json
 import sys
@@ -114,9 +116,9 @@ def verdict(t):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--tasks', default='examples/study/tasks_v5.json')
-    p.add_argument('--key', default='private/session10_answer_key.json')
-    p.add_argument('--output', default='experiments/session10/study_doc_check.json')
+    p.add_argument('--tasks', default='examples/study/tasks_v6.json')
+    p.add_argument('--key', default='private/session11_answer_key.json')
+    p.add_argument('--output', default='experiments/session11/study_doc_check.json')
     a = p.parse_args()
     try:
         summary = check(a.tasks, a.key, load())
