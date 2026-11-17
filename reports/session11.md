@@ -93,7 +93,7 @@ The previous value is Session 10 (tasks I1 and J1). This week's tasks are differ
 
 ## What did not work
 
-- **The ablation, in words:** Configurations that performed worse generally lacked balanced class weighting or relied on fixed cut-offs, causing significant performance drops and flagging far fewer sentences. Although fixed cut-offs scored higher on the fresh documents, those documents suggested that models flagging more sentences perform better on domain shifts, though validation scores remained the governing metric.
+- **The ablation, in words:** Without balanced class weighting every configuration did worse on validation and flagged fewer sentences, far fewer with a fixed cut-off. With balanced weighting, a fixed cut-off also did worse on validation than per-category cut-offs, but it flagged more sentences and scored higher on the fresh documents. Those labels were not made independently and cover only three documents, so this is a hint for Session 12, not a reason to switch; the decision uses validation only.
 - **Wrong answers in the study:** No wrong answers were recorded this week.
 - **Limits:** the ablation chooses among 12 configurations on one split, which flatters the best one; the Session 12 test-split run is the unbiased number. A contextual model (for example sentence embeddings) was not tried, because it cannot be installed offline on every laptop.
 
