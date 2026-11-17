@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-11-17T00:06:47.719624+00:00",
+  "stopped_at_utc": "2026-11-17T00:07:56.903869+00:00",
+  "record": {
+    "recorded_at_utc": "2026-11-17T00:08:45.735024+00:00",
+    "participant_id": "U017",
+    "task_id": "K1",
+    "condition": "manual",
+    "correct": 1,
+    "seconds": 69.192,
+    "limit_seconds": 180,
+    "model_id": "manual",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Is there a limit on how much money the company would have to pay you if something goes wrong? Find the sentence that answers this, show me the passage, and tell me the limit.",
+  "document": "examples/fresh/cloudup_terms.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "Automattic's liability is limited to $5.23",
+  "observer_notes": "Participant searched the Cloudup document for liability-related terms and navigated to the Limitation of Liability section. They read the liability cap clause and correctly identified that Automattic's maximum liability is $5.23.",
+  "interface": "text_editor",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}

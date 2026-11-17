@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-11-17T00:04:13.938325+00:00",
+  "stopped_at_utc": "2026-11-17T00:05:13.887379+00:00",
+  "record": {
+    "recorded_at_utc": "2026-11-17T00:06:04.131891+00:00",
+    "participant_id": "U017",
+    "task_id": "L1",
+    "condition": "clauseguard",
+    "correct": 1,
+    "seconds": 59.959,
+    "limit_seconds": 180,
+    "model_id": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Can the company delete your free account if you stop using it? Find the sentence that answers this, show me the passage, and tell me after how long.",
+  "document": "examples/fresh/crowdsignal_terms.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "Yes. Crowdsignal can delete a free account that has not been logged into for six months or longer.",
+  "observer_notes": "Participant opened the Crowdsignal document and reviewed the available findings. They explored the account-related information and located the clause about deleting inactive free accounts. They correctly explained the six-month inactivity condition.",
+  "interface": "web",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}
