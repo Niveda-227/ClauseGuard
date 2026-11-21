@@ -10,9 +10,10 @@ source .venv/bin/activate          # Windows: .venv\Scripts\Activate.ps1
 git switch main
 git pull --ff-only origin main
 python scripts/demo_check.py --output /tmp/demo_check_rehearsal.json
+python scripts/check_release.py
 ```
 
-The last line must say `READY FOR THE DEMO`. The check confirms that the app runs the model the report quotes, that the demo document still gets the rehearsed flags, and that the web app returns exactly what the desktop app returns. The `--output` path keeps this rehearsal run out of the repository.
+The demo check's last line must say `READY FOR THE DEMO`, and the release check's last line `THIS IS RELEASE 1.0.0` (from Session 12). The check confirms that the app runs the model the report quotes, that the demo document still gets the rehearsed flags, and that the web app returns exactly what the desktop app returns. The `--output` path keeps this rehearsal run out of the repository.
 
 Then rehearse the flow below once, with a timer.
 

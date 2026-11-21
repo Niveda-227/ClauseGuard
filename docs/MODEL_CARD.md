@@ -4,7 +4,7 @@
 **Variant:** hybrid, with one threshold per category  
 **SHA-256:** `dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd`  
 **Base model:** `artifacts/hybrid.joblib`, SHA-256 `04713fbf6e23784a5d32e5cdd5fef459182408565bfe8a4fb6a9f10d53dbff76` (same trained weights, fixed 0.5 thresholds; the product model until Session 06)  
-**Status:** Session 07 model, unchanged through Session 11 (Sessions 08 to 10 changed only what users see). A rebuild check was added in Session 11 (see below and `experiments/session11/reproduce.md`). Not a final semester freeze: the freeze and the one-time test-split result come in Session 12.
+**Status:** Session 07 model, unchanged since then (Sessions 08 to 11 changed only what users see). **Frozen as release 1.0.0 in Session 12** ([docs/RELEASE.md](RELEASE.md); check with `python scripts/check_release.py`). A rebuild check was added in Session 11 (see below and `experiments/session11/reproduce.md`). The one-time test-split result comes after the freeze.
 
 Purpose: classify eight contractual categories in English ToS sentences for source-linked review. Not a legal-enforceability system, safety rating, or replacement for reading an agreement. The annotations reflect the source's consumer-law context.
 
