@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "tag": "v1.0.0",
+  "model_sha256": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+  "model_short": "dafbb5470f2f",
+  "product_files": 28,
+  "dataset_sha256": "934470d74b62139dfbfad4a13b75a32e4a4d26a680ab12eedfb7659cdf669d53",
+  "packages": [
+    "numpy==2.3.5",
+    "scipy==1.17.0",
+    "scikit-learn==1.8.0",
+    "joblib==1.5.3"
+  ],
+  "test_split_read_before_freeze": false,
+  "summary": "release 1.0.0: 28 product files, model dafbb5470f2f"
+}
