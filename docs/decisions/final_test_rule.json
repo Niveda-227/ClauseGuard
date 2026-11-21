@@ -1,0 +1,33 @@
+{
+  "written": "2026-11-18",
+  "written_before": "the test split was read: no test-split result exists when this rule is merged on main (the kit's dry run used validation rows in place of test rows and never opened the test split)",
+  "run_by": "Jayakrishna, once, with scripts/final_test.py, after release 1.0.0 is merged on main and tagged v1.0.0",
+  "model": {
+    "release": "1.0.0",
+    "model_sha256": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+    "cut_offs": "the shipped per-category cut-offs in artifacts/selected.json; nothing is tuned on the test split"
+  },
+  "measure": "macro-F1 over the 8 categories on the UNFAIR-ToS test split (1,607 sentences)",
+  "compare_with": {
+    "honest_validation_macro_f1": {
+      "source": "experiments/session07/threshold_ship_eval.json",
+      "key": "new_product_leave_one_company_out_HONEST.macro_f1"
+    },
+    "optimistic_validation_macro_f1": {
+      "source": "experiments/session07/threshold_ship_eval.json",
+      "key": "new_product_tuned_OPTIMISTIC.macro_f1"
+    }
+  },
+  "rule": {
+    "margin": 0.05,
+    "difference": "test macro-F1 minus honest validation macro-F1",
+    "if_within": "CONSISTENT with the honest validation estimate",
+    "if_below": "LOWER than the honest validation estimate",
+    "if_above": "HIGHER than the honest validation estimate"
+  },
+  "reported_only": [
+    "micro-F1, flags per 100 sentences, correct tags, wrong tags and missed labels on the test split",
+    "precision, recall and F1 for each category, next to the honest validation F1 of that category"
+  ],
+  "after_the_result": "The test split is read once and never again. Nothing in the product changes because of the test result before the final submission; the result is reported whatever it shows, next to the validation numbers."
+}
