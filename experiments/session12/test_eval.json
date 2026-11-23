@@ -1,0 +1,91 @@
+{
+  "split": "test",
+  "sentences": 1607,
+  "companies": 10,
+  "release": "1.0.0",
+  "model_sha256": "dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd",
+  "test_macro_f1": 0.7626,
+  "test_micro_f1": 0.7292,
+  "flags_per_100_sentences": 11.64,
+  "flags": 187,
+  "correct_tags": 136,
+  "wrong_tags": 51,
+  "missed_labels": 50,
+  "gold_labels": 186,
+  "honest_validation_macro_f1": 0.6768,
+  "optimistic_validation_macro_f1": 0.7244,
+  "difference_from_honest_validation": 0.0858,
+  "margin": 0.05,
+  "result": "HIGHER than the honest validation estimate",
+  "summary": "test macro-F1 0.7626; honest validation 0.6768; difference +0.0858 (margin 0.05)",
+  "per_category": {
+    "Limitation of liability": {
+      "support": 38,
+      "precision": 0.675,
+      "recall": 0.7105,
+      "f1": 0.6923,
+      "honest_validation_f1": 0.6929
+    },
+    "Unilateral termination": {
+      "support": 38,
+      "precision": 0.6522,
+      "recall": 0.7895,
+      "f1": 0.7143,
+      "honest_validation_f1": 0.6875
+    },
+    "Unilateral change": {
+      "support": 38,
+      "precision": 0.7188,
+      "recall": 0.6053,
+      "f1": 0.6571,
+      "honest_validation_f1": 0.6545
+    },
+    "Content removal": {
+      "support": 13,
+      "precision": 0.5789,
+      "recall": 0.8462,
+      "f1": 0.6875,
+      "honest_validation_f1": 0.6071
+    },
+    "Contract by using": {
+      "support": 23,
+      "precision": 0.9375,
+      "recall": 0.6522,
+      "f1": 0.7692,
+      "honest_validation_f1": 0.75
+    },
+    "Choice of law": {
+      "support": 13,
+      "precision": 0.9231,
+      "recall": 0.9231,
+      "f1": 0.9231,
+      "honest_validation_f1": 0.7742
+    },
+    "Jurisdiction": {
+      "support": 16,
+      "precision": 0.8571,
+      "recall": 0.75,
+      "f1": 0.8,
+      "honest_validation_f1": 0.9
+    },
+    "Arbitration": {
+      "support": 7,
+      "precision": 0.8571,
+      "recall": 0.8571,
+      "f1": 0.8571,
+      "honest_validation_f1": 0.3478
+    }
+  },
+  "cut_offs": {
+    "Limitation of liability": 0.75,
+    "Unilateral termination": 0.7,
+    "Unilateral change": 0.8,
+    "Content removal": 0.8,
+    "Contract by using": 0.8,
+    "Choice of law": 0.65,
+    "Jurisdiction": 0.55,
+    "Arbitration": 0.8
+  },
+  "rule_file": "docs/decisions/final_test_rule.json",
+  "note": "Read once with the frozen release and its shipped cut-offs; nothing was tuned on the test split. Counts and scores only."
+}
