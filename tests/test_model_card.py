@@ -28,13 +28,16 @@ class ModelCardTests(unittest.TestCase):
             self.assertEqual(len(number.split('.')[1]) if '.' in number else 0,
                              len(str(v).split('.')[1]) if '.' in str(v) else 0, msg=f'{name}: same precision as the source')
 
-    def test_the_card_names_the_shipped_file_and_no_test_result(self):
+    def test_the_card_names_the_shipped_file_and_the_one_time_test_result(self):
         text = CARD.read_text(encoding='utf-8')
         self.assertIn('artifacts/selected.joblib', text)
         self.assertIn('dafbb5470f2fb2678cae273eac7c23046bbad0487c7be247174a99a08ad493bd', text)
-        self.assertIn('Final test not evaluated', text)
         self.assertIn('scripts/reproduce_model.py', text)
-        self.assertNotIn('experiments/session12', text)
+        self.assertIn('read once with the frozen release in Session 12', text)
+        self.assertIn('experiments/session12/test_eval.md', text)
+        if (ROOT / 'experiments/session12/test_eval.json').exists():
+            ledger = (ROOT / 'experiments/test_exposure.jsonl').read_text(encoding='utf-8')
+            self.assertEqual(len([l for l in ledger.splitlines() if l.strip()]), 1, 'the test split is read once')
 
 
 if __name__ == '__main__':

@@ -8,7 +8,7 @@
 
 Purpose: classify eight contractual categories in English ToS sentences for source-linked review. Not a legal-enforceability system, safety rating, or replacement for reading an agreement. The annotations reflect the source's consumer-law context.
 
-Training data: official UNFAIR-ToS train, 5,532 sentences. Development: official validation, 2,275. Final test not evaluated. The selected representation combines word TF-IDF and character n-grams with balanced one-vs-rest logistic regressions. Manifest lists exact thresholds, seed, packages and data hash.
+Training data: official UNFAIR-ToS train, 5,532 sentences. Development: official validation, 2,275. Final test: the official test split (1,607 sentences), read once with the frozen release in Session 12; the result is in `experiments/session12/test_eval.md`, next to the validation numbers. The selected representation combines word TF-IDF and character n-grams with balanced one-vs-rest logistic regressions. Manifest lists exact thresholds, seed, packages and data hash.
 
 ## Thresholds (Session 07)
 
