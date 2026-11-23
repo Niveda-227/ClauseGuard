@@ -1,0 +1,14 @@
+{
+  "protocol": "sep29_v2",
+  "note": "Public task bank for Session 12, the final user check on the frozen release 1.0.0: prompts and documents only. The documents are fresh real Terms of Service in examples/fresh/ (openly licensed, see examples/fresh/SOURCES.md). In both tasks the model flags the answer sentence. Tasks C1 and D1 stay retired; E1 to L1 were used in Sessions 07 to 11. The observer answer key is kept in private/ (git-ignored) and must never be committed.",
+  "tasks": {
+    "M1": {
+      "document": "examples/fresh/cloudup_terms.txt",
+      "prompt": "If you have a dispute with the company, how must it be settled? Find the sentence that answers this, show me the passage, and tell me how."
+    },
+    "N1": {
+      "document": "examples/fresh/basecamp_terms.txt",
+      "prompt": "Can the company remove content that you put on the service? Find the sentence that answers this, show me the passage, and tell me whether they check content before it goes up."
+    }
+  }
+}
