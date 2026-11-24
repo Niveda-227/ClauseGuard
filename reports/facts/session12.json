@@ -3,7 +3,7 @@
   "protocol": "sep29_v2",
   "branch_protection_verified": true,
   "outside_user_evidence_reviewed": true,
-  "contributions_verified": false,
+  "contributions_verified": true,
   "shipped_evidence_urls": [
     "https://github.com/Niveda-227/ClauseGuard/pull/101",
     "https://github.com/Niveda-227/ClauseGuard/pull/102",
