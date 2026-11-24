@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-11-24T00:21:04.333422+00:00",
+  "stopped_at_utc": "2026-11-24T00:21:50.513096+00:00",
+  "record": {
+    "recorded_at_utc": "2026-11-24T00:22:21.678093+00:00",
+    "participant_id": "U019",
+    "task_id": "M1",
+    "condition": "manual",
+    "correct": 1,
+    "seconds": 46.18,
+    "limit_seconds": 180,
+    "model_id": "manual",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "If you have a dispute with the company, how must it be settled? Find the sentence that answers this, show me the passage, and tell me how.",
+  "document": "examples/fresh/cloudup_terms.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "Yes. Any dispute arising from the Terms or use of Cloudup must be resolved through final and binding arbitration, rather than through a judge or jury. The arbitration is conducted under JAMS rules by three arbitrators, in the United States county where the user lives or works, San Francisco, or another agreed location.",
+  "observer_notes": "Participant opened the Cloudup terms in Notepad and searched for dispute-resolution information. They navigated to the Arbitration Agreement section, read the relevant passage, and correctly identified binding arbitration as the required method for settling disputes.",
+  "interface": "text_editor",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}
