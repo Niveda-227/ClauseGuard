@@ -1,0 +1,73 @@
+{
+  "repo_url": "https://github.com/Niveda-227/ClauseGuard",
+  "protocol": "sep29_v2",
+  "branch_protection_verified": true,
+  "outside_user_evidence_reviewed": true,
+  "contributions_verified": false,
+  "shipped_evidence_urls": [
+    "https://github.com/Niveda-227/ClauseGuard/pull/101",
+    "https://github.com/Niveda-227/ClauseGuard/pull/102",
+    "https://github.com/Niveda-227/ClauseGuard/pull/103",
+    "https://github.com/Niveda-227/ClauseGuard/pull/104",
+    "https://github.com/Niveda-227/ClauseGuard/pull/105"
+  ],
+  "user_change_evidence_urls": [
+    "https://github.com/Niveda-227/ClauseGuard/issues/99",
+    "https://github.com/Niveda-227/ClauseGuard/pull/105"
+  ],
+  "number_sources": [
+    "evidence/session12/summary.json",
+    "evidence/session11/summary.json",
+    "experiments/session12/test_eval.json",
+    "experiments/session12/release_summary.json",
+    "experiments/session12/study_doc_check.json",
+    "experiments/session12/study_summary.json",
+    "experiments/session07/threshold_ship_eval.json",
+    "docs/decisions/final_test_rule.json",
+    "evidence/session12/tasks.csv"
+  ],
+  "quoted_numbers": [],
+  "members": {
+    "Ameer": {
+      "github": "sohail-umd",
+      "completed_work": "Wrote the rule for reporting the one-time test-split result before the test split was read, and drafted the speaker notes for the final presentation.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/96",
+        "https://github.com/Niveda-227/ClauseGuard/pull/101"
+      ]
+    },
+    "Hemanth": {
+      "github": "hreddy14",
+      "completed_work": "Froze the product as release 1.0.0 before the test split was read, with a fingerprint of every product file, a check that a folder is still the release, and the release tag.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/97",
+        "https://github.com/Niveda-227/ClauseGuard/pull/102"
+      ]
+    },
+    "Jayakrishna": {
+      "github": "Jayakrishna-Reddy",
+      "completed_work": "Read the test split once with the frozen release under the pre-set rule, reported it next to the validation numbers by category, and added a check of that record that never reads the test split again.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/98",
+        "https://github.com/Niveda-227/ClauseGuard/pull/103"
+      ]
+    },
+    "Niveda": {
+      "github": "Niveda-227",
+      "completed_work": "Prepared study tasks M1 and N1 on two fresh real documents, ran the final user check on the frozen release with new outside participants, and summarised every outside-user session in one table.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/99",
+        "https://github.com/Niveda-227/ClauseGuard/pull/104",
+        "https://github.com/Niveda-227/ClauseGuard/pull/105"
+      ]
+    },
+    "Ankan": {
+      "github": "aroycoder",
+      "completed_work": "Checked the release, the test-split record and the study summary before writing the Session 12 report, wrote the report with every number filled from its source file, and updated the lean canvas.",
+      "evidence_urls": [
+        "https://github.com/Niveda-227/ClauseGuard/issues/100",
+        "https://github.com/Niveda-227/ClauseGuard/pull/106"
+      ]
+    }
+  }
+}
