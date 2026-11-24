@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-11-24T00:13:57.379837+00:00",
+  "stopped_at_utc": "2026-11-24T00:14:58.110960+00:00",
+  "record": {
+    "recorded_at_utc": "2026-11-24T00:15:27.980686+00:00",
+    "participant_id": "U018",
+    "task_id": "N1",
+    "condition": "manual",
+    "correct": 1,
+    "seconds": 60.731,
+    "limit_seconds": 180,
+    "model_id": "manual",
+    "protocol_version": "sep29_v2"
+  },
+  "task_prompt": "Can the company remove content that you put on the service? Find the sentence that answers this, show me the passage, and tell me whether they check content before it goes up.",
+  "document": "examples/fresh/basecamp_terms.txt",
+  "prompt_restated_correctly": true,
+  "prompt_readings": 1,
+  "participant_answer": "Yes. The company can remove content that users submit. It does not actively review content before it is uploaded.",
+  "observer_notes": "Yes. The company can remove content that users submit. It does not actively review content before it is uploaded.",
+  "interface": "text_editor",
+  "observer_id": "OBS01",
+  "outside_team_and_consented": true,
+  "capture_tool": "clauses.session_v2",
+  "timing_note": "Clock stops when the participant states the answer; answer entry is excluded. Answers after the limit count as unsuccessful."
+}

@@ -1,0 +1,212 @@
+{
+  "protocol_counted": "sep29_v2",
+  "sessions": [
+    {
+      "session": "04",
+      "protocol": [
+        "sep22_v1"
+      ],
+      "participants": [
+        "U001"
+      ],
+      "tasks": [
+        "A1",
+        "B1"
+      ],
+      "documents": "fictional",
+      "clauseguard_tasks": 1,
+      "clauseguard_successful": 0,
+      "manual_tasks": 1,
+      "manual_successful": 0,
+      "clauseguard_median_seconds": 16.9,
+      "manual_median_seconds": 486.3
+    },
+    {
+      "session": "05",
+      "protocol": [
+        "sep29_v2"
+      ],
+      "participants": [
+        "U002"
+      ],
+      "tasks": [
+        "C1",
+        "D1"
+      ],
+      "documents": "fictional",
+      "clauseguard_tasks": 1,
+      "clauseguard_successful": 1,
+      "manual_tasks": 1,
+      "manual_successful": 1,
+      "clauseguard_median_seconds": 51.8,
+      "manual_median_seconds": 87.0
+    },
+    {
+      "session": "06",
+      "protocol": [
+        "sep29_v2"
+      ],
+      "participants": [
+        "U003",
+        "U004",
+        "U005"
+      ],
+      "tasks": [
+        "C1",
+        "D1"
+      ],
+      "documents": "fictional",
+      "clauseguard_tasks": 3,
+      "clauseguard_successful": 3,
+      "manual_tasks": 3,
+      "manual_successful": 3,
+      "clauseguard_median_seconds": 51.6,
+      "manual_median_seconds": 69.0
+    },
+    {
+      "session": "07",
+      "protocol": [
+        "sep29_v2"
+      ],
+      "participants": [
+        "U006",
+        "U007"
+      ],
+      "tasks": [
+        "E1",
+        "F1"
+      ],
+      "documents": "fictional",
+      "clauseguard_tasks": 2,
+      "clauseguard_successful": 2,
+      "manual_tasks": 2,
+      "manual_successful": 1,
+      "clauseguard_median_seconds": 81.4,
+      "manual_median_seconds": 139.6
+    },
+    {
+      "session": "08",
+      "protocol": [
+        "sep29_v2"
+      ],
+      "participants": [
+        "U008",
+        "U009",
+        "U010"
+      ],
+      "tasks": [
+        "E1",
+        "F1"
+      ],
+      "documents": "fictional",
+      "clauseguard_tasks": 3,
+      "clauseguard_successful": 3,
+      "manual_tasks": 3,
+      "manual_successful": 3,
+      "clauseguard_median_seconds": 47.5,
+      "manual_median_seconds": 66.9
+    },
+    {
+      "session": "09",
+      "protocol": [
+        "sep29_v2"
+      ],
+      "participants": [
+        "U012",
+        "U013"
+      ],
+      "tasks": [
+        "G1",
+        "H1"
+      ],
+      "documents": "fictional",
+      "clauseguard_tasks": 2,
+      "clauseguard_successful": 2,
+      "manual_tasks": 2,
+      "manual_successful": 2,
+      "clauseguard_median_seconds": 59.5,
+      "manual_median_seconds": 61.1
+    },
+    {
+      "session": "10",
+      "protocol": [
+        "sep29_v2"
+      ],
+      "participants": [
+        "U014",
+        "U015"
+      ],
+      "tasks": [
+        "I1",
+        "J1"
+      ],
+      "documents": "real",
+      "clauseguard_tasks": 2,
+      "clauseguard_successful": 2,
+      "manual_tasks": 2,
+      "manual_successful": 2,
+      "clauseguard_median_seconds": 46.0,
+      "manual_median_seconds": 78.5
+    },
+    {
+      "session": "11",
+      "protocol": [
+        "sep29_v2"
+      ],
+      "participants": [
+        "U016",
+        "U017"
+      ],
+      "tasks": [
+        "K1",
+        "L1"
+      ],
+      "documents": "real",
+      "clauseguard_tasks": 2,
+      "clauseguard_successful": 2,
+      "manual_tasks": 2,
+      "manual_successful": 2,
+      "clauseguard_median_seconds": 52.2,
+      "manual_median_seconds": 58.4
+    },
+    {
+      "session": "12",
+      "protocol": [
+        "sep29_v2"
+      ],
+      "participants": [
+        "U018",
+        "U019"
+      ],
+      "tasks": [
+        "M1",
+        "N1"
+      ],
+      "documents": "real",
+      "clauseguard_tasks": 2,
+      "clauseguard_successful": 2,
+      "manual_tasks": 2,
+      "manual_successful": 2,
+      "clauseguard_median_seconds": 35.3,
+      "manual_median_seconds": 53.5
+    }
+  ],
+  "totals": {
+    "clauseguard_tasks": 17,
+    "clauseguard_successful": 17,
+    "manual_tasks": 17,
+    "manual_successful": 16,
+    "sessions": 8,
+    "first_session": "05",
+    "last_session": "12",
+    "participants": 17,
+    "sessions_on_real_documents": 3,
+    "clauseguard_success_percent": 100.0,
+    "manual_success_percent": 94.1,
+    "summary": "17 outside participants in 8 sessions (Sessions 05 to 12): ClauseGuard 17/17 tasks correct within the limit, manual 16/17"
+  },
+  "not_counted": [
+    "04"
+  ],
+  "note": "Descriptive records of small, non-random samples; each participant did one task with the app and one without; documents and tasks changed between sessions. Not a population estimate."
+}
